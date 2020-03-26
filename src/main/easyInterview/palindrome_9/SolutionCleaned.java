@@ -1,10 +1,12 @@
-package main.palindrome_9;
+package main.easyInterview.palindrome_9;
 
-class SolutionCleaned
+import main.utils.Solution;
+
+class SolutionCleaned implements Solution
 {
-    public boolean isPalindrome( int x )
+    private static boolean isPalindrome( int x )
     {
-        if ( x < 0 || ( x != 0 && x % 10 == 0) )
+        if ( x < 0 || ( x != 0 && x % 10 == 0 ) )
         {
             return false;
         }
@@ -26,5 +28,10 @@ class SolutionCleaned
         }
 
         return ( a == b ) || ( a / 10 == b );
+    }
+
+    public Object execute( Object input )
+    {
+        return isPalindrome( (int) input );
     }
 }

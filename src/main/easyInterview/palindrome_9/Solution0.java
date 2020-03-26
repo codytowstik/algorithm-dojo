@@ -1,6 +1,8 @@
-package main.easyInterview.removeDuplicatesSortedArray.palindrome_9;
+package main.easyInterview.palindrome_9;
 
-class Solution0
+import main.utils.Solution;
+
+class Solution0 implements Solution
 {
     public boolean isPalindrome( int x )
     {
