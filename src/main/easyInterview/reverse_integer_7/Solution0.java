@@ -32,7 +32,7 @@ class Solution0 extends Solution
             return 0;
         }
 
-        long     currentNumber = (long) Math.abs(x);
+        long     currentNumber = (x > 0) ? x : (x * -1);
         long     reversed = 0;
 
         while ( currentNumber > 0 )

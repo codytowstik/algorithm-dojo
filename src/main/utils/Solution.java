@@ -48,11 +48,15 @@ public abstract class Solution
      */
     public void validateResults()
     {
+        int averageExecuteTime = 0;
 
         for (Result result : results)
         {
             String expectedResult = result.expectedResult;
             String actualResult = result.actualResult;
+            String executeTime = result.executeTime;
+
+            averageExecuteTime += Integer.parseInt(executeTime);
 
             boolean success = expectedResult.equals(actualResult);
 
@@ -70,11 +74,16 @@ public abstract class Solution
             resultBuilder.append(Result.normalizeResultStringToColumnWidth(result.input));
             resultBuilder.append(Result.normalizeResultStringToColumnWidth(expectedResult));
             resultBuilder.append(Result.normalizeResultStringToColumnWidth(actualResult));
-            resultBuilder.append(Result.normalizeResultStringToColumnWidth(result.executeTime));
+            resultBuilder.append(Result.normalizeResultStringToColumnWidth(executeTime));
 
             System.out.println(resultBuilder.toString());
             System.out.println();
         }
+
+        averageExecuteTime = averageExecuteTime / results.size();
+
+        System.out.println();
+        System.out.println( "Average execute Time: " + averageExecuteTime );
     }
 
     static class Result

@@ -5,32 +5,48 @@ import main.utils.Solution;
 class SolutionCleaned extends Solution
 {
     public Object execute(Object input) {
-        return isPalindrome((int) input);
+        return reverseInteger((int) input);
     }
 
-    private static boolean isPalindrome( int x )
+    /**
+     * Reverse Integer.
+     * <p>
+     * Example:
+     * 123 == 321
+     * -123 == -321
+     * 120 == 21
+     * <p>
+     * Strategy:
+     * Use the strategy we saw in `palindrome_9`.
+     * Take the mod 10 remainder of the value, make that your start.
+     * <p>
+     * Divide the value by 10, and set the reversed = reversed * 10 + new remainder
+     *
+     * @param x 32-bit signed integer (or smaller)
+     * @return the input reversed
+     */
+    public int reverseInteger(long x)
     {
-        if ( x < 0 || ( x != 0 && x % 10 == 0 ) )
+        if (x > 2147483647 || x < -2147483648)
         {
-            return false;
+            return 0;
         }
 
-        if ( x == 0 )
+        long    currentNumber = (x > 0) ? x : (x * -1);
+        long    reversed = 0;
+
+        while (currentNumber > 0)
         {
-            return true;
+            reversed = (reversed * 10) + currentNumber % 10;
+
+            if (reversed > 2147483647)
+            {
+                return 0;
+            }
+
+            currentNumber /= 10;
         }
 
-        int     a = 0, b = x;
-
-        while ( ( b > 0 ) && ( ( a / b ) < 1 ) )
-        {
-            int     r = b % 10;
-
-            a = a * 10 + r;
-
-            b /= 10;
-        }
-
-        return ( a == b ) || ( a / 10 == b );
+        return (x > 0) ? (int) reversed : (int) (reversed * -1);
     }
 }

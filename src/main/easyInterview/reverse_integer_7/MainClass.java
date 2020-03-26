@@ -10,7 +10,7 @@ public class MainClass {
 
     private static final String INPUT_FILE_NAME = "input.properties";
 
-    private static final Solution TEST_CLASS = new Solution0();
+    private static final Solution TEST_CLASS = new SolutionCleaned();
 
     public static void main( String[] args )
     {
