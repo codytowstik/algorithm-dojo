@@ -16,6 +16,8 @@ public abstract class Solution
 
     private final Set<Result> results = new HashSet<>();
 
+    public abstract Object execute(Object input);
+
     public static Properties loadExpectedResults( String propertiesFileName )
     {
         Properties expectedResults = new Properties();
@@ -34,8 +36,6 @@ public abstract class Solution
 
         return expectedResults;
     }
-
-    public abstract Object execute(Object input);
 
     public void saveResult(String input, String expectedResult, String actualResult, long executeTime)
     {
