@@ -1,10 +1,8 @@
-package main.easyInterview.palindrome_9;
+package main.easyInterview.reverse_integer_7;
 
+import main.easyInterview.reverse_integer_7.Solution0;
 import main.utils.Solution;
 
-import java.io.*;
-import java.lang.reflect.InvocationTargetException;
-import java.net.URL;
 import java.util.Map;
 import java.util.Properties;
 
@@ -26,7 +24,7 @@ public class MainClass {
 
             long    start = System.nanoTime();
 
-            // isPalindrome(int)
+            // reverseInteger(int)
             Object  result = TEST_CLASS.execute(numericInput);
 
             long    totalTimeNano = System.nanoTime() - start;

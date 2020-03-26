@@ -1,12 +1,12 @@
 package main.utils;
 
-import main.easyInterview.palindrome_9.MainClass;
+import main.easyInterview.reverse_integer_7.MainClass;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URL;
-import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Properties;
 import java.util.Set;
 
@@ -14,7 +14,7 @@ public abstract class Solution
 {
     private static final int COLUMN_WIDTH = 16;
 
-    private final Set<Result> results = new HashSet<>();
+    private final Set<Result> results = new LinkedHashSet<>();
 
     public abstract Object execute(Object input);
 
