@@ -48,7 +48,7 @@ public abstract class Solution
      */
     public void validateResults()
     {
-        int averageExecuteTime = 0;
+        long averageExecuteTime = 0;
 
         for (Result result : results)
         {
@@ -56,7 +56,7 @@ public abstract class Solution
             String actualResult = result.actualResult;
             String executeTime = result.executeTime;
 
-            averageExecuteTime += Integer.parseInt(executeTime);
+            averageExecuteTime += Long.parseLong(executeTime);
 
             boolean success = expectedResult.equals(actualResult);
 
