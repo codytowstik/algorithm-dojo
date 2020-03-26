@@ -59,7 +59,7 @@ a palindrome.
 
 We know:
 
-    number n with magnitude m can only have ( m + 1 ) digits .. 100, mag 2, digits 3
+    number n with magnitude m can only have ( m + 1 ) digits .. 100, magnitude 2, digits 3
     
     1234 / 1 % 10 == 4           (n) 4
     1234 / 1000 = 1 % 10 = 1     (0) 1

@@ -2,21 +2,25 @@ package main.easyInterview.palindrome_9;
 
 import main.utils.Solution;
 
-class Solution0 implements Solution
+class Solution0 extends Solution
 {
-    public boolean isPalindrome( int x )
+    public Object execute(Object input) {
+        return isPalindrome((int) input);
+    }
+
+    public boolean isPalindrome( int input )
     {
-        if ( x < 0 )
+        if ( input < 0 )
         {
             return false;
         }
 
-        if ( x < 10 )
+        if ( input < 10 )
         {
             return true;
         }
 
-        int     orderOfMagnitude = (int) Math.log10( x );
+        int     orderOfMagnitude = (int) Math.floor(Math.log10( input ));
 
         // number n with magnitude m can only have ( m + 1 ) digits .. 100, mag 2, digits 3
 
@@ -47,19 +51,23 @@ class Solution0 implements Solution
             // 1234 / 1             1234 / 10^0
             // 1234 / 1000          1234 / 10^3
 
-            // right == digitIndex == 1
-            // left == orderOfMagnitude - digitIndex = 2
+                        ////// if it continued:
+                        // right == digitIndex == 1
+                        // left == orderOfMagnitude - digitIndex = 2
 
-            // 1234 / 10            1234 / 10^1
-            // 1234 / 100           1234 / 10^2
+                        // 1234 / 10            1234 / 10^1
+                        // 1234 / 100           1234 / 10^2
 
-            // 1234/1               1234/10
-            int         numScaledRight = ( x / rightDivisor );
+            // 1234/1 = 1234
+            int         numScaledRight = ( input / rightDivisor );
 
-            // 1234/1000            1234/100
-            int         numScaledLeft = ( x / leftDivisor );
+            // 1234/1000 = 1.234 (int floors)
+            int         numScaledLeft = ( input / leftDivisor );
 
+            // 1234 % 10 = 4
             int         rightDigit = ( numScaledRight % 10 );
+
+            // 1 % 10 = 1
             int         leftDigit = ( numScaledLeft % 10 );
 
             if ( rightDigit != leftDigit )

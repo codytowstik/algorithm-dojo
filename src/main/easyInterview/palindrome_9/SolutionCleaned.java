@@ -2,8 +2,12 @@ package main.easyInterview.palindrome_9;
 
 import main.utils.Solution;
 
-class SolutionCleaned implements Solution
+class SolutionCleaned extends Solution
 {
+    public Object execute(Object input) {
+        return isPalindrome((int) input);
+    }
+
     private static boolean isPalindrome( int x )
     {
         if ( x < 0 || ( x != 0 && x % 10 == 0 ) )
@@ -28,10 +32,5 @@ class SolutionCleaned implements Solution
         }
 
         return ( a == b ) || ( a / 10 == b );
-    }
-
-    public Object execute( Object input )
-    {
-        return isPalindrome( (int) input );
     }
 }

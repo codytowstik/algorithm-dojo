@@ -1,24 +1,44 @@
 package main.easyInterview.palindrome_9;
 
-class Solution1
+import main.utils.Solution;
+
+class Solution1 extends Solution
 {
-    public boolean isPalindrome( int x )
+    public Object execute(Object input) {
+        return isPalindrome((int) input);
+    }
+
+    public boolean isPalindrome( int input )
     {
-        if ( x < 0 || ( x != 0 && x % 10 == 0) )
+        if ( input < 0 || ( input != 0 && input % 10 == 0) )
         {
             return false;
         }
 
-        if ( x == 0 )
+        if ( input == 0 )
         {
             return true;
         }
 
         int     reversed = 0;
-        int     numToCheck = x;
+        int     numToCheck = input;
 
         // if the current un-reversed number is smaller than the number we are checking .. we are done
-        // since we mutiply reversed number by 10 and divide number we are checking by 10
+        // since we multiply reversed number by 10 and divide number we are checking by 10
+
+        // 12321
+        // remainder: 1; reversed: 0*10 + 1
+        // 1232.1
+        // remainder: 2; reversed: (1 * 10) + 2 = 12
+        // 123.21
+        // remainder: 3; reversed: (12 * 10) + 3 = 123
+
+        // 3223
+        // remainder: 3; reversed: 0*10 + 3
+        // 322.3
+        // remainder: 2; reversed: (3 * 10) + 2 = 32
+        // 32.23
+        // remainder: 2; reversed: (32 * 10) + 2 = 322
 
         while ( ( numToCheck > 0 ) && ( ( reversed / numToCheck ) < 1 ) )
         {
@@ -34,8 +54,8 @@ class Solution1
             numToCheck /= 10;    // get next digit
         }
 
-        // 13531 13 13.5
-        // 1331 13 13
+        // 0 and negatives will automatically evaluate true and false
+        // divide reversed by 10 to handle results crossing for even length numbers
         return ( reversed == numToCheck ) || ( reversed / 10 == numToCheck );
     }
 }
