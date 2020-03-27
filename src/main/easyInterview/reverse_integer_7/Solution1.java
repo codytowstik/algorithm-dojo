@@ -29,13 +29,14 @@ class Solution1 extends Solution
     public int reverseInteger(int x)
     {
         int reversed = 0;
+        int remainder;
 
         while ( x != 0 )
         {
             // 123 -> 3
             // 12  -> 2
             // 1   -> 1
-            int remainder = x % 10;
+            remainder = x % 10;
 
             if ( ( reversed > (Integer.MAX_VALUE / 10) || ( reversed == Integer.MAX_VALUE / 10 ) && (remainder > 8) ) ||
                  ( reversed < (Integer.MIN_VALUE / 10) || ( reversed == Integer.MIN_VALUE / 10 ) && (remainder < -7) ) )
