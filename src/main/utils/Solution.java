@@ -18,13 +18,13 @@ public abstract class Solution
 
     public abstract Object execute(Object input);
 
-    public static Properties loadExpectedResults( String propertiesFileName )
+    public static Properties loadExpectedResults( Class clazz, String propertiesFileName )
     {
         Properties expectedResults = new Properties();
 
         try
         {
-            URL             url = MainClass.class.getResource(propertiesFileName);
+            URL             url = clazz.getResource(propertiesFileName);
             File            inputFile = new File(url.getPath());
             FileInputStream fileInputStream = new FileInputStream(inputFile);
 

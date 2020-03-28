@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34f871cd-4740-4420-b6b9-4b7ca22bd1d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/easyInterview/reverse_integer_7/Solution2.java" afterDir="false" />
+    <list default="true" id="34f871cd-4740-4420-b6b9-4b7ca22bd1d2" name="Default Changelist" comment="support for multiple inputs and array stuff">
+      <change afterPath="$PROJECT_DIR$/src/main/easyInterview/two_sum_1/Approach.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/easyInterview/two_sum_1/MainClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/easyInterview/two_sum_1/Solution0.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/easyInterview/two_sum_1/Solution1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/easyInterview/two_sum_1/SolutionCleaned.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/easyInterview/two_sum_1/input.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/utils/MultiInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/easyInterview/palindrome_9/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easyInterview/palindrome_9/MainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/easyInterview/reverse_integer_7/Approach.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easyInterview/reverse_integer_7/Approach.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/easyInterview/reverse_integer_7/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easyInterview/reverse_integer_7/MainClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easyInterview/reverse_integer_7/Solution1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easyInterview/reverse_integer_7/Solution1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/easyInterview/reverse_integer_7/SolutionCleaned.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easyInterview/reverse_integer_7/SolutionCleaned.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/utils/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/Solution.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +28,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JavaScript File" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -52,7 +62,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/easyInterview" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/easyInterview/two_sum_1" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -61,20 +71,21 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/easyInterview" />
-      <recent name="$PROJECT_DIR$/src/main/easyInterview/removeDuplicatesSortedArray" />
-      <recent name="$PROJECT_DIR$/src/main/threesum_15" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/palindrome" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="main.easyInterview.reverse_integer_7" />
       <recent name="main.palindrome" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/palindrome" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/easyInterview/two_sum_1" />
+      <recent name="$PROJECT_DIR$/src/main/easyInterview" />
+      <recent name="$PROJECT_DIR$/src/main/easyInterview/removeDuplicatesSortedArray" />
+      <recent name="$PROJECT_DIR$/src/main/threesum_15" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainClass (3)">
+  <component name="RunManager" selected="Application.MainClass (4)">
     <configuration name="MainClass (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.threesum_15.MainClass" />
       <module name="leetcode" />
@@ -114,6 +125,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainClass (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.easyInterview.two_sum_1.MainClass" />
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.easyInterview.two_sum_1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.palindrome_9.MainClass" />
       <module name="leetcode" />
@@ -129,6 +153,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainClass (4)" />
         <item itemvalue="Application.MainClass (3)" />
         <item itemvalue="Application.MainClass (2)" />
       </list>
@@ -151,7 +176,7 @@
       <workItem from="1585190759329" duration="192000" />
       <workItem from="1585190963485" duration="13685000" />
       <workItem from="1585204714232" duration="6697000" />
-      <workItem from="1585348081115" duration="1249000" />
+      <workItem from="1585348081115" duration="5441000" />
     </task>
     <task id="LOCAL-00001" summary="moved files around">
       <created>1585193165740</created>
@@ -195,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585209969246</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="* added string solution to reverse_integer">
+      <created>1585350565661</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1585350565661</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +256,9 @@
     <MESSAGE value="* first solution reverse integer, 100% faster, 36.4mb, less than 5.5%" />
     <MESSAGE value="* cleaned solution" />
     <MESSAGE value="* v2 complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="* v2 complete" />
+    <MESSAGE value="* added string solution to reverse_integer" />
+    <MESSAGE value="support for multiple inputs and array stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="support for multiple inputs and array stuff" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3886" y="985" width="308" height="244" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1585190830466">
@@ -235,14 +269,14 @@
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
     <state x="3623" y="762" width="824" height="691" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585190780346" />
-    <state x="4144" y="759" key="#xdebugger.evaluate" timestamp="1585208726130">
+    <state x="4144" y="759" key="#xdebugger.evaluate" timestamp="1585354055190">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state x="4144" y="759" key="#xdebugger.evaluate/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585208726130" />
-    <state x="3463" y="667" width="1154" height="859" key="CommitChangelistDialog2" timestamp="1585209969198">
+    <state x="4144" y="759" key="#xdebugger.evaluate/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585354055190" />
+    <state x="3463" y="667" width="1154" height="859" key="CommitChangelistDialog2" timestamp="1585354577022">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state x="3463" y="667" width="1154" height="859" key="CommitChangelistDialog2/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585209969198" />
+    <state x="3463" y="667" width="1154" height="859" key="CommitChangelistDialog2/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585354577022" />
     <state x="2260" y="127" width="3570" height="1933" key="DiffContextDialog" timestamp="1585195914070">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
@@ -251,38 +285,38 @@
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
     <state x="3818" y="865" width="424" height="491" key="FileChooserDialogImpl/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585191148690" />
-    <state width="3724" height="762" key="GridCell.Tab.0.bottom" timestamp="1585211412334">
+    <state width="3724" height="762" key="GridCell.Tab.0.bottom" timestamp="1585354753745">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="762" key="GridCell.Tab.0.bottom/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585211412334" />
-    <state width="3724" height="762" key="GridCell.Tab.0.center" timestamp="1585211412334">
+    <state width="3724" height="762" key="GridCell.Tab.0.bottom/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585354753745" />
+    <state width="3724" height="762" key="GridCell.Tab.0.center" timestamp="1585354753745">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="762" key="GridCell.Tab.0.center/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585211412334" />
-    <state width="3724" height="762" key="GridCell.Tab.0.left" timestamp="1585211412334">
+    <state width="3724" height="762" key="GridCell.Tab.0.center/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585354753745" />
+    <state width="3724" height="762" key="GridCell.Tab.0.left" timestamp="1585354753744">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="762" key="GridCell.Tab.0.left/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585211412334" />
-    <state width="3724" height="762" key="GridCell.Tab.0.right" timestamp="1585211412334">
+    <state width="3724" height="762" key="GridCell.Tab.0.left/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585354753744" />
+    <state width="3724" height="762" key="GridCell.Tab.0.right" timestamp="1585354753745">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="762" key="GridCell.Tab.0.right/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585211412334" />
-    <state width="3724" height="762" key="GridCell.Tab.1.bottom" timestamp="1585211412334">
+    <state width="3724" height="762" key="GridCell.Tab.0.right/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585354753745" />
+    <state width="3724" height="762" key="GridCell.Tab.1.bottom" timestamp="1585354753746">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="762" key="GridCell.Tab.1.bottom/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585211412334" />
-    <state width="3724" height="762" key="GridCell.Tab.1.center" timestamp="1585211412334">
+    <state width="3724" height="762" key="GridCell.Tab.1.bottom/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585354753746" />
+    <state width="3724" height="762" key="GridCell.Tab.1.center" timestamp="1585354753745">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="762" key="GridCell.Tab.1.center/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585211412334" />
-    <state width="3724" height="762" key="GridCell.Tab.1.left" timestamp="1585211412334">
+    <state width="3724" height="762" key="GridCell.Tab.1.center/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585354753745" />
+    <state width="3724" height="762" key="GridCell.Tab.1.left" timestamp="1585354753745">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="762" key="GridCell.Tab.1.left/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585211412334" />
-    <state width="3724" height="762" key="GridCell.Tab.1.right" timestamp="1585211412334">
+    <state width="3724" height="762" key="GridCell.Tab.1.left/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585354753745" />
+    <state width="3724" height="762" key="GridCell.Tab.1.right" timestamp="1585354753745">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="762" key="GridCell.Tab.1.right/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585211412334" />
+    <state width="3724" height="762" key="GridCell.Tab.1.right/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585354753745" />
     <state x="3785" y="682" width="1022" height="737" key="SettingsEditor" timestamp="1585198581559">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
@@ -291,5 +325,16 @@
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
     <state x="3709" y="522" key="run.anything.popup/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585194123920" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/utils/Solution.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

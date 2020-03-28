@@ -10,17 +10,13 @@ class SolutionCleaned extends Solution
 
     /**
      * Reverse Integer.
-     * <p>
+     *
      * Example:
      * 123 == 321
      * -123 == -321
      * 120 == 21
-     * <p>
-     * Strategy:
-     * Use the strategy we saw in `palindrome_9`.
-     * Take the mod 10 remainder of the value, make that your start.
-     * <p>
-     * Divide the value by 10, and set the reversed = reversed * 10 + new remainder
+     *
+     * Strategy: Solution0
      *
      * @param x 32-bit signed integer (or smaller)
      * @return the input reversed
