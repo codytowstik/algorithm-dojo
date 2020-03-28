@@ -11,7 +11,7 @@ public class MainClass {
 
     private static final String INPUT_FILE_NAME = "input.properties";
 
-    private static final Solution TEST_CLASS = new Solution1();
+    private static final Solution TEST_CLASS = new Solution3();
 
     public static void main( String[] args )
     {

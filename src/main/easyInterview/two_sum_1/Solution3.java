@@ -22,7 +22,7 @@ import java.util.Map;
  *      - if not, add the current value to the map
  *      - if yes, return
  */
-class SolutionCleaned extends Solution
+class Solution3 extends Solution
 {
     public Object execute(Object input)
     {
