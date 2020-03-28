@@ -7,19 +7,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Solution1.
+ * Solution2.
  *
- * 2ms, 65.1%
- * 40.2mb, 5.65%
+ * Solution1 as template.
  *
- * Runtime: O(n)
- * Space: O(n)
- *
- * Two passes.
- * Pass 1: Load each value into a map, storing the index as the value.
- * Pass 2: See if there is a value in the map that would hit our target sum.
+ * - give 'processedValues' HashMap load factor of 1 so it doesn't grow.
+ * - don't store the first value, since we won't ever need it
  */
-class Solution1 extends Solution
+class Solution2 extends Solution
 {
     public Object execute(Object input)
     {
@@ -33,7 +28,7 @@ class Solution1 extends Solution
 
     public int[] twoSum(int[] nums, int target)
     {
-        Map<Integer,Integer>     processedValues = new HashMap<>( nums.length );
+        Map<Integer,Integer>     processedValues = new HashMap<>( nums.length, 1 );
 
         // store the values into a map with <key,value> == <value,index>
         for (int index = 0; index < nums.length; index++)
