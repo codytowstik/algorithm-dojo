@@ -9,6 +9,8 @@ import java.util.Map;
 /**
  * Solution2.
  *
+ * No improvement (as expected).
+ *
  * Solution1 as template.
  *
  * - give 'processedValues' HashMap load factor of 1 so it doesn't grow.
@@ -28,10 +30,10 @@ class Solution2 extends Solution
 
     public int[] twoSum(int[] nums, int target)
     {
-        Map<Integer,Integer>     processedValues = new HashMap<>( nums.length, 1 );
+        Map<Integer,Integer>     processedValues = new HashMap<>( nums.length-1, 1 );
 
         // store the values into a map with <key,value> == <value,index>
-        for (int index = 0; index < nums.length; index++)
+        for (int index = 1; index < nums.length; index++)
         {
             int     inputNumber = nums[index];
 
