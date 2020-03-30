@@ -37,30 +37,31 @@ class Solution2 extends Solution
 
         for (int i = 0; i < nums.length; i++)
         {
-            int firstValue = nums[i];
+            // since we want to sum to zero, target is inverse of current number
+            int target = nums[i] * -1;
 
             // for each other number with greater index,
 
-            for (int j = (i + 1); j < nums.length; j++)
+            int indexToCheck = i + 1;
+
+            int[] subArray = Arrays.copyOfRange(nums, 0, i);
+
+            // if subarray has at least two values (since this is three sum)
+
+            if (subArray.length >= 2)
             {
+                int[] tupleResult = twoSumValues(subArray, target);
 
-                int secondValue = nums[j];
-                int twoValueSum = firstValue + secondValue;
-
-                // see if there is a value (with greater index) that sums us to zero
-
-                for (int k = (j + 1); k < nums.length; k++)
+                // if we found results, add them!
+                if (tupleResult.length != 0)
                 {
-                    int thirdValue = nums[k];
-                    int threeValueSum = twoValueSum + thirdValue;
+                    int first = nums[i];
+                    int second = tupleResult[0];
+                    int third = tupleResult[1];
 
-                    if (threeValueSum == 0)
-                    {
-                        List<Integer>   resultTriplet = createResult(firstValue, secondValue, thirdValue);
+                    List<Integer> resultTriplet = createResult(first, second, third);
 
-                        // append the result triplet
-                        addResult(resultTriplet, resultTriplets, existingResults );
-                    }
+                    addResult(resultTriplet, resultTriplets, existingResults);
                 }
             }
         }
