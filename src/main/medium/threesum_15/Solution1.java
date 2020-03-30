@@ -3,20 +3,18 @@ package main.medium.threesum_15;
 import main.utils.MultiInput;
 import main.utils.Solution;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
- * Solution0.
+ * Solution1.
  *
- * Naive solution.
+ * Same as solution0, checking if we care about the order within a triplet.
+ * Since values aren't ordered, we can't rely on hashcode .. but we are
+ * just checking for expected output format so we will naively sort each result triplet.
  *
- * Runtime: O(n^2)
- * Space: O(1)
+ * RESULT: Order doesn't matter for individual tuples
  *
- * For each number, see if any other number sums up to the target. If so, save indices and return them.
+ * [[-1,0,1],[-1,2,-1]] == [[-1,-1,2],[-1,0,1]]
  */
 class Solution1 extends Solution
 {
@@ -61,7 +59,7 @@ class Solution1 extends Solution
 
                     if (threeValueSum == 0)
                     {
-                        List<Integer>   resultTriplet = createOrderedResults(firstValue, secondValue, thirdValue);
+                        List<Integer>   resultTriplet = createResult(firstValue, secondValue, thirdValue);
 
                         // append the result triplet
                         addResult(resultTriplet, resultTriplets, existingResults );
@@ -76,23 +74,18 @@ class Solution1 extends Solution
     /**
      * Create an ordered 3-sized list out of the given inputs.
      *
-     * @param one
-     * @param two
-     * @param three
-     * @return
+     * @param one first num
+     * @param two second num
+     * @param three third num
+     * @return a list of the given inputs
      */
-    public List<Integer> createOrderedResults(int one, int two, int three)
+    public List<Integer> createResult(int one, int two, int three)
     {
         List<Integer> result = new ArrayList<>(3);
 
-        int minValue = Math.min(one, Math.min(two, three));
-        int maxValue = Math.max(one, Math.max(two, three));
-
-        int middleValue = (one+two+three) - minValue - maxValue;
-
-        result.add(minValue);
-        result.add(middleValue);
-        result.add(maxValue);
+        result.add(one);
+        result.add(two);
+        result.add(three);
 
         return result;
     }
@@ -107,7 +100,12 @@ class Solution1 extends Solution
      */
     public void addResult(List<Integer> result, List<List<Integer>> results, Set<Integer> existingResultsHash)
     {
-        int currentResultHash = result.hashCode();
+        // copy the list so it doesn't affect our output, we are just checking if order matters
+        List<Integer> resultOrdered = new ArrayList<>(result);
+
+        Collections.sort(resultOrdered);
+
+        int currentResultHash = resultOrdered.hashCode();
 
         if (!existingResultsHash.contains(currentResultHash))
         {

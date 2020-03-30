@@ -73,10 +73,10 @@ class Solution0 extends Solution
     /**
      * Create an ordered 3-sized list out of the given inputs.
      *
-     * @param one
-     * @param two
-     * @param three
-     * @return
+     * @param one first num
+     * @param two second num
+     * @param three third num
+     * @return an ordered list of the given numbers
      */
     public List<Integer> createOrderedResults(int one, int two, int three)
     {
