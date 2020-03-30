@@ -6,7 +6,7 @@ import main.utils.Solution;
 import java.util.*;
 
 /**
- * Solution2.
+ * Solution3.
  *
  * Runtime: O(n^2)
  *
@@ -19,13 +19,9 @@ import java.util.*;
  * - we store a hash value for each possible triplet (less than n)
  * - 2sum hashmap, recreated n times
  *
- * This approach tries to track which triplets we have already saved by adding resulting sets hash codes
- * to a map. This is bad for 2 reasons.
- * - triplets can have the same hash value (and computing it is expensive anyways)
- * - we are storing a huge amount of data
+ * 3sum is really like 'two sum' except the 'target' is our current value
  */
-
-class Solution2 extends Solution
+class Solution3 extends Solution
 {
     public Object execute(Object input) {
         MultiInput      multiInput = (MultiInput) input;

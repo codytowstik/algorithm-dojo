@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34f871cd-4740-4420-b6b9-4b7ca22bd1d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/SolutionEx0.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/SolutionEx1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/utils/Results.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/Solution3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/Solution4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/medium/threesum_15/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/ThreeSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/medium/threesum_15/Solution0.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/Solution0.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/medium/threesum_15/Solution2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/Solution2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/medium/threesum_15/SolutionEx0.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/SolutionEx0.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/medium/threesum_15/ThreeSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/ThreeSum.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,8 +172,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Results" />
         <item itemvalue="Application.ThreeSum" />
+        <item itemvalue="Application.Results" />
         <item itemvalue="Application.MainClass (4)" />
         <item itemvalue="Application.MainClass (3)" />
         <item itemvalue="Application.MainClass (2)" />
@@ -197,7 +198,7 @@
       <workItem from="1585190963485" duration="13685000" />
       <workItem from="1585204714232" duration="6697000" />
       <workItem from="1585348081115" duration="9038000" />
-      <workItem from="1585592944627" duration="17221000" />
+      <workItem from="1585592944627" duration="18502000" />
     </task>
     <task id="LOCAL-00001" summary="moved files around">
       <created>1585193165740</created>
@@ -409,7 +410,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585606091527</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="3sum&#10;- validated hash collisions are an issue in this Solution&#10;- added example solutions">
+      <created>1585610202726</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1585610202726</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -432,7 +440,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/../.." />
     </ignored-roots>
-    <MESSAGE value="* v2 complete" />
     <MESSAGE value="* added string solution to reverse_integer" />
     <MESSAGE value="support for multiple inputs and array stuff" />
     <MESSAGE value="utils file" />
@@ -457,7 +464,8 @@
     <MESSAGE value="ordered results since our current verify impl doesn't handle unordered" />
     <MESSAGE value="3sum&#10;- build results within the twosum function&#10;- keep looking for results after we find some" />
     <MESSAGE value="3sum&#10;- added failed input and outputs" />
-    <option name="LAST_COMMIT_MESSAGE" value="3sum&#10;- added failed input and outputs" />
+    <MESSAGE value="3sum&#10;- validated hash collisions are an issue in this Solution&#10;- added example solutions" />
+    <option name="LAST_COMMIT_MESSAGE" value="3sum&#10;- validated hash collisions are an issue in this Solution&#10;- added example solutions" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3733" y="898" width="639" height="439" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585605671675">
@@ -476,10 +484,10 @@
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
     <state x="4144" y="759" key="#xdebugger.evaluate/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585354055190" />
-    <state x="3463" y="667" width="1602" height="1343" key="CommitChangelistDialog2" timestamp="1585606091457">
+    <state x="3463" y="667" width="1602" height="1343" key="CommitChangelistDialog2" timestamp="1585610202661">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state x="3463" y="667" width="1602" height="1343" key="CommitChangelistDialog2/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585606091457" />
+    <state x="3463" y="667" width="1602" height="1343" key="CommitChangelistDialog2/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585610202661" />
     <state x="2260" y="127" width="3570" height="1933" key="DiffContextDialog" timestamp="1585604609459">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
@@ -488,42 +496,46 @@
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
     <state x="3818" y="865" width="424" height="491" key="FileChooserDialogImpl/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585191148690" />
-    <state width="3724" height="624" key="GridCell.Tab.0.bottom" timestamp="1585610173506">
+    <state width="3724" height="632" key="GridCell.Tab.0.bottom" timestamp="1585611364713">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="624" key="GridCell.Tab.0.bottom/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585610173506" />
-    <state width="3724" height="624" key="GridCell.Tab.0.center" timestamp="1585610173506">
+    <state width="3724" height="632" key="GridCell.Tab.0.bottom/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585611364713" />
+    <state width="3724" height="632" key="GridCell.Tab.0.center" timestamp="1585611364713">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="624" key="GridCell.Tab.0.center/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585610173506" />
-    <state width="3724" height="624" key="GridCell.Tab.0.left" timestamp="1585610173506">
+    <state width="3724" height="632" key="GridCell.Tab.0.center/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585611364713" />
+    <state width="3724" height="632" key="GridCell.Tab.0.left" timestamp="1585611364713">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="624" key="GridCell.Tab.0.left/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585610173506" />
-    <state width="3724" height="624" key="GridCell.Tab.0.right" timestamp="1585610173506">
+    <state width="3724" height="632" key="GridCell.Tab.0.left/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585611364713" />
+    <state width="3724" height="632" key="GridCell.Tab.0.right" timestamp="1585611364713">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="624" key="GridCell.Tab.0.right/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585610173506" />
-    <state width="3724" height="632" key="GridCell.Tab.1.bottom" timestamp="1585609659296">
+    <state width="3724" height="632" key="GridCell.Tab.0.right/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585611364713" />
+    <state width="3724" height="632" key="GridCell.Tab.1.bottom" timestamp="1585611364713">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="632" key="GridCell.Tab.1.bottom/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585609659296" />
-    <state width="3724" height="632" key="GridCell.Tab.1.center" timestamp="1585609659296">
+    <state width="3724" height="632" key="GridCell.Tab.1.bottom/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585611364713" />
+    <state width="3724" height="632" key="GridCell.Tab.1.center" timestamp="1585611364713">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="632" key="GridCell.Tab.1.center/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585609659296" />
-    <state width="3724" height="632" key="GridCell.Tab.1.left" timestamp="1585609659296">
+    <state width="3724" height="632" key="GridCell.Tab.1.center/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585611364713" />
+    <state width="3724" height="632" key="GridCell.Tab.1.left" timestamp="1585611364713">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="632" key="GridCell.Tab.1.left/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585609659296" />
-    <state width="3724" height="632" key="GridCell.Tab.1.right" timestamp="1585609659296">
+    <state width="3724" height="632" key="GridCell.Tab.1.left/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585611364713" />
+    <state width="3724" height="632" key="GridCell.Tab.1.right" timestamp="1585611364713">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="632" key="GridCell.Tab.1.right/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585609659296" />
+    <state width="3724" height="632" key="GridCell.Tab.1.right/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585611364713" />
     <state x="3785" y="682" width="1022" height="737" key="SettingsEditor" timestamp="1585198581559">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
     <state x="3785" y="682" width="1022" height="737" key="SettingsEditor/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585198581559" />
+    <state x="3568" y="699" width="944" height="796" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585611451670">
+      <screen x="2160" y="0" width="3840" height="2160" />
+    </state>
+    <state x="3568" y="699" width="944" height="796" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585611451670" />
     <state x="3709" y="522" key="run.anything.popup" timestamp="1585194123920">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>

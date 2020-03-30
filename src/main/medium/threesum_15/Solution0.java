@@ -12,8 +12,8 @@ import java.util.*;
  *
  * Runtime: O(n^3)
  * for each number,
- * for each other number with greater index,
- * see if there is a value (with greater index) that sums us to zero
+ *   for each other number with greater index,
+ *    see if there is a value (with greater index) that sums us to zero
  *
  * Space: 0(n)
  *

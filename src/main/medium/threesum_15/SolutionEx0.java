@@ -8,7 +8,7 @@ import java.util.*;
 /**
  * SolutionEx0.
  *
- * Runtime: 20ms, 58%
+ * Runtime: 20ms, 75%
  * Space: 44mb
  *
  * 3sum is really like 'two sum' except the 'target' is our current value
@@ -31,6 +31,7 @@ class SolutionEx0 extends Solution
         for (int i = 0; i < nums.length - 2; i++)
         {
             // we are on first number or previous number equals this number
+            // i.e. skip duplicates because any triplets we find with a duplicate value will be duplicates of the previous
             if (i == 0 || (nums[i] != nums[i - 1]) )
             {
                 int lo = i + 1;

@@ -12,7 +12,7 @@ public class ThreeSum
 
     private static final String INPUT_FILE_NAME = "input.properties";
 
-    private static final Solution TEST_CLASS = new Solution2();
+    private static final Solution TEST_CLASS = new SolutionEx0();
 
     public static void main( String[] args )
     {
