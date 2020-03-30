@@ -3,8 +3,7 @@ package main.medium.threesum_15;
 import main.utils.MultiInput;
 import main.utils.Solution;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Solution0.
@@ -34,6 +33,8 @@ class Solution0 extends Solution
 
         List<List<Integer>> resultTriplets = new ArrayList<>();
 
+        Set<Integer> existingResults = new HashSet<>();
+
         // for each number
 
         for (int i = 0; i < nums.length; i++)
@@ -57,19 +58,58 @@ class Solution0 extends Solution
 
                     if (threeValueSum == 0)
                     {
-                        List<Integer> resultTriplet = new ArrayList<>();
-
-                        resultTriplet.add(firstValue);
-                        resultTriplet.add(secondValue);
-                        resultTriplet.add(thirdValue);
+                        List<Integer>   resultTriplet = createOrderedResults(firstValue, secondValue, thirdValue);
 
                         // append the result triplet
-                        resultTriplets.add(resultTriplet);
+                        addResult(resultTriplet, resultTriplets, existingResults );
                     }
                 }
             }
         }
 
         return resultTriplets;
+    }
+
+    /**
+     * Create an ordered 3-sized list out of the given inputs.
+     *
+     * @param one
+     * @param two
+     * @param three
+     * @return
+     */
+    public List<Integer> createOrderedResults(int one, int two, int three)
+    {
+        List<Integer> result = new ArrayList<>(3);
+
+        int minValue = Math.min(one, Math.min(two, three));
+        int maxValue = Math.max(one, Math.max(two, three));
+
+        int middleValue = (one+two+three) - minValue - maxValue;
+
+        result.add(minValue);
+        result.add(middleValue);
+        result.add(maxValue);
+
+        return result;
+    }
+
+    /**
+     * Check if the hashcode of the given result is in the existingResultsHash set.
+     * If not, add the result to the list of results (and result hashes)
+     *
+     * @param result the result to check
+     * @param results the set of results to add to
+     * @param existingResultsHash a set of hashes for existing result sets.
+     */
+    public void addResult(List<Integer> result, List<List<Integer>> results, Set<Integer> existingResultsHash)
+    {
+        int currentResultHash = result.hashCode();
+
+        if (!existingResultsHash.contains(currentResultHash))
+        {
+            results.add(result);
+            existingResultsHash.add(currentResultHash);
+        }
     }
 }
