@@ -11,7 +11,7 @@ public class MainClass {
 
     private static final String INPUT_FILE_NAME = "input.properties";
 
-    private static final Solution TEST_CLASS = new Solution3();
+    private static final Solution TEST_CLASS = new Solution0();
 
     public static void main( String[] args )
     {
@@ -29,7 +29,7 @@ public class MainClass {
             long    totalTimeNano = System.nanoTime() - start;
 
             String  expectedResult = (String) entry.getValue();
-            String  actualResult = Utils.parseIntArray(result);
+            String  actualResult = Utils.parseListListInt(result);
 
             TEST_CLASS.saveResult(multiInput.originalInput, expectedResult, actualResult, totalTimeNano);
         }

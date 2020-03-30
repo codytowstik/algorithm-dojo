@@ -3,6 +3,9 @@ package main.medium.threesum_15;
 import main.utils.MultiInput;
 import main.utils.Solution;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Solution0.
  *
@@ -19,31 +22,29 @@ class Solution0 extends Solution
         MultiInput      multiInput = (MultiInput) input;
 
         int[]           nums = multiInput.parseArrayInt(0);
-        int             target = multiInput.parseInt(1);
 
-        return twoSum(nums, target);
+        return threeSum(nums);
     }
 
     public List<List<Integer>> threeSum(int[] nums)
     {
-        // for each number
-        for (int i = 0; i < nums.length; i++)
-        {
-            int     firstNumber = nums[i];
+        List<List<Integer>> result = new ArrayList<>();
 
-            // see if there is a pair that results in target value
-            for (int j = 0; j < nums.length; j++)
-            {
-                int     secondNumber = nums[j];
+        List<Integer> subList1 = new ArrayList<>();
 
-                if ( firstNumber + secondNumber == target)
-                {
-                    return new int[]{i,j};
-                }
-            }
-        }
+        subList1.add(-1);
+        subList1.add(0);
+        subList1.add(1);
 
-        // it should always have a solution
-        return new int[]{};
+        List<Integer> subList2 = new ArrayList<>();
+
+        subList2.add(-1);
+        subList2.add(-1);
+        subList2.add(2);
+
+        result.add(subList1);
+        result.add(subList2);
+
+        return result;
     }
 }

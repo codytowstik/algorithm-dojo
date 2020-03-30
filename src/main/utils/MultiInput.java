@@ -6,26 +6,27 @@ package main.utils;
  * For an `input.properties` file line, each separate input is delimited by a forward slash (/)
  *
  * ex:
- * Two Sum:
+ * Two Sum
  * 2,7,11,15/9=0,1
  *
  * input1 = [2,7,11,15]
  * input2 = 9 (target)
  */
-public class MultiInput
+public final class MultiInput
 {
     public static final String INPUT_DELIMETER = "/";
 
     public final String originalInput;
     public final String[] inputs;
 
-    public MultiInput(Object input)
+    /**
+     * @param rawInput raw input from properties e.g. 2,7,11,15/9
+     */
+    public MultiInput(Object rawInput)
     {
-        String  inputString = (String) input;
+        originalInput = (String) rawInput;
 
-        originalInput = inputString;
-
-        this.inputs = inputString.split(INPUT_DELIMETER);
+        this.inputs = originalInput.split(INPUT_DELIMETER);
     }
 
     /**
