@@ -42,9 +42,7 @@ class Solution2 extends Solution
 
             // for each other number with greater index,
 
-            int indexToCheck = i + 1;
-
-            int[] subArray = Arrays.copyOfRange(nums, 0, i);
+            int[] subArray = copyArrayMinusIndex(nums, i);
 
             // if subarray has at least two values (since this is three sum)
 
@@ -59,7 +57,7 @@ class Solution2 extends Solution
                     int second = tupleResult[0];
                     int third = tupleResult[1];
 
-                    List<Integer> resultTriplet = createResult(first, second, third);
+                    List<Integer> resultTriplet = createOrderedResults(first, second, third);
 
                     addResult(resultTriplet, resultTriplets, existingResults);
                 }
@@ -72,18 +70,23 @@ class Solution2 extends Solution
     /**
      * Create an ordered 3-sized list out of the given inputs.
      *
-     * @param one first num
-     * @param two second num
+     * @param one   first num
+     * @param two   second num
      * @param three third num
-     * @return a list of the given inputs
+     * @return an ordered list of the given numbers
      */
-    public List<Integer> createResult(int one, int two, int three)
+    public List<Integer> createOrderedResults(int one, int two, int three)
     {
         List<Integer> result = new ArrayList<>(3);
 
-        result.add(one);
-        result.add(two);
-        result.add(three);
+        int minValue = Math.min(one, Math.min(two, three));
+        int maxValue = Math.max(one, Math.max(two, three));
+
+        int middleValue = (one + two + three) - minValue - maxValue;
+
+        result.add(minValue);
+        result.add(middleValue);
+        result.add(maxValue);
 
         return result;
     }
@@ -92,18 +95,13 @@ class Solution2 extends Solution
      * Check if the hashcode of the given result is in the existingResultsHash set.
      * If not, add the result to the list of results (and result hashes)
      *
-     * @param result the result to check
-     * @param results the set of results to add to
+     * @param result              the result to check
+     * @param results             the set of results to add to
      * @param existingResultsHash a set of hashes for existing result sets.
      */
     public void addResult(List<Integer> result, List<List<Integer>> results, Set<Integer> existingResultsHash)
     {
-        // copy the list so it doesn't affect our output, we are just checking if order matters
-        List<Integer> resultOrdered = new ArrayList<>(result);
-
-        Collections.sort(resultOrdered);
-
-        int currentResultHash = resultOrdered.hashCode();
+        int currentResultHash = result.hashCode();
 
         if (!existingResultsHash.contains(currentResultHash))
         {
@@ -138,5 +136,22 @@ class Solution2 extends Solution
         }
 
         return new int[]{};
+    }
+
+    private int[] copyArrayMinusIndex(int[] original, int index)
+    {
+        int[] copy = new int[original.length - 1];
+
+        int copyIndex = 0;
+
+        for (int i = 0; i < original.length; i++)
+        {
+            if (i != index)
+            {
+                copy[copyIndex++] = original[i];
+            }
+        }
+
+        return copy;
     }
 }

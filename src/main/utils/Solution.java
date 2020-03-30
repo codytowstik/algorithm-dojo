@@ -10,7 +10,7 @@ import java.util.Set;
 
 public abstract class Solution
 {
-    private static final int COLUMN_WIDTH = 24;
+    private static final int COLUMN_WIDTH = 64;
 
     private final Set<Result> results = new LinkedHashSet<>();
 
