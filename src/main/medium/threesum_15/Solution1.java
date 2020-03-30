@@ -8,6 +8,15 @@ import java.util.*;
 /**
  * Solution1.
  *
+ * Runtime: O(n^3)
+ * for each number,
+ *   for each other number with greater index,
+ *     see if there is a value (with greater index) that sums us to zero
+ *
+ * Space: 0(n)
+ *
+ * We store the hash of each triplet (ordered) to check for duplicate results
+ *
  * Same as solution0, checking if we care about the order within a triplet.
  * Since values aren't ordered, we can't rely on hashcode .. but we are
  * just checking for expected output format so we will naively sort each result triplet.
