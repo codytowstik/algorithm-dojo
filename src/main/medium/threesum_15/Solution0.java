@@ -6,14 +6,18 @@ import main.utils.Solution;
 import java.util.*;
 
 /**
- * Solution0.
+ * Solution0 - Brute Force, ordered output
  *
- * Naive solution.
+ * Time Limit Exceeded
  *
- * Runtime: O(n^2)
- * Space: O(1)
+ * Runtime: O(n^3)
+ * for each number,
+ * for each other number with greater index,
+ * see if there is a value (with greater index) that sums us to zero
  *
- * For each number, see if any other number sums up to the target. If so, save indices and return them.
+ * Space: 0(n)
+ *
+ * We store the hash of each triplet (ordered) to check for duplicate results
  */
 class Solution0 extends Solution
 {
