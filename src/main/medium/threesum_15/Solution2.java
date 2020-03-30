@@ -110,4 +110,32 @@ class Solution2 extends Solution
             existingResultsHash.add(currentResultHash);
         }
     }
+
+    /**
+     * Like two sum, but we return a tuple of values rather than indices.
+     * @param nums
+     * @param target
+     * @return
+     */
+    public int[] twoSumValues(int[] nums, int target)
+    {
+        Set<Integer> valueSet = new HashSet<>(nums.length - 1, 1);
+
+        // store the values into a map with <key,value> == <value,index>
+        // skip the first value since obviously we need a pair
+        for (int index = 0; index < nums.length; index++)
+        {
+            int baseValue = nums[index];
+            int complement = target - baseValue;
+
+            if (valueSet.contains(complement))
+            {
+                return new int[]{baseValue, complement};
+            }
+
+            valueSet.add(baseValue);
+        }
+
+        return new int[]{};
+    }
 }

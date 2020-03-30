@@ -44,17 +44,17 @@ class Solution3 extends Solution
         // skip the first value since obviously we need a pair
         for (int index = 1; index < nums.length; index++)
         {
-            int     secondValue = nums[index];
-            int     requiredValue = target - secondValue;
+            int     baseValue = nums[index];
+            int     complement = target - baseValue;
 
-            if (processedValues.containsKey(requiredValue))
+            if (processedValues.containsKey(complement))
             {
-                int firstValueIndex = processedValues.get(requiredValue);
+                int complementIndex = processedValues.get(complement);
 
-                return new int[]{firstValueIndex, index};
+                return new int[]{complementIndex, index};
             }
 
-            processedValues.put( secondValue, index);
+            processedValues.put( baseValue, index);
         }
 
         // it should always have a solution
