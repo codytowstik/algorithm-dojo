@@ -37,8 +37,7 @@ class Solution2 extends Solution
 
         for (int i = 0; i < nums.length; i++)
         {
-            // since we want to sum to zero, target is inverse of current number
-            int target = nums[i] * -1;
+            int baseValue = nums[i];
 
             // for each other number with greater index,
 
@@ -48,14 +47,13 @@ class Solution2 extends Solution
 
             if (subArray.length >= 2)
             {
-                int[] tupleResult = twoSumValues(subArray, target);
+                List<List<Integer>> results = twoSumValues(subArray, baseValue);
 
-                // if we found results, add them!
-                if (tupleResult.length != 0)
+                for (List<Integer> result : results)
                 {
-                    int first = nums[i];
-                    int second = tupleResult[0];
-                    int third = tupleResult[1];
+                    int first = result.get(0);
+                    int second = result.get(1);
+                    int third = result.get(2);
 
                     List<Integer> resultTriplet = createOrderedResults(first, second, third);
 
@@ -116,8 +114,13 @@ class Solution2 extends Solution
      * @param target
      * @return
      */
-    public int[] twoSumValues(int[] nums, int target)
+    public List<List<Integer>> twoSumValues(int[] nums, int target)
     {
+        List<List<Integer>>   allResults = new ArrayList<>();
+
+        // since we want to sum to zero, target is inverse of current number
+        int inverseTarget = target * -1;
+
         Set<Integer> valueSet = new HashSet<>(nums.length - 1, 1);
 
         // store the values into a map with <key,value> == <value,index>
@@ -125,17 +128,24 @@ class Solution2 extends Solution
         for (int index = 0; index < nums.length; index++)
         {
             int baseValue = nums[index];
-            int complement = target - baseValue;
+            int complement = inverseTarget - baseValue;
 
             if (valueSet.contains(complement))
             {
-                return new int[]{baseValue, complement};
+                List<Integer> result = new ArrayList<>();
+
+
+                result.add(target);
+                result.add(baseValue);
+                result.add(complement);
+
+                allResults.add(result);
             }
 
             valueSet.add(baseValue);
         }
 
-        return new int[]{};
+        return allResults;
     }
 
     private int[] copyArrayMinusIndex(int[] original, int index)
