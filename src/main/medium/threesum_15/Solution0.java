@@ -28,23 +28,48 @@ class Solution0 extends Solution
 
     public List<List<Integer>> threeSum(int[] nums)
     {
-        List<List<Integer>> result = new ArrayList<>();
+        // for each number,
+        //   for each other number with greater index,
+        //     see if there is a value (with greater index) that sums us to zero
 
-        List<Integer> subList1 = new ArrayList<>();
+        List<List<Integer>> resultTriplets = new ArrayList<>();
 
-        subList1.add(-1);
-        subList1.add(1);
-        subList1.add(0);
+        // for each number
 
-        List<Integer> subList2 = new ArrayList<>();
+        for (int i = 0; i < nums.length; i++)
+        {
+            int firstValue = nums[i];
 
-        subList2.add(0);
-        subList2.add(2);
-        subList2.add(-2);
+            // for each other number with greater index,
 
-        result.add(subList1);
-        result.add(subList2);
+            for (int j = (i + 1); j < nums.length; j++)
+            {
 
-        return result;
+                int secondValue = nums[j];
+                int twoValueSum = firstValue + secondValue;
+
+                // see if there is a value (with greater index) that sums us to zero
+
+                for (int k = (j + 1); k < nums.length; k++)
+                {
+                    int thirdValue = nums[k];
+                    int threeValueSum = twoValueSum + thirdValue;
+
+                    if (threeValueSum == 0)
+                    {
+                        List<Integer> resultTriplet = new ArrayList<>();
+
+                        resultTriplet.add(firstValue);
+                        resultTriplet.add(secondValue);
+                        resultTriplet.add(thirdValue);
+
+                        // append the result triplet
+                        resultTriplets.add(resultTriplet);
+                    }
+                }
+            }
+        }
+
+        return resultTriplets;
     }
 }
