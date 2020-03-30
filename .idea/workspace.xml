@@ -2,30 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34f871cd-4740-4420-b6b9-4b7ca22bd1d2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/3Sum.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/MainClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/Solution0.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/Solution1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/Solution2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/Solution3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/SolutionCleaned.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/input.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easyInterview/palindrome_9/Approach.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/palindrome_9/Approach.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easyInterview/palindrome_9/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/palindrome_9/MainClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easyInterview/palindrome_9/Solution0.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/palindrome_9/Solution0.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easyInterview/palindrome_9/Solution1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/palindrome_9/Solution1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easyInterview/palindrome_9/SolutionCleaned.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/palindrome_9/SolutionCleaned.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easyInterview/palindrome_9/input.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/palindrome_9/input.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easyInterview/palindrome_9/js/mainTry.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/palindrome_9/js/mainTry.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easyInterview/reverse_integer_7/Approach.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/reverse_integer_7/Approach.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easyInterview/reverse_integer_7/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/reverse_integer_7/MainClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easyInterview/reverse_integer_7/Solution0.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/reverse_integer_7/Solution0.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easyInterview/reverse_integer_7/Solution1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/reverse_integer_7/Solution1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easyInterview/reverse_integer_7/Solution2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/reverse_integer_7/Solution2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easyInterview/reverse_integer_7/SolutionCleaned.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/reverse_integer_7/SolutionCleaned.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easyInterview/reverse_integer_7/input.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/reverse_integer_7/input.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easyInterview/reverse_integer_7/js/mainTry.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/reverse_integer_7/js/mainTry.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easyInterview/two_sum_1/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/two_sum_1/MainClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easyInterview/two_sum_1/Solution0.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/two_sum_1/Solution0.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easyInterview/two_sum_1/Solution1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/two_sum_1/Solution1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easyInterview/two_sum_1/Solution2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/two_sum_1/Solution2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easyInterview/two_sum_1/Solution3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/two_sum_1/Solution3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easyInterview/two_sum_1/SolutionCleaned.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/two_sum_1/SolutionCleaned.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easyInterview/two_sum_1/TwoSum.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/two_sum_1/TwoSum.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easyInterview/two_sum_1/input.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/two_sum_1/input.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/easy/reverse_integer_7/Solution2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/reverse_integer_7/Solution2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/easy/two_sum_1/Solution0.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/two_sum_1/Solution0.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/easy/two_sum_1/Solution1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/two_sum_1/Solution1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/easy/two_sum_1/Solution2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/two_sum_1/Solution2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/easy/two_sum_1/Solution3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/two_sum_1/Solution3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/easy/two_sum_1/SolutionCleaned.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/two_sum_1/SolutionCleaned.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/threesum_15/MainClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/threesum_15/Solution0.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/threesum_15/Solution1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/threesum_15/SolutionCleaned.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/threesum_15/input_15.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/utils/MultiInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/MultiInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/utils/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/Solution.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,9 +44,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/threesum_15/MainClass.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectConfigurationFiles">
     <option name="files">
@@ -72,7 +67,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/easyInterview/two_sum_1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/medium/threesum_15" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -81,35 +76,23 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/palindrome" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/medium/threesum_15" />
+      <recent name="$PROJECT_DIR$/src/main/easyInterview/two_sum_1" />
+      <recent name="$PROJECT_DIR$/src/main/easyInterview" />
+      <recent name="$PROJECT_DIR$/src/main/easyInterview/removeDuplicatesSortedArray" />
+      <recent name="$PROJECT_DIR$/src/main/threesum_15" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="main.easyInterview.two_sum_1" />
       <recent name="main.easyInterview.reverse_integer_7" />
       <recent name="main.palindrome" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/easyInterview/two_sum_1" />
-      <recent name="$PROJECT_DIR$/src/main/easyInterview" />
-      <recent name="$PROJECT_DIR$/src/main/easyInterview/removeDuplicatesSortedArray" />
-      <recent name="$PROJECT_DIR$/src/main/threesum_15" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/palindrome" />
     </key>
   </component>
   <component name="RunManager" selected="Application.MainClass (4)">
-    <configuration name="MainClass (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.threesum_15.MainClass" />
-      <module name="leetcode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="main.threesum_15.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MainClass (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.easyInterview.palindrome_9.MainClass" />
       <module name="leetcode" />
@@ -188,6 +171,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.medium.threesum_15.MainClass" />
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.medium.threesum_15.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainClass (4)" />
@@ -214,7 +210,7 @@
       <workItem from="1585190963485" duration="13685000" />
       <workItem from="1585204714232" duration="6697000" />
       <workItem from="1585348081115" duration="9038000" />
-      <workItem from="1585592944627" duration="1051000" />
+      <workItem from="1585592944627" duration="1736000" />
     </task>
     <task id="LOCAL-00001" summary="moved files around">
       <created>1585193165740</created>
@@ -314,7 +310,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585593750116</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="renamed folder">
+      <created>1585594002714</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1585594002714</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,7 +354,8 @@
     <MESSAGE value="* one pass two sum" />
     <MESSAGE value="cleaned two sum" />
     <MESSAGE value="twosum readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="twosum readme" />
+    <MESSAGE value="renamed folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="renamed folder" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3886" y="985" width="308" height="244" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1585190830466">
@@ -366,10 +370,10 @@
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
     <state x="4144" y="759" key="#xdebugger.evaluate/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585354055190" />
-    <state x="3463" y="667" width="1154" height="859" key="CommitChangelistDialog2" timestamp="1585593749937">
+    <state x="3463" y="667" width="1154" height="859" key="CommitChangelistDialog2" timestamp="1585594002613">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state x="3463" y="667" width="1154" height="859" key="CommitChangelistDialog2/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585593749937" />
+    <state x="3463" y="667" width="1154" height="859" key="CommitChangelistDialog2/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585594002613" />
     <state x="2260" y="127" width="3570" height="1933" key="DiffContextDialog" timestamp="1585195914070">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>

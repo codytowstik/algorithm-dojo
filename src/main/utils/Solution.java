@@ -1,7 +1,5 @@
 package main.utils;
 
-import main.easyInterview.reverse_integer_7.MainClass;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;

@@ -28,8 +28,8 @@ class Solution3 extends Solution
     {
         MultiInput multiInput = (MultiInput) input;
 
-        int[] nums = multiInput.getArrayInt(0);
-        int target = multiInput.getInt(1);
+        int[] nums = multiInput.parseArrayInt(0);
+        int target = multiInput.parseInt(1);
 
         return twoSum(nums, target);
     }

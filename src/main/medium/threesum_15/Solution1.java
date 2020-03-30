@@ -1,4 +1,4 @@
-package main.easy.two_sum_1;
+package main.medium.threesum_15;
 
 import main.utils.MultiInput;
 import main.utils.Solution;

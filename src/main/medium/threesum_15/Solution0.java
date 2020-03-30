@@ -1,10 +1,12 @@
-package main.easy.two_sum_1;
+package main.medium.threesum_15;
 
 import main.utils.MultiInput;
 import main.utils.Solution;
 
 /**
- * Solution0 - Brute Force.
+ * Solution0.
+ *
+ * Naive solution.
  *
  * Runtime: O(n^2)
  * Space: O(1)
@@ -22,7 +24,7 @@ class Solution0 extends Solution
         return twoSum(nums, target);
     }
 
-    public int[] twoSum(int[] nums, int target)
+    public List<List<Integer>> threeSum(int[] nums)
     {
         // for each number
         for (int i = 0; i < nums.length; i++)

@@ -1,5 +1,17 @@
 package main.utils;
 
+/**
+ * Multiple input class.
+ *
+ * For an `input.properties` file line, each separate input is delimited by a forward slash (/)
+ *
+ * ex:
+ * Two Sum:
+ * 2,7,11,15/9=0,1
+ *
+ * input1 = [2,7,11,15]
+ * input2 = 9 (target)
+ */
 public class MultiInput
 {
     public static final String INPUT_DELIMETER = "/";
@@ -16,12 +28,32 @@ public class MultiInput
         this.inputs = inputString.split(INPUT_DELIMETER);
     }
 
-    public int getInt(int inputNum)
+    /**
+     * Get the specified input as an int.
+     *
+     * ex:
+     * 2,7,11,15/9=0,1
+     * getInt(1) = 9
+     *
+     * @param inputNum the nth input to parse
+     * @return the parsed input as an `int`
+     */
+    public int parseInt(int inputNum)
     {
         return Integer.parseInt(inputs[inputNum]);
     }
 
-    public int[] getArrayInt(int inputNum)
+    /**
+     * Get the specified input as an array.
+     *
+     * ex:
+     *  2,7,11,15/9=0,1
+     *  getArrayInt(0) => [2,7,11,15]
+     *
+     * @param inputNum the nth input to parse
+     * @return the parsed input as an `int[]`
+     */
+    public int[] parseArrayInt(int inputNum)
     {
         // get our comma separated list of values e.g. 1,2,3
         String      input = inputs[inputNum];
