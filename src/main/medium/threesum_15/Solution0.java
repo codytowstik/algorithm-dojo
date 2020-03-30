@@ -33,14 +33,14 @@ class Solution0 extends Solution
         List<Integer> subList1 = new ArrayList<>();
 
         subList1.add(-1);
-        subList1.add(0);
         subList1.add(1);
+        subList1.add(0);
 
         List<Integer> subList2 = new ArrayList<>();
 
-        subList2.add(-1);
-        subList2.add(-1);
+        subList2.add(0);
         subList2.add(2);
+        subList2.add(-2);
 
         result.add(subList1);
         result.add(subList2);
