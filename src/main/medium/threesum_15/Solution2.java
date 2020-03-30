@@ -25,6 +25,9 @@ class Solution2 extends Solution
 
     public List<List<Integer>> threeSum(int[] nums)
     {
+
+        Arrays.sort(nums);
+
         // for each number,
         //   for each other number with greater index,
         //     see if there is a value (with greater index) that sums us to zero

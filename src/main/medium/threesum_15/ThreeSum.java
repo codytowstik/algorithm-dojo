@@ -7,7 +7,8 @@ import main.utils.Utils;
 import java.util.Map;
 import java.util.Properties;
 
-public class MainClass {
+public class ThreeSum
+{
 
     private static final String INPUT_FILE_NAME = "input.properties";
 
@@ -15,7 +16,7 @@ public class MainClass {
 
     public static void main( String[] args )
     {
-        Properties  expectedResults = Solution.loadExpectedResults( MainClass.class, INPUT_FILE_NAME );
+        Properties  expectedResults = Solution.loadExpectedResults( ThreeSum.class, INPUT_FILE_NAME );
 
         for ( Map.Entry<Object, Object> entry: expectedResults.entrySet() )
         {
