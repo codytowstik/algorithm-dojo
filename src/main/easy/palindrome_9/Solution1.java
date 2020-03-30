@@ -1,4 +1,4 @@
-package main.easyInterview.palindrome_9;
+package main.easy.palindrome_9;
 
 import main.utils.Solution;
 

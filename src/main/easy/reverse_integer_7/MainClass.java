@@ -1,8 +1,6 @@
-package main.easyInterview.two_sum_1;
+package main.easy.reverse_integer_7;
 
-import main.utils.MultiInput;
 import main.utils.Solution;
-import main.utils.Utils;
 
 import java.util.Map;
 import java.util.Properties;
@@ -11,7 +9,7 @@ public class MainClass {
 
     private static final String INPUT_FILE_NAME = "input.properties";
 
-    private static final Solution TEST_CLASS = new Solution3();
+    private static final Solution TEST_CLASS = new Solution2();
 
     public static void main( String[] args )
     {
@@ -19,19 +17,21 @@ public class MainClass {
 
         for ( Map.Entry<Object, Object> entry: expectedResults.entrySet() )
         {
-            MultiInput  multiInput = new MultiInput(entry.getKey());
+            String  input = (String) entry.getKey();
+
+            int     numericInput = Integer.parseInt(input);
 
             long    start = System.nanoTime();
 
-            // int[] twoSum(int[] nums, int target)
-            Object  result = TEST_CLASS.execute(multiInput);
+            // reverseInteger(int)
+            Object  result = TEST_CLASS.execute(numericInput);
 
             long    totalTimeNano = System.nanoTime() - start;
 
             String  expectedResult = (String) entry.getValue();
-            String  actualResult = Utils.parseIntArray(result);
+            String  actualResult = String.valueOf(result);
 
-            TEST_CLASS.saveResult(multiInput.originalInput, expectedResult, actualResult, totalTimeNano);
+            TEST_CLASS.saveResult(input, expectedResult, actualResult, totalTimeNano);
         }
 
         TEST_CLASS.validateResults();

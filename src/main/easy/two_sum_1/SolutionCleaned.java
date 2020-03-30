@@ -1,4 +1,4 @@
-package main.easyInterview.two_sum_1;
+package main.easy.two_sum_1;
 
 import main.utils.MultiInput;
 import main.utils.Solution;
@@ -22,7 +22,7 @@ import java.util.Map;
  *      - if not, add the current value to the map
  *      - if yes, return
  */
-class Solution3 extends Solution
+class SolutionCleaned extends Solution
 {
     public Object execute(Object input)
     {
@@ -36,28 +36,22 @@ class Solution3 extends Solution
 
     public int[] twoSum(int[] nums, int target)
     {
-        Map<Integer,Integer>     processedValues = new HashMap<>( nums.length-1, 1 );
+        Map<Integer,Integer>     processedValues = new HashMap<>( nums.length-2, 1 );
 
         processedValues.put(nums[0], 0);
 
-        // store the values into a map with <key,value> == <value,index>
-        // skip the first value since obviously we need a pair
         for (int index = 1; index < nums.length; index++)
         {
-            int     secondValue = nums[index];
-            int     requiredValue = target - secondValue;
+            int     requiredValue = target - nums[index];
 
             if (processedValues.containsKey(requiredValue))
             {
-                int firstValueIndex = processedValues.get(requiredValue);
-
-                return new int[]{firstValueIndex, index};
+                return new int[]{processedValues.get(requiredValue), index};
             }
 
-            processedValues.put( secondValue, index);
+            processedValues.put(nums[index], index);
         }
 
-        // it should always have a solution
         return new int[]{};
     }
 }

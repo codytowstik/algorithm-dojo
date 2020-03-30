@@ -1,10 +1,7 @@
-package main.easyInterview.palindrome_9;
+package main.easy.palindrome_9;
 
 import main.utils.Solution;
 
-import java.io.*;
-import java.lang.reflect.InvocationTargetException;
-import java.net.URL;
 import java.util.Map;
 import java.util.Properties;
 

@@ -1,4 +1,4 @@
-package main.easyInterview.two_sum_1;
+package main.easy.two_sum_1;
 
 import main.utils.MultiInput;
 import main.utils.Solution;

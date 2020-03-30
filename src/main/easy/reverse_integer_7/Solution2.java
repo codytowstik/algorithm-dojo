@@ -1,4 +1,4 @@
-package main.easyInterview.reverse_integer_7;
+package main.easy.reverse_integer_7;
 
 import main.utils.Solution;
 
