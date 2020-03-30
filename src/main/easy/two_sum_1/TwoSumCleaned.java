@@ -22,7 +22,7 @@ import java.util.Map;
  *      - if not, add the current value to the map
  *      - if yes, return
  */
-class SolutionCleaned extends Solution
+public class TwoSumCleaned extends Solution
 {
     public Object execute(Object input)
     {
@@ -36,7 +36,7 @@ class SolutionCleaned extends Solution
 
     public int[] twoSum(int[] nums, int target)
     {
-        Map<Integer,Integer>     processedValues = new HashMap<>( nums.length-2, 1 );
+        Map<Integer, Integer> processedValues = new HashMap<>(nums.length - 2, 1);
 
         processedValues.put(nums[0], 0);
 
