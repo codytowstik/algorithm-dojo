@@ -3,64 +3,116 @@ package main.medium.threesum_15;
 import main.utils.MultiInput;
 import main.utils.Solution;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 /**
- * Solution1.
+ * Solution0.
  *
- * 2ms, 65.1%
- * 40.2mb, 5.65%
+ * Naive solution.
  *
- * Runtime: O(n)
- * Space: O(n)
+ * Runtime: O(n^2)
+ * Space: O(1)
  *
- * Two passes.
- * Pass 1: Load each value into a map, storing the index as the value.
- * Pass 2: See if there is a value in the map that would hit our target sum.
+ * For each number, see if any other number sums up to the target. If so, save indices and return them.
  */
 class Solution1 extends Solution
 {
-    public Object execute(Object input)
-    {
-        MultiInput multiInput = (MultiInput) input;
+    public Object execute(Object input) {
+        MultiInput      multiInput = (MultiInput) input;
 
-        int[] nums = multiInput.parseArrayInt(0);
-        int target = multiInput.parseInt(1);
+        int[]           nums = multiInput.parseArrayInt(0);
 
-        return twoSum(nums, target);
+        return threeSum(nums);
     }
 
-    public int[] twoSum(int[] nums, int target)
+    public List<List<Integer>> threeSum(int[] nums)
     {
-        Map<Integer,Integer>     processedValues = new HashMap<>( nums.length );
+        // for each number,
+        //   for each other number with greater index,
+        //     see if there is a value (with greater index) that sums us to zero
 
-        // store the values into a map with <key,value> == <value,index>
-        for (int index = 0; index < nums.length; index++)
+        List<List<Integer>> resultTriplets = new ArrayList<>();
+
+        Set<Integer> existingResults = new HashSet<>();
+
+        // for each number
+
+        for (int i = 0; i < nums.length; i++)
         {
-            int     inputNumber = nums[index];
+            int firstValue = nums[i];
 
-            processedValues.put( inputNumber, index);
-        }
+            // for each other number with greater index,
 
-        // for each value, see if there is a pair that results in the value
-
-        for (int index = 0; index < nums.length; index++)
-        {
-            int firstValue = nums[index];
-
-            int requiredValue = target - firstValue;
-
-            Integer pairIndex = processedValues.get(requiredValue);
-
-            // if we didn't find a match or the index is the same as the current number, no dice
-            if ((pairIndex != null) && (pairIndex != index))
+            for (int j = (i + 1); j < nums.length; j++)
             {
-                return new int[]{index, pairIndex};
+
+                int secondValue = nums[j];
+                int twoValueSum = firstValue + secondValue;
+
+                // see if there is a value (with greater index) that sums us to zero
+
+                for (int k = (j + 1); k < nums.length; k++)
+                {
+                    int thirdValue = nums[k];
+                    int threeValueSum = twoValueSum + thirdValue;
+
+                    if (threeValueSum == 0)
+                    {
+                        List<Integer>   resultTriplet = createOrderedResults(firstValue, secondValue, thirdValue);
+
+                        // append the result triplet
+                        addResult(resultTriplet, resultTriplets, existingResults );
+                    }
+                }
             }
         }
 
-        // it should always have a solution
-        return new int[]{};
+        return resultTriplets;
+    }
+
+    /**
+     * Create an ordered 3-sized list out of the given inputs.
+     *
+     * @param one
+     * @param two
+     * @param three
+     * @return
+     */
+    public List<Integer> createOrderedResults(int one, int two, int three)
+    {
+        List<Integer> result = new ArrayList<>(3);
+
+        int minValue = Math.min(one, Math.min(two, three));
+        int maxValue = Math.max(one, Math.max(two, three));
+
+        int middleValue = (one+two+three) - minValue - maxValue;
+
+        result.add(minValue);
+        result.add(middleValue);
+        result.add(maxValue);
+
+        return result;
+    }
+
+    /**
+     * Check if the hashcode of the given result is in the existingResultsHash set.
+     * If not, add the result to the list of results (and result hashes)
+     *
+     * @param result the result to check
+     * @param results the set of results to add to
+     * @param existingResultsHash a set of hashes for existing result sets.
+     */
+    public void addResult(List<Integer> result, List<List<Integer>> results, Set<Integer> existingResultsHash)
+    {
+        int currentResultHash = result.hashCode();
+
+        if (!existingResultsHash.contains(currentResultHash))
+        {
+            results.add(result);
+            existingResultsHash.add(currentResultHash);
+        }
     }
 }
