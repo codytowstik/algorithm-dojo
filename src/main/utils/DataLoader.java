@@ -4,11 +4,11 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URL;
-import java.util.Properties;
+import java.util.*;
 
 public final class DataLoader
 {
-    public static Properties loadExpectedResults(Class clazz, String propertiesFileName )
+    public static Map<String,String> loadExpectedResults(Class clazz, String propertiesFileName )
     {
         Properties expectedResults = new Properties();
 
@@ -24,6 +24,21 @@ public final class DataLoader
             e.printStackTrace();
         }
 
-        return expectedResults;
+        Set<String>     rawInputs = expectedResults.stringPropertyNames();
+
+        List<String>    sortedRawInputs = new ArrayList<>(rawInputs);
+
+        Collections.sort(sortedRawInputs);
+
+        LinkedHashMap<String, String>   orderedInputOutputs = new LinkedHashMap<>();
+
+        for (String sortedRawInput : sortedRawInputs)
+        {
+            String rawOutput = expectedResults.getProperty(sortedRawInput);
+
+            orderedInputOutputs.put(sortedRawInput, rawOutput);
+        }
+
+        return orderedInputOutputs;
     }
 }

@@ -14,9 +14,9 @@ public class MainClass {
 
     public static void main( String[] args )
     {
-        Properties  expectedResults = DataLoader.loadExpectedResults( MainClass.class, INPUT_FILE_NAME );
+        Map<String,String>  expectedResults = DataLoader.loadExpectedResults( MainClass.class, INPUT_FILE_NAME );
 
-        for ( Map.Entry<Object, Object> entry: expectedResults.entrySet() )
+        for ( Map.Entry<String, String> entry: expectedResults.entrySet() )
         {
             String  input = (String) entry.getKey();
 

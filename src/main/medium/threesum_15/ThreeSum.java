@@ -17,9 +17,9 @@ public class ThreeSum
 
     public static void main( String[] args )
     {
-        Properties  expectedResults = DataLoader.loadExpectedResults( ThreeSum.class, INPUT_FILE_NAME );
+        Map<String, String>  expectedResults = DataLoader.loadExpectedResults( ThreeSum.class, INPUT_FILE_NAME );
 
-        for ( Map.Entry<Object, Object> entry: expectedResults.entrySet() )
+        for ( Map.Entry<String, String> entry: expectedResults.entrySet() )
         {
             MultiInput  multiInput = new MultiInput(entry.getKey());
 
