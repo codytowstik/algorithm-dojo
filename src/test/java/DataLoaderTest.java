@@ -1,11 +1,11 @@
 import main.utils.DataLoader;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
-import java.util.Map;
 import java.util.Properties;
 
 public final class DataLoaderTest extends TestBase
 {
-
     @Test
     public void testIterationOrder()
     {
@@ -13,9 +13,13 @@ public final class DataLoaderTest extends TestBase
 
         int expected = 0;
 
-        for (Map.Entry<Object, Object> entry : inputOutput.entrySet())
+        for (Object key : inputOutput.keySet())
         {
+            String keyString = (String) key;
 
+            Assertions.assertEquals(expected, Integer.parseInt(keyString) );
+
+            expected++;
         }
     }
 }
