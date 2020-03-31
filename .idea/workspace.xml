@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34f871cd-4740-4420-b6b9-4b7ca22bd1d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestFileName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/failed_actual_ListListInt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/failed_expected_ListListInt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/failed_input_ArrayInt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/utils/InputOutputParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easy/palindrome_9/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/palindrome_9/MainClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easy/reverse_integer_7/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/reverse_integer_7/MainClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easy/two_sum_1/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/two_sum_1/MainClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/medium/threesum_15/ThreeSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/ThreeSum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/utils/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/DataLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/DataLoaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DataLoaderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +19,8 @@
       <list>
         <option value="JavaScript File" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -202,7 +193,7 @@
       <workItem from="1585348081115" duration="9038000" />
       <workItem from="1585592944627" duration="19737000" />
       <workItem from="1585622727052" duration="25000" />
-      <workItem from="1585677159000" duration="13478000" />
+      <workItem from="1585677159000" duration="15365000" />
     </task>
     <task id="LOCAL-00001" summary="moved files around">
       <created>1585193165740</created>
@@ -463,7 +454,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585687497664</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="* arrayInt_int input">
+      <created>1585691530398</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1585691530398</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -486,7 +484,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/../.." />
     </ignored-roots>
-    <MESSAGE value="* one pass two sum" />
     <MESSAGE value="cleaned two sum" />
     <MESSAGE value="twosum readme" />
     <MESSAGE value="renamed folder" />
@@ -511,7 +508,8 @@
     <MESSAGE value="3sum&#10;solution4 init (try using two sum approach)" />
     <MESSAGE value="testing init" />
     <MESSAGE value="tests running" />
-    <option name="LAST_COMMIT_MESSAGE" value="tests running" />
+    <MESSAGE value="* arrayInt_int input" />
+    <option name="LAST_COMMIT_MESSAGE" value="* arrayInt_int input" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3733" y="898" width="639" height="439" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585605671675">
@@ -538,10 +536,10 @@
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
     <state x="4144" y="759" key="#xdebugger.evaluate/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585354055190" />
-    <state x="3463" y="667" width="1602" height="1343" key="CommitChangelistDialog2" timestamp="1585687497609">
+    <state x="3463" y="667" width="1602" height="1343" key="CommitChangelistDialog2" timestamp="1585691530333">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state x="3463" y="667" width="1602" height="1343" key="CommitChangelistDialog2/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585687497609" />
+    <state x="3463" y="667" width="1602" height="1343" key="CommitChangelistDialog2/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585691530333" />
     <state x="2260" y="127" width="3570" height="1933" key="DiffContextDialog" timestamp="1585604609459">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
@@ -550,22 +548,22 @@
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
     <state x="3818" y="865" width="424" height="491" key="FileChooserDialogImpl/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585191148690" />
-    <state width="3724" height="632" key="GridCell.Tab.0.bottom" timestamp="1585691509539">
+    <state width="3724" height="624" key="GridCell.Tab.0.bottom" timestamp="1585693467751">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="632" key="GridCell.Tab.0.bottom/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585691509539" />
-    <state width="3724" height="632" key="GridCell.Tab.0.center" timestamp="1585691509539">
+    <state width="3724" height="624" key="GridCell.Tab.0.bottom/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585693467751" />
+    <state width="3724" height="624" key="GridCell.Tab.0.center" timestamp="1585693467751">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="632" key="GridCell.Tab.0.center/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585691509539" />
-    <state width="3724" height="632" key="GridCell.Tab.0.left" timestamp="1585691509539">
+    <state width="3724" height="624" key="GridCell.Tab.0.center/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585693467751" />
+    <state width="3724" height="624" key="GridCell.Tab.0.left" timestamp="1585693467751">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="632" key="GridCell.Tab.0.left/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585691509539" />
-    <state width="3724" height="632" key="GridCell.Tab.0.right" timestamp="1585691509539">
+    <state width="3724" height="624" key="GridCell.Tab.0.left/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585693467751" />
+    <state width="3724" height="624" key="GridCell.Tab.0.right" timestamp="1585693467751">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="632" key="GridCell.Tab.0.right/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585691509539" />
+    <state width="3724" height="624" key="GridCell.Tab.0.right/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585693467751" />
     <state width="3724" height="632" key="GridCell.Tab.1.bottom" timestamp="1585691509540">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
@@ -582,18 +580,18 @@
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
     <state width="3724" height="632" key="GridCell.Tab.1.right/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585691509540" />
-    <state x="3545" y="641" width="1284" height="737" key="SettingsEditor" timestamp="1585686725827">
+    <state x="3545" y="641" width="1284" height="737" key="SettingsEditor" timestamp="1585693356695">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state x="3545" y="641" width="1284" height="737" key="SettingsEditor/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585686725827" />
+    <state x="3545" y="641" width="1284" height="737" key="SettingsEditor/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585693356695" />
     <state x="3717" y="989" width="646" height="231" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1585685002719">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
     <state x="3717" y="989" width="646" height="231" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585685002719" />
-    <state x="3568" y="699" width="944" height="796" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585611451670">
+    <state x="3568" y="699" width="944" height="796" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585691860003">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state x="3568" y="699" width="944" height="796" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585611451670" />
+    <state x="3568" y="699" width="944" height="796" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585691860003" />
     <state x="3819" y="810" width="442" height="573" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1585684927577">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>

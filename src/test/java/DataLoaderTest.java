@@ -1,4 +1,5 @@
 import main.utils.DataLoader;
+import main.utils.InputOutputParser;
 import main.utils.MultiInput;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -47,12 +48,10 @@ public final class DataLoaderTest extends TestBase
         expectedIntInputs.add(6);
 
 
-        int propertyIndex = 0;
+        int     propertyIndex = 0;
 
-        for (Map.Entry<String, String> inputOutput : inputOutputs.entrySet())
+        for (String inputs : inputOutputs.keySet())
         {
-            Object      inputs = inputOutput.getKey();
-
             MultiInput  multiInput = new MultiInput(inputs);
 
             int[]       expectedArrayIntInput = expectedArrayIntInputs.get(propertyIndex);
@@ -66,11 +65,38 @@ public final class DataLoaderTest extends TestBase
 
             propertyIndex++;
         }
+
+        Assertions.assertEquals(expectedCount, propertyIndex, "Unexpected property count.");
     }
 
     @Test
     public void test_ArrayInt_Output()
     {
+        String                  testFileName = TestFileName.ARRAYINT_INT__ARRAYINT.getFileName();
+        int                     expectedCount = 3;
 
+        Map<String, String>     inputOutputs = DataLoader.loadExpectedResults(getClass(), testFileName);
+
+        List<int[]>             expectedArrayIntOutputs = new ArrayList<>(expectedCount);
+
+        expectedArrayIntOutputs.add(new int[]{1,2});
+
+        expectedArrayIntOutputs.add(new int[]{0,1});
+
+        expectedArrayIntOutputs.add(new int[]{1,2});
+
+        int     propertyIndex = 0;
+
+        for (String output : inputOutputs.values())
+        {
+            int[]     expectedIntOutput = expectedArrayIntOutputs.get(propertyIndex);
+            int[]     actualArrayIntInput = InputOutputParser.parseArrayInt(output);
+
+            assertEquals(expectedIntOutput, actualArrayIntInput);
+
+            propertyIndex++;
+        }
+
+        Assertions.assertEquals(expectedCount, propertyIndex, "Unexpected property count.");
     }
 }
