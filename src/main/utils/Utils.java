@@ -91,7 +91,7 @@ public final class Utils
          return list
                  .stream()
                  .peek(Collections::sort)
-                 .sorted()
+                 .sorted(new ListComparator<>())
                  .collect(Collectors.toList());
     }
 }
