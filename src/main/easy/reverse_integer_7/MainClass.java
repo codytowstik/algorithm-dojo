@@ -1,5 +1,6 @@
 package main.easy.reverse_integer_7;
 
+import main.utils.DataLoader;
 import main.utils.Solution;
 
 import java.util.Map;
@@ -13,7 +14,7 @@ public class MainClass {
 
     public static void main( String[] args )
     {
-        Properties  expectedResults = Solution.loadExpectedResults( MainClass.class, INPUT_FILE_NAME );
+        Properties  expectedResults = DataLoader.loadExpectedResults( MainClass.class, INPUT_FILE_NAME );
 
         for ( Map.Entry<Object, Object> entry: expectedResults.entrySet() )
         {

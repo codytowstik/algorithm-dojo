@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34f871cd-4740-4420-b6b9-4b7ca22bd1d2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/medium/threesum_15/Solution3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/Solution3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/utils/DataLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/DataLoaderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/TestBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/int-boolean.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/simple.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/string-string.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/easy/palindrome_9/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/palindrome_9/MainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/easy/reverse_integer_7/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/reverse_integer_7/MainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/easy/two_sum_1/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/two_sum_1/MainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/medium/threesum_15/ThreeSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/ThreeSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/utils/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/Solution.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,25 +54,28 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/medium/threesum_15" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resources" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/medium/threesum_15" />
-      <recent name="$PROJECT_DIR$/src/main/easyInterview/two_sum_1" />
-      <recent name="$PROJECT_DIR$/src/main/easyInterview" />
-      <recent name="$PROJECT_DIR$/src/main/easyInterview/removeDuplicatesSortedArray" />
-      <recent name="$PROJECT_DIR$/src/main/threesum_15" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/palindrome" />
+    </key>
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="main.utils.DataLoader" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="main.medium.threesum_15" />
@@ -68,8 +83,12 @@
       <recent name="main.easyInterview.reverse_integer_7" />
       <recent name="main.palindrome" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/palindrome" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
+      <recent name="$PROJECT_DIR$/src/main/medium/threesum_15" />
+      <recent name="$PROJECT_DIR$/src/main/easyInterview/two_sum_1" />
+      <recent name="$PROJECT_DIR$/src/main/easyInterview" />
+      <recent name="$PROJECT_DIR$/src/main/easyInterview/removeDuplicatesSortedArray" />
     </key>
   </component>
   <component name="RunManager" selected="Application.ThreeSum">
@@ -190,7 +209,7 @@
       <workItem from="1585348081115" duration="9038000" />
       <workItem from="1585592944627" duration="19737000" />
       <workItem from="1585622727052" duration="25000" />
-      <workItem from="1585677159000" duration="5671000" />
+      <workItem from="1585677159000" duration="6859000" />
     </task>
     <task id="LOCAL-00001" summary="moved files around">
       <created>1585193165740</created>
@@ -430,7 +449,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585683637949</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="3sum&#10;solution4 init (try using two sum approach)">
+      <created>1585683802036</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1585683802036</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,7 +479,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/../.." />
     </ignored-roots>
-    <MESSAGE value="utils file" />
     <MESSAGE value="optimized two sum solution done, now further optimization" />
     <MESSAGE value="* slightly  optimized 2 pass solution for two sum" />
     <MESSAGE value="* one pass two sum" />
@@ -478,13 +503,18 @@
     <MESSAGE value="3sum&#10;- validated hash collisions are an issue in this Solution&#10;- added example solutions" />
     <MESSAGE value="3sum - init sol3" />
     <MESSAGE value="3sum&#10;- bi-directional solution" />
-    <option name="LAST_COMMIT_MESSAGE" value="3sum&#10;- bi-directional solution" />
+    <MESSAGE value="3sum&#10;solution4 init (try using two sum approach)" />
+    <option name="LAST_COMMIT_MESSAGE" value="3sum&#10;solution4 init (try using two sum approach)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3733" y="898" width="639" height="439" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585605671675">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
     <state x="3733" y="898" width="639" height="439" key="#com.intellij.fileTypes.FileTypeChooser/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585605671675" />
+    <state x="3772" y="883" width="525" height="435" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1585683999403">
+      <screen x="2160" y="0" width="3840" height="2160" />
+    </state>
+    <state x="3772" y="883" width="525" height="435" key="#com.intellij.ide.util.TreeClassChooserDialog/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585683999403" />
     <state x="3886" y="985" width="308" height="244" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1585190830466">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
@@ -493,14 +523,18 @@
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
     <state x="3623" y="762" width="824" height="691" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585190780346" />
+    <state x="3754" y="791" width="571" height="612" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog" timestamp="1585684000900">
+      <screen x="2160" y="0" width="3840" height="2160" />
+    </state>
+    <state x="3754" y="791" width="571" height="612" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585684000900" />
     <state x="4144" y="759" key="#xdebugger.evaluate" timestamp="1585354055190">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
     <state x="4144" y="759" key="#xdebugger.evaluate/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585354055190" />
-    <state x="3463" y="667" width="1602" height="1343" key="CommitChangelistDialog2" timestamp="1585683637890">
+    <state x="3463" y="667" width="1602" height="1343" key="CommitChangelistDialog2" timestamp="1585683801985">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state x="3463" y="667" width="1602" height="1343" key="CommitChangelistDialog2/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585683637890" />
+    <state x="3463" y="667" width="1602" height="1343" key="CommitChangelistDialog2/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585683801985" />
     <state x="2260" y="127" width="3570" height="1933" key="DiffContextDialog" timestamp="1585604609459">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
@@ -541,14 +575,22 @@
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
     <state width="3724" height="632" key="GridCell.Tab.1.right/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585683621282" />
-    <state x="3545" y="641" width="1284" height="737" key="SettingsEditor" timestamp="1585683101894">
+    <state x="3545" y="641" width="1284" height="737" key="SettingsEditor" timestamp="1585684389391">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state x="3545" y="641" width="1284" height="737" key="SettingsEditor/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585683101894" />
+    <state x="3545" y="641" width="1284" height="737" key="SettingsEditor/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585684389391" />
+    <state x="3717" y="989" width="646" height="215" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1585684961170">
+      <screen x="2160" y="0" width="3840" height="2160" />
+    </state>
+    <state x="3717" y="989" width="646" height="215" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585684961170" />
     <state x="3568" y="699" width="944" height="796" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585611451670">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
     <state x="3568" y="699" width="944" height="796" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585611451670" />
+    <state x="3819" y="810" width="442" height="573" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1585684927577">
+      <screen x="2160" y="0" width="3840" height="2160" />
+    </state>
+    <state x="3819" y="810" width="442" height="573" key="com.intellij.testIntegration.createTest.CreateTestDialog/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585684927577" />
     <state x="3709" y="522" key="run.anything.popup" timestamp="1585194123920">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>

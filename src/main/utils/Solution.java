@@ -16,25 +16,6 @@ public abstract class Solution
 
     public abstract Object execute(Object input);
 
-    public static Properties loadExpectedResults( Class clazz, String propertiesFileName )
-    {
-        Properties expectedResults = new Properties();
-
-        try
-        {
-            URL             url = clazz.getResource(propertiesFileName);
-            File            inputFile = new File(url.getPath());
-            FileInputStream fileInputStream = new FileInputStream(inputFile);
-
-            expectedResults.load(fileInputStream);
-        } catch (IOException e)
-        {
-            e.printStackTrace();
-        }
-
-        return expectedResults;
-    }
-
     public void saveResult(String input, String expectedResult, String actualResult, long executeTime)
     {
         results.add(new Result(input, expectedResult, actualResult, executeTime));

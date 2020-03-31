@@ -1,5 +1,6 @@
 package main.medium.threesum_15;
 
+import main.utils.DataLoader;
 import main.utils.MultiInput;
 import main.utils.Solution;
 import main.utils.Utils;
@@ -16,7 +17,7 @@ public class ThreeSum
 
     public static void main( String[] args )
     {
-        Properties  expectedResults = Solution.loadExpectedResults( ThreeSum.class, INPUT_FILE_NAME );
+        Properties  expectedResults = DataLoader.loadExpectedResults( ThreeSum.class, INPUT_FILE_NAME );
 
         for ( Map.Entry<Object, Object> entry: expectedResults.entrySet() )
         {
