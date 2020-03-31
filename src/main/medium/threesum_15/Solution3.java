@@ -10,166 +10,69 @@ import java.util.*;
  *
  * Runtime: O(n^2)
  *
- * for each number, (n)
- *   2sum (n)
- *   => n * n => n^2
+ * - Sort the input (n*log(n))
+ * - For each number, skipping any duplicate numbers (n)
+ *    do a bidirectional search of remaining numbers to see if a pair adds up to the complement of the base number (n)
  *
- * Space: O(n)
+ * Space: O(1)
  *
- * - we store a hash value for each possible triplet (less than n)
- * - 2sum hashmap, recreated n times
- *
- * 3sum is really like 'two sum' except the 'target' is our current value
+ * We don't need to save any values
  */
 class Solution3 extends Solution
 {
-    public Object execute(Object input) {
-        MultiInput      multiInput = (MultiInput) input;
+    public Object execute(Object input)
+    {
+        MultiInput  multiInput = (MultiInput) input;
 
-        int[]           nums = multiInput.parseArrayInt(0);
+        int[]       nums = multiInput.parseArrayInt(0);
 
         return threeSum(nums);
     }
 
     public List<List<Integer>> threeSum(int[] nums)
     {
-        // for each number,
-        //   for each other number with greater index,
-        //     see if there is a value (with greater index) that sums us to zero
+        List<List<Integer>> result = new LinkedList<>();
 
-        List<List<Integer>> resultTriplets = new ArrayList<>();
+        Arrays.sort(nums);
 
-        Set<Integer> existingResults = new HashSet<>();
-
-        // for each number
-
-        for (int i = 0; i < nums.length; i++)
+        // we can safely skip the last two numbers because there won't be enough for a triplet
+        for (int i = 0; i < nums.length - 2; i++)
         {
-            int baseValue = nums[i];
-
-            // for each other number with greater index,
-
-            int[] subArray = copyArrayMinusIndex(nums, i);
-
-            // if subarray has at least two values (since this is three sum)
-
-            if (subArray.length >= 2)
+            // skip duplicates .. i.e consecutive same values in our now-sorted input
+            // this is what saves us from
+            if ((i == 0) || (nums[i] != nums[i - 1]))
             {
-                List<List<Integer>> results = twoSumValues(subArray, baseValue);
+                // target is negative number we are at (a + b + c = 0 ==> b + c = -a)
+                int target = 0 - nums[i];
 
-                for (List<Integer> result : results)
+                int loIndex = i + 1;
+                int hiIndex = nums.length - 1;
+
+                int lo = nums[loIndex];
+                int hi = nums[hiIndex];
+
+                while (lo < hi)
                 {
-                    int first = result.get(0);
-                    int second = result.get(1);
-                    int third = result.get(2);
+                    if (lo + hi == target)
+                    {
+                        result.add(Arrays.asList(nums[i], lo, hi));
 
-                    List<Integer> resultTriplet = createOrderedResults(first, second, third);
-
-                    addResult(resultTriplet, resultTriplets, existingResults);
+                        hi = nums[--hiIndex];
+                        lo = nums[++loIndex];
+                    }
+                    // target is lower, so we need to decrease the bigger number so move 'hi' index to the left
+                    else if (lo + hi > target)
+                    {
+                        hi = nums[--hiIndex];
+                    }
+                    else
+                    {
+                        lo = nums[++loIndex];
+                    }
                 }
             }
         }
 
-        return resultTriplets;
-    }
-
-    /**
-     * Create an ordered 3-sized list out of the given inputs.
-     *
-     * @param one   first num
-     * @param two   second num
-     * @param three third num
-     * @return an ordered list of the given numbers
-     */
-    public List<Integer> createOrderedResults(int one, int two, int three)
-    {
-        List<Integer> result = new ArrayList<>(3);
-
-        int minValue = Math.min(one, Math.min(two, three));
-        int maxValue = Math.max(one, Math.max(two, three));
-
-        int middleValue = (one + two + three) - minValue - maxValue;
-
-        result.add(minValue);
-        result.add(middleValue);
-        result.add(maxValue);
-
         return result;
-    }
-
-    /**
-     * Check if the hashcode of the given result is in the existingResultsHash set.
-     * If not, add the result to the list of results (and result hashes)
-     *
-     * @param result              the result to check
-     * @param results             the set of results to add to
-     * @param existingResultsHash a set of hashes for existing result sets.
-     */
-    public void addResult(List<Integer> result, List<List<Integer>> results, Set<Integer> existingResultsHash)
-    {
-        int currentResultHash = result.hashCode();
-
-        if (!existingResultsHash.contains(currentResultHash))
-        {
-            results.add(result);
-            existingResultsHash.add(currentResultHash);
-        }
-    }
-
-    /**
-     * Like two sum, but we return a tuple of values rather than indices.
-     * @param nums
-     * @param target
-     * @return
-     */
-    public List<List<Integer>> twoSumValues(int[] nums, int target)
-    {
-        List<List<Integer>>   allResults = new ArrayList<>();
-
-        // since we want to sum to zero, target is inverse of current number
-        int inverseTarget = target * -1;
-
-        Set<Integer> valueSet = new HashSet<>(nums.length - 1, 1);
-
-        // store the values into a map with <key,value> == <value,index>
-        // skip the first value since obviously we need a pair
-        for (int index = 0; index < nums.length; index++)
-        {
-            int baseValue = nums[index];
-            int complement = inverseTarget - baseValue;
-
-            if (valueSet.contains(complement))
-            {
-                List<Integer> result = new ArrayList<>();
-
-
-                result.add(target);
-                result.add(baseValue);
-                result.add(complement);
-
-                allResults.add(result);
-            }
-
-            valueSet.add(baseValue);
-        }
-
-        return allResults;
-    }
-
-    private int[] copyArrayMinusIndex(int[] original, int index)
-    {
-        int[] copy = new int[original.length - 1];
-
-        int copyIndex = 0;
-
-        for (int i = 0; i < original.length; i++)
-        {
-            if (i != index)
-            {
-                copy[copyIndex++] = original[i];
-            }
-        }
-
-        return copy;
     }
 }

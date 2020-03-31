@@ -8,10 +8,14 @@ import java.util.*;
 /**
  * SolutionEx0.
  *
- * Runtime: 20ms, 75%
- * Space: 44mb
+ * Runtime: 19ms, 75%
+ * Space: 43.5mb, 100%
  *
- * 3sum is really like 'two sum' except the 'target' is our current value
+ * Runtime: O(n^2)
+ * Space: O(1)
+ *
+ * uses bi-directional search for each 2Sum sweep of the remaining array.
+ * skip duplicates to avoid duplicates in answer without making a set.
  */
 class SolutionEx0 extends Solution
 {
@@ -25,6 +29,7 @@ class SolutionEx0 extends Solution
 
     public List<List<Integer>> threeSum(int[] nums)
     {
+        // https://leetcode.com/problems/3sum/discuss/7380/Concise-O(N2)-Java-solution
         Arrays.sort(nums);
         List<List<Integer>> res = new LinkedList<>();
 

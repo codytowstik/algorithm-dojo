@@ -17,14 +17,14 @@ import java.util.*;
  * Space: O(n)
  *
  * - we store a hash value for each possible triplet (less than n)
- * - 2sum hashmap, recreated n times
+ * - 2sum hash map, recreated n times
  *
  * This approach tries to track which triplets we have already saved by adding resulting sets hash codes
  * to a map. This is bad for 2 reasons.
- * - triplets can have the same hash value (and computing it is expensive anyways)
+ * - triplets can have the same hash value (and computing it is expensive anyways) .. so this fails on large
+ *   sets of data that have triplets that hash to the same value (collisions)
  * - we are storing a huge amount of data
  */
-
 class Solution2 extends Solution
 {
     public Object execute(Object input) {
