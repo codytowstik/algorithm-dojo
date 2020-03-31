@@ -1,7 +1,9 @@
 package main.utils;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public final class Utils
 {
@@ -75,5 +77,21 @@ public final class Utils
         resultBuilder.setLength(resultBuilder.length() - 1);
 
         return resultBuilder.toString();
+    }
+
+    /**
+     * Sort a `List<List<Integer>>` object .. sorting the inner lists and then
+     * the outer lists.
+     *
+     * @param list the original list
+     * @return the deeply- sorted
+     */
+    public static List<List<Integer>> deepSortListListInteger(List<List<Integer>> list)
+    {
+         return list
+                 .stream()
+                 .peek(Collections::sort)
+                 .sorted()
+                 .collect(Collectors.toList());
     }
 }

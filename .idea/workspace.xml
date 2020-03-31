@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34f871cd-4740-4420-b6b9-4b7ca22bd1d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/utils/InputOutputParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/ArrayInt_ListListInt.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/utils/InputOutputParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/InputOutputParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/DataLoaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DataLoaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestFileName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestFileName.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +197,7 @@
       <workItem from="1585348081115" duration="9038000" />
       <workItem from="1585592944627" duration="19737000" />
       <workItem from="1585622727052" duration="25000" />
-      <workItem from="1585677159000" duration="15365000" />
+      <workItem from="1585677159000" duration="19433000" />
     </task>
     <task id="LOCAL-00001" summary="moved files around">
       <created>1585193165740</created>
@@ -461,7 +465,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585691530398</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="arrayInt output test">
+      <created>1585693480099</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1585693480099</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -484,7 +495,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/../.." />
     </ignored-roots>
-    <MESSAGE value="cleaned two sum" />
     <MESSAGE value="twosum readme" />
     <MESSAGE value="renamed folder" />
     <MESSAGE value="3sum init" />
@@ -509,7 +519,8 @@
     <MESSAGE value="testing init" />
     <MESSAGE value="tests running" />
     <MESSAGE value="* arrayInt_int input" />
-    <option name="LAST_COMMIT_MESSAGE" value="* arrayInt_int input" />
+    <MESSAGE value="arrayInt output test" />
+    <option name="LAST_COMMIT_MESSAGE" value="arrayInt output test" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3733" y="898" width="639" height="439" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585605671675">
@@ -536,10 +547,10 @@
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
     <state x="4144" y="759" key="#xdebugger.evaluate/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585354055190" />
-    <state x="3463" y="667" width="1602" height="1343" key="CommitChangelistDialog2" timestamp="1585691530333">
+    <state x="3463" y="667" width="1602" height="1343" key="CommitChangelistDialog2" timestamp="1585693480041">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state x="3463" y="667" width="1602" height="1343" key="CommitChangelistDialog2/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585691530333" />
+    <state x="3463" y="667" width="1602" height="1343" key="CommitChangelistDialog2/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585693480041" />
     <state x="2260" y="127" width="3570" height="1933" key="DiffContextDialog" timestamp="1585604609459">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
@@ -580,10 +591,10 @@
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
     <state width="3724" height="632" key="GridCell.Tab.1.right/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585691509540" />
-    <state x="3545" y="641" width="1284" height="737" key="SettingsEditor" timestamp="1585693356695">
+    <state x="3545" y="641" width="1284" height="737" key="SettingsEditor" timestamp="1585696409664">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state x="3545" y="641" width="1284" height="737" key="SettingsEditor/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585693356695" />
+    <state x="3545" y="641" width="1284" height="737" key="SettingsEditor/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585696409664" />
     <state x="3717" y="989" width="646" height="231" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1585685002719">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
@@ -604,9 +615,9 @@
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
     <state x="3741" y="712" width="598" height="769" key="refactoring.ChangeSignatureDialog/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585689667917" />
-    <state x="3709" y="522" key="run.anything.popup" timestamp="1585194123920">
+    <state x="3709" y="522" key="run.anything.popup" timestamp="1585695947516">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state x="3709" y="522" key="run.anything.popup/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585194123920" />
+    <state x="3709" y="522" key="run.anything.popup/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585695947516" />
   </component>
 </project>

@@ -14,6 +14,7 @@
 public enum TestFileName
 {
     ARRAYINT_INT__ARRAYINT( "arrayint-int_arrayint.properties"),
+    ARRAYINT__LISTLISTINT( "ArrayInt_ListListInt.properties"),
     INT__BOOLEAN_PROPERTIES("int_boolean.properties"),
     INT__INT_PROPERTIES("simple.properties"),
     STRING__STRING_PROPERTIES("string_string.properties"),
