@@ -48,26 +48,40 @@ class Solution3 extends Solution
                 int loIndex = i + 1;
                 int hiIndex = nums.length - 1;
 
-                int lo = nums[loIndex];
-                int hi = nums[hiIndex];
-
-                while (lo < hi)
+                while (loIndex < hiIndex)
                 {
+                    int lo = nums[loIndex];
+                    int hi = nums[hiIndex];
+
                     if (lo + hi == target)
                     {
                         result.add(Arrays.asList(nums[i], lo, hi));
 
-                        hi = nums[--hiIndex];
-                        lo = nums[++loIndex];
+                        // take care of duplicate values in the remaining numbers
+                        // e.g. given input -2,0,0,2,2
+
+                        while ((loIndex < hiIndex) && (nums[loIndex] == nums[loIndex + 1]))
+                        {
+                            loIndex++;
+                        }
+
+                        while ((loIndex < hiIndex) && (nums[hiIndex] == nums[hiIndex - 1]))
+                        {
+                            hiIndex--;
+                        }
+
+
+                        hiIndex--;
+                        loIndex++;
                     }
                     // target is lower, so we need to decrease the bigger number so move 'hi' index to the left
                     else if (lo + hi > target)
                     {
-                        hi = nums[--hiIndex];
+                        hiIndex--;
                     }
                     else
                     {
-                        lo = nums[++loIndex];
+                        loIndex++;
                     }
                 }
             }
