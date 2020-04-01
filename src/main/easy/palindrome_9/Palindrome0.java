@@ -2,10 +2,11 @@ package main.easy.palindrome_9;
 
 import main.utils.Solution;
 
-class Solution0 extends Solution
+class Palindrome0 implements Palindrome
 {
-    public Object execute(Object input) {
-        return isPalindrome((int) input);
+    public boolean execute(int input)
+    {
+        return isPalindrome(input);
     }
 
     public boolean isPalindrome( int input )

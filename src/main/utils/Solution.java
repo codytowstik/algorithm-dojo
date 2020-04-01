@@ -1,11 +1,6 @@
 package main.utils;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.net.URL;
 import java.util.LinkedHashSet;
-import java.util.Properties;
 import java.util.Set;
 
 public abstract class Solution
@@ -13,8 +8,6 @@ public abstract class Solution
     private static final int COLUMN_WIDTH = 64;
 
     private final Set<Result> results = new LinkedHashSet<>();
-
-    public abstract Object execute(Object input);
 
     public void saveResult(String input, String expectedResult, String actualResult, long executeTime)
     {

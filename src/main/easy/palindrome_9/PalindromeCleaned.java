@@ -2,7 +2,7 @@ package main.easy.palindrome_9;
 
 import main.utils.Solution;
 
-class SolutionCleaned extends Solution
+class PalindromeCleaned extends Solution
 {
     public Object execute(Object input) {
         return isPalindrome((int) input);

@@ -1,16 +1,14 @@
 package main.easy.palindrome_9;
 
 import main.utils.DataLoader;
-import main.utils.Solution;
 
 import java.util.Map;
-import java.util.Properties;
 
 public class MainClass {
 
     private static final String INPUT_FILE_NAME = "input.properties";
 
-    private static final Solution TEST_CLASS = new Solution0();
+    private static final Palindrome TEST_CLASS = new Palindrome0();
 
     public static void main( String[] args )
     {
@@ -18,19 +16,19 @@ public class MainClass {
 
         for ( Map.Entry<String, String> entry: expectedResults.entrySet() )
         {
-            String  input = (String) entry.getKey();
+            String      input = entry.getKey();
 
-            int     numericInput = Integer.parseInt(input);
+            int         numericInput = Integer.parseInt(input);
 
-            long    start = System.nanoTime();
+            long        start = System.nanoTime();
 
             // isPalindrome(int)
-            Object  result = TEST_CLASS.execute(numericInput);
+            boolean     result = TEST_CLASS.execute(numericInput);
 
-            long    totalTimeNano = System.nanoTime() - start;
+            long        totalTimeNano = System.nanoTime() - start;
 
-            String  expectedResult = (String) entry.getValue();
-            String  actualResult = String.valueOf(result);
+            String      expectedResult = entry.getValue();
+            String      actualResult = String.valueOf(result);
 
             TEST_CLASS.saveResult(input, expectedResult, actualResult, totalTimeNano);
         }
