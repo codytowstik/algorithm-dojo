@@ -1,4 +1,4 @@
-package main.utils;
+package main.scratch;
 
 import main.medium.threesum_15.ThreeSum;
 

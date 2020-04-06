@@ -8,7 +8,7 @@ import java.util.*;
 
 public final class DataLoader
 {
-    public static Map<String,String> loadExpectedResults(Class clazz, String propertiesFileName )
+    public static Map<String,String> loadExpectedResults(Class<?> clazz, String propertiesFileName )
     {
         Properties expectedResults = new Properties();
 

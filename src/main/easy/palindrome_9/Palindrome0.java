@@ -1,8 +1,10 @@
 package main.easy.palindrome_9;
 
 import main.utils.Solution;
+import main.utils.SolutionEx;
+import main.utils.SolutionResult;
 
-class Palindrome0 implements Palindrome
+class Palindrome0 implements Palindrome, SolutionEx
 {
     public boolean execute(int input)
     {
