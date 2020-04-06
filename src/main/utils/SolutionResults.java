@@ -1,6 +1,8 @@
 package main.utils;
 
+import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
+import java.util.Map;
 import java.util.Set;
 
 public class SolutionResults
@@ -8,6 +10,7 @@ public class SolutionResults
 	private static final int COLUMN_WIDTH = 64;
 
 	private final Set<SolutionResult> results = new LinkedHashSet<>();
+	private final Map<SolutionResult,Boolean> resultToSuccess = new LinkedHashMap<>();
 
 	public void saveResult(int input, boolean expectedResult, boolean actualResult, long executeTime)
 	{
@@ -25,6 +28,107 @@ public class SolutionResults
 	 */
 	public void validateResults()
 	{
-		//
+		long			averageExecuteTime = 0;
+
+		for (SolutionResult result : results)
+		{
+			int 		input = result.getInput();
+			boolean		expectedResult = result.isExpectedResult();
+			boolean		actualResult = result.isActualResult();
+			long		executeTime = result.getExecuteTime();
+
+			boolean 	success = validateResult(expectedResult, actualResult);
+
+			trackResult(success, result);
+
+			// track total execution time so we can compute average
+			averageExecuteTime += executeTime;
+		}
+
+		// calculate average execute time
+		averageExecuteTime = averageExecuteTime / results.size();
+
+		printResults(averageExecuteTime);
+	}
+
+	private boolean validateResult(boolean expectedResult, boolean actualResult)
+	{
+		return expectedResult == actualResult;
+	}
+
+	private void trackResult(boolean success, SolutionResult solutionResult)
+	{
+		resultToSuccess.put(solutionResult, success);
+	}
+
+	private void printResults(long averageExecuteTime)
+	{
+		for (Map.Entry<SolutionResult, Boolean> entry : resultToSuccess.entrySet())
+		{
+			StringBuilder resultBuilder = new StringBuilder();
+
+			// value should never be null, don't handle *if* it is so it's obvious if its wrong
+			boolean			success = entry.getValue();
+
+			if (success)
+			{
+				resultBuilder.append("SUCCESS!  ");
+			}
+			else
+			{
+				resultBuilder.append("FAILED!!  ");
+			}
+
+			// keep these variables here for easy debugging
+			SolutionResult 		solutionResult = entry.getKey();
+
+			int			input = solutionResult.getInput();
+			boolean		expectedResult = solutionResult.isExpectedResult();
+			boolean		actualResult = solutionResult.isActualResult();
+			long		executeTime = solutionResult.getExecuteTime();
+
+			String		inputString = String.valueOf(input);
+			String		expectedResultString = String.valueOf(expectedResult);
+			String		actualResultString = String.valueOf(actualResult);
+			String		executeTimeString = String.valueOf(executeTime);
+
+
+			resultBuilder.append(normalizeResultStringToColumnWidth(inputString));
+			resultBuilder.append(normalizeResultStringToColumnWidth(expectedResultString));
+			resultBuilder.append(normalizeResultStringToColumnWidth(actualResultString));
+			resultBuilder.append(normalizeResultStringToColumnWidth(executeTimeString));
+
+			System.out.println(resultBuilder.toString());
+			System.out.println();
+		}
+
+		System.out.println();
+		System.out.println("Average execute Time: " + averageExecuteTime);
+	}
+
+	/**
+	 * Normalize all strings to COLUMN_WIDTH length, truncating strings that are longer and adding extra
+	 * spaces to strings that are shorter.
+	 *
+	 * @param original the element
+	 * @return the normalized string
+	 */
+	public static String normalizeResultStringToColumnWidth(String original)
+	{
+		int 	lengthLimit = Math.min(original.length(), COLUMN_WIDTH);
+
+		String 	lengthLimitBound = original.substring(0, lengthLimit);
+
+		// truncate strings that are too long
+		StringBuilder 	normalizedBuilder = new StringBuilder(lengthLimitBound);
+
+		int 	originalLength = original.length();
+
+		int 	requiredBufferSize = Math.max(0, COLUMN_WIDTH - originalLength);
+
+		// add any space buffering needed to meet our COLUMN_WIDTH
+		normalizedBuilder.append(" ".repeat(requiredBufferSize));
+
+		return normalizedBuilder.toString();
 	}
 }

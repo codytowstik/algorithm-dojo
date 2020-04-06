@@ -17,6 +17,26 @@ public final class SolutionResult
 		this.executeTime = executeTime;
 	}
 
+	public int getInput()
+	{
+		return input;
+	}
+
+	public boolean isExpectedResult()
+	{
+		return expectedResult;
+	}
+
+	public boolean isActualResult()
+	{
+		return actualResult;
+	}
+
+	public long getExecuteTime()
+	{
+		return executeTime;
+	}
+
 	@Override
 	public boolean equals(Object o)
 	{

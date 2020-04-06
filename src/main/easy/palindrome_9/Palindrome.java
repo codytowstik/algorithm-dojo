@@ -1,6 +1,13 @@
 package main.easy.palindrome_9;
 
-public interface Palindrome
+import main.utils.SolutionEx;
+
+public abstract class Palindrome implements SolutionEx
 {
-	boolean isPalindrome(int input);
+	public boolean execute(int input)
+	{
+		return isPalindrome(input);
+	}
+
+	abstract boolean isPalindrome(int input);
 }

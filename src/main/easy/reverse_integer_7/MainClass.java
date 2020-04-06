@@ -25,14 +25,14 @@ public class MainClass {
             long    start = System.nanoTime();
 
             // reverseInteger(int)
-            Object  result = TEST_CLASS.execute(numericInput);
+            // Object  result = TEST_CLASS.execute(numericInput);
 
             long    totalTimeNano = System.nanoTime() - start;
 
             String  expectedResult = (String) entry.getValue();
-            String  actualResult = String.valueOf(result);
+            // String  actualResult = String.valueOf(result);
 
-            TEST_CLASS.saveResult(input, expectedResult, actualResult, totalTimeNano);
+            // TEST_CLASS.saveResult(input, expectedResult, actualResult, totalTimeNano);
         }
 
         TEST_CLASS.validateResults();

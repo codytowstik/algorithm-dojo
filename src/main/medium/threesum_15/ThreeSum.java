@@ -26,14 +26,14 @@ public class ThreeSum
             long    start = System.nanoTime();
 
             // List<List<Integer>> threeSum(int[] nums)
-            Object  result = TEST_CLASS.execute(multiInput);
+            // Object  result = TEST_CLASS.execute(multiInput);
 
             long    totalTimeNano = System.nanoTime() - start;
 
             String  expectedResult = (String) entry.getValue();
-            String  actualResult = Utils.parseListListInt(result);
+            // String  actualResult = Utils.parseListListInt(result);
 
-            TEST_CLASS.saveResult(multiInput.originalInput, expectedResult, actualResult, totalTimeNano);
+            // TEST_CLASS.saveResult(multiInput.originalInput, expectedResult, actualResult, totalTimeNano);
         }
 
         TEST_CLASS.validateResults();

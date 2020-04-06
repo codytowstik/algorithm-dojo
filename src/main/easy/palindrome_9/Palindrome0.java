@@ -1,16 +1,7 @@
 package main.easy.palindrome_9;
 
-import main.utils.Solution;
-import main.utils.SolutionEx;
-import main.utils.SolutionResult;
-
-class Palindrome0 implements Palindrome, SolutionEx
+class Palindrome0 extends Palindrome
 {
-    public boolean execute(int input)
-    {
-        return isPalindrome(input);
-    }
-
     public boolean isPalindrome( int input )
     {
         if ( input < 0 )

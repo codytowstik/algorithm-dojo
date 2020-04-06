@@ -25,14 +25,14 @@ public class MainClass {
             long    start = System.nanoTime();
 
             // int[] twoSum(int[] nums, int target)
-            Object  result = TEST_CLASS.execute(multiInput);
+            // Object  result = TEST_CLASS.execute(multiInput);
 
             long    totalTimeNano = System.nanoTime() - start;
 
             String  expectedResult = (String) entry.getValue();
-            String  actualResult = Utils.parseIntArray(result);
+            // String  actualResult = Utils.parseIntArray(result);
 
-            TEST_CLASS.saveResult(multiInput.originalInput, expectedResult, actualResult, totalTimeNano);
+            // TEST_CLASS.saveResult(multiInput.originalInput, expectedResult, actualResult, totalTimeNano);
         }
 
         TEST_CLASS.validateResults();

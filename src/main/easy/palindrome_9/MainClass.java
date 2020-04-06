@@ -8,11 +8,11 @@ public class MainClass {
 
     private static final String INPUT_FILE_NAME = "input.properties";
 
-    private static final SolutionEx TEST_CLASS = new Palindrome0();
+    private static final Palindrome TEST_CLASS = new Palindrome0();
 
     public static void main( String[] args )
     {
-        Map<String,String>  expectedResults = DataLoader.loadExpectedResults( MainClass.class, INPUT_FILE_NAME );
+        Map<String,String>  expectedResults = DataLoader.loadExpectedResults( Palindrome.class, INPUT_FILE_NAME );
         SolutionResults     solutionResults = new SolutionResults();
 
         for ( Map.Entry<String, String> entry: expectedResults.entrySet() )

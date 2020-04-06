@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34f871cd-4740-4420-b6b9-4b7ca22bd1d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/utils/SolutionEx.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/utils/SolutionExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/utils/SolutionResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/utils/SolutionResults.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/easy/palindrome_9/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/palindrome_9/MainClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/easy/palindrome_9/Palindrome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/palindrome_9/Palindrome.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/easy/palindrome_9/Palindrome0.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/palindrome_9/Palindrome0.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/utils/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/DataLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/utils/Results.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scratch/Results.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/easy/reverse_integer_7/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/reverse_integer_7/MainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/easy/two_sum_1/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/two_sum_1/MainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/medium/threesum_15/ThreeSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/ThreeSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/utils/SolutionResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/SolutionResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/utils/SolutionResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/SolutionResults.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,13 +88,13 @@
       <recent name="$PROJECT_DIR$/src/main/easyInterview/removeDuplicatesSortedArray" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DataLoaderTest.test_ListListInt_Output">
-    <configuration name="MainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.easy.two_sum_1.MainClass" />
+  <component name="RunManager" selected="Application.MainClass (1)">
+    <configuration name="MainClass (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.easy.palindrome_9.MainClass" />
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.easy.two_sum_1.*" />
+          <option name="PATTERN" value="main.easy.palindrome_9.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -135,16 +134,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DataLoaderTest.testIterationOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="leetcode" />
-      <option name="PACKAGE_NAME" value="java" />
-      <option name="MAIN_CLASS_NAME" value="java.DataLoaderTest" />
-      <option name="METHOD_NAME" value="testIterationOrder" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DataLoaderTest.test_ArrayInt_Int_Inputs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="leetcode" />
       <option name="PACKAGE_NAME" value="" />
@@ -167,11 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainClass (1)" />
         <item itemvalue="JUnit.DataLoaderTest.test_ListListInt_Output" />
         <item itemvalue="JUnit.DataLoaderTest (1)" />
         <item itemvalue="JUnit.DataLoaderTest.test_ArrayInt_Int_Inputs" />
         <item itemvalue="JUnit.DataLoaderTest.testIterationOrder (1)" />
-        <item itemvalue="JUnit.DataLoaderTest.testIterationOrder" />
       </list>
     </recent_temporary>
   </component>
@@ -200,7 +189,7 @@
       <workItem from="1585715800652" duration="2266000" />
       <workItem from="1585778885495" duration="599000" />
       <workItem from="1586049922937" duration="695000" />
-      <workItem from="1586198752247" duration="3190000" />
+      <workItem from="1586198752247" duration="4903000" />
     </task>
     <task id="LOCAL-00001" summary="moved files around">
       <created>1585193165740</created>
@@ -496,7 +485,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585723013537</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="* initialize executor pattern">
+      <created>1586201977706</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1586201977706</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -519,7 +515,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/../.." />
     </ignored-roots>
-    <MESSAGE value="support for List&lt;List&lt;Integer&gt;&gt; expected output" />
     <MESSAGE value="more testing of parsing outputs" />
     <MESSAGE value="3sum naive&#10;- need to remove duplicate sets" />
     <MESSAGE value="3sum naive&#10;- order result numbers&#10;- check for existing result (via hash) and add result if not existing" />
@@ -544,7 +539,8 @@
     <MESSAGE value="ListListInteger no order test, initial impl" />
     <MESSAGE value="* list comparator&#10;* order doesn't matter sublist equals" />
     <MESSAGE value="* per problem interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="* per problem interface" />
+    <MESSAGE value="* initialize executor pattern" />
+    <option name="LAST_COMMIT_MESSAGE" value="* initialize executor pattern" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3672" y="798" width="735" height="597" key="#com.intellij.featureStatistics.actions.ShowFeatureUsageStatisticsDialog" timestamp="1585723071817">
@@ -555,6 +551,10 @@
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
     <state x="3733" y="898" width="639" height="439" key="#com.intellij.fileTypes.FileTypeChooser/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585605671675" />
+    <state x="3853" y="797" width="374" height="599" key="#com.intellij.ide.util.MemberChooser" timestamp="1586202286284">
+      <screen x="2160" y="0" width="3840" height="2160" />
+    </state>
+    <state x="3853" y="797" width="374" height="599" key="#com.intellij.ide.util.MemberChooser/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586202286284" />
     <state x="3772" y="883" width="525" height="435" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1585683999403">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
@@ -575,10 +575,10 @@
       <screen x="0" y="27" width="2160" height="3813" />
     </state>
     <state x="1106" y="811" key="#xdebugger.evaluate/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585697728938" />
-    <state x="3463" y="667" width="1602" height="1343" key="CommitChangelistDialog2" timestamp="1585723013412">
+    <state x="3463" y="667" width="1602" height="1343" key="CommitChangelistDialog2" timestamp="1586201977605">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state x="3463" y="667" width="1602" height="1343" key="CommitChangelistDialog2/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585723013412" />
+    <state x="3463" y="667" width="1602" height="1343" key="CommitChangelistDialog2/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586201977605" />
     <state x="2260" y="127" width="3570" height="1933" key="DiffContextDialog" timestamp="1585604609459">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
@@ -587,22 +587,22 @@
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
     <state x="3818" y="865" width="424" height="491" key="FileChooserDialogImpl/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585191148690" />
-    <state width="3724" height="624" key="GridCell.Tab.0.bottom" timestamp="1585700782058">
+    <state width="3724" height="624" key="GridCell.Tab.0.bottom" timestamp="1586203680758">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="624" key="GridCell.Tab.0.bottom/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585700782058" />
-    <state width="3724" height="624" key="GridCell.Tab.0.center" timestamp="1585700782057">
+    <state width="3724" height="624" key="GridCell.Tab.0.bottom/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586203680758" />
+    <state width="3724" height="624" key="GridCell.Tab.0.center" timestamp="1586203680758">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="624" key="GridCell.Tab.0.center/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585700782057" />
-    <state width="3724" height="624" key="GridCell.Tab.0.left" timestamp="1585700782057">
+    <state width="3724" height="624" key="GridCell.Tab.0.center/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586203680758" />
+    <state width="3724" height="624" key="GridCell.Tab.0.left" timestamp="1586203680758">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="624" key="GridCell.Tab.0.left/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585700782057" />
-    <state width="3724" height="624" key="GridCell.Tab.0.right" timestamp="1585700782058">
+    <state width="3724" height="624" key="GridCell.Tab.0.left/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586203680758" />
+    <state width="3724" height="624" key="GridCell.Tab.0.right" timestamp="1586203680758">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="624" key="GridCell.Tab.0.right/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585700782058" />
+    <state width="3724" height="624" key="GridCell.Tab.0.right/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586203680758" />
     <state width="3724" height="632" key="GridCell.Tab.1.bottom" timestamp="1585700782055">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
@@ -623,14 +623,18 @@
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
     <state x="3545" y="641" width="1284" height="737" key="SettingsEditor/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586199093383" />
+    <state width="498" height="451" key="SwitcherDM" timestamp="1586203468684">
+      <screen x="2160" y="0" width="3840" height="2160" />
+    </state>
+    <state width="498" height="451" key="SwitcherDM/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586203468684" />
     <state x="3717" y="989" width="646" height="231" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1585685002719">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
     <state x="3717" y="989" width="646" height="231" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585685002719" />
-    <state x="3568" y="699" width="944" height="796" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585691860003">
+    <state x="3568" y="699" width="944" height="796" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1586203262768">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state x="3568" y="699" width="944" height="796" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585691860003" />
+    <state x="3568" y="699" width="944" height="796" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586203262768" />
     <state x="3819" y="810" width="442" height="573" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1585684927577">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
@@ -655,6 +659,10 @@
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
     <state x="3709" y="522" key="run.anything.popup/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585695947516" />
+    <state x="3708" y="529" width="672" height="678" key="search.everywhere.popup" timestamp="1586202281245">
+      <screen x="2160" y="0" width="3840" height="2160" />
+    </state>
+    <state x="3708" y="529" width="672" height="678" key="search.everywhere.popup/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586202281245" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
