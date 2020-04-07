@@ -2,13 +2,9 @@ package main.easy.palindrome_9;
 
 import main.utils.Solution;
 
-class PalindromeCleaned extends Solution
+class PalindromeCleaned extends Palindrome
 {
-    public Object execute(Object input) {
-        return isPalindrome((int) input);
-    }
-
-    private static boolean isPalindrome( int x )
+    public boolean isPalindrome( int x )
     {
         if ( x < 0 || ( x != 0 && x % 10 == 0 ) )
         {

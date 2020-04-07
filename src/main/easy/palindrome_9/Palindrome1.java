@@ -1,13 +1,7 @@
 package main.easy.palindrome_9;
 
-import main.utils.Solution;
-
-class Palindrome1 extends Solution
+class Palindrome1 extends Palindrome
 {
-    public Object execute(Object input) {
-        return isPalindrome((int) input);
-    }
-
     public boolean isPalindrome( int input )
     {
         if ( input < 0 || ( input != 0 && input % 10 == 0) )

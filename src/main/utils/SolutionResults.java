@@ -26,8 +26,9 @@ public class SolutionResults
 	 * Validate the results of execution on each input, and output the results to console .. prepended
 	 * with 'FAILED!!` or `SUCCESS!` .. in column format.
 	 */
-	public void validateResults()
+	public boolean validateResults()
 	{
+		boolean			allSuccess = true;
 		long			averageExecuteTime = 0;
 
 		for (SolutionResult result : results)
@@ -39,6 +40,8 @@ public class SolutionResults
 
 			boolean 	success = validateResult(expectedResult, actualResult);
 
+			allSuccess &= success;
+
 			trackResult(success, result);
 
 			// track total execution time so we can compute average
@@ -49,6 +52,8 @@ public class SolutionResults
 		averageExecuteTime = averageExecuteTime / results.size();
 
 		printResults(averageExecuteTime);
+
+		return allSuccess;
 	}
 
 	private boolean validateResult(boolean expectedResult, boolean actualResult)
