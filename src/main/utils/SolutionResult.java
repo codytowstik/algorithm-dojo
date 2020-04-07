@@ -5,11 +5,11 @@ import java.util.Objects;
 public final class SolutionResult
 {
 	private final int input;
-	private final boolean expectedResult;
-	private final boolean actualResult;
+	private final Object expectedResult;
+	private final Object actualResult;
 	private final long executeTime;
 
-	public SolutionResult(int input, boolean expectedResult, boolean actualResult, long executeTime)
+	public SolutionResult(int input, Object expectedResult, Object actualResult, long executeTime)
 	{
 		this.input = input;
 		this.expectedResult = expectedResult;
@@ -22,12 +22,12 @@ public final class SolutionResult
 		return input;
 	}
 
-	public boolean isExpectedResult()
+	public Object getExpectedResult()
 	{
 		return expectedResult;
 	}
 
-	public boolean isActualResult()
+	public Object getActualResult()
 	{
 		return actualResult;
 	}

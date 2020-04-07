@@ -2,11 +2,11 @@ package main.utils;
 
 public class SolutionExecutor
 {
-	public static SolutionResult executeAndTime(SolutionEx solutionEx, int input, boolean expectedResult)
+	public static SolutionResult executeAndTime(SolutionEx solutionEx, int input, Object expectedResult)
 	{
 		long 		start = System.nanoTime();
 
-		boolean 	result = solutionEx.execute(input);
+		Object 		result = solutionEx.execute(input);
 
 		long 		end = System.nanoTime() - start;
 

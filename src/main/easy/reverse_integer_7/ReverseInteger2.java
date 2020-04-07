@@ -2,13 +2,8 @@ package main.easy.reverse_integer_7;
 
 import main.utils.Solution;
 
-class Solution2 extends Solution
+class ReverseInteger2 extends ReverseInteger
 {
-    public Object execute(Object input)
-    {
-        return reverseInteger((int) input);
-    }
-
     /**
      * Reverse Integer.
      * <p>

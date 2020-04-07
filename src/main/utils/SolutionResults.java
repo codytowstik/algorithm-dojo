@@ -34,8 +34,8 @@ public class SolutionResults
 		for (SolutionResult result : results)
 		{
 			int 		input = result.getInput();
-			boolean		expectedResult = result.isExpectedResult();
-			boolean		actualResult = result.isActualResult();
+			Object		expectedResult = result.getExpectedResult();
+			Object		actualResult = result.getActualResult();
 			long		executeTime = result.getExecuteTime();
 
 			boolean 	success = validateResult(expectedResult, actualResult);
@@ -56,9 +56,9 @@ public class SolutionResults
 		return allSuccess;
 	}
 
-	private boolean validateResult(boolean expectedResult, boolean actualResult)
+	private boolean validateResult(Object expectedResult, Object actualResult)
 	{
-		return expectedResult == actualResult;
+		return expectedResult.equals(actualResult);
 	}
 
 	private void trackResult(boolean success, SolutionResult solutionResult)
@@ -88,8 +88,8 @@ public class SolutionResults
 			SolutionResult 		solutionResult = entry.getKey();
 
 			int			input = solutionResult.getInput();
-			boolean		expectedResult = solutionResult.isExpectedResult();
-			boolean		actualResult = solutionResult.isActualResult();
+			Object		expectedResult = solutionResult.getExpectedResult();
+			Object		actualResult = solutionResult.getActualResult();
 			long		executeTime = solutionResult.getExecuteTime();
 
 			String		inputString = String.valueOf(input);

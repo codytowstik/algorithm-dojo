@@ -24,7 +24,7 @@ public class PalindromeRunner
             String          rawExpectedResult = entry.getValue();
             boolean         expectedResult = Boolean.parseBoolean(rawExpectedResult);
 
-            // isPalindrome(int)
+            // boolean isPalindrome(int)
             SolutionResult  solutionResult = SolutionExecutor.executeAndTime(TEST_CLASS, input, expectedResult);
 
             solutionResults.saveResult(solutionResult);

@@ -4,7 +4,7 @@ import main.utils.SolutionEx;
 
 public abstract class Palindrome implements SolutionEx
 {
-	public boolean execute(int input)
+	public Object execute(int input)
 	{
 		return isPalindrome(input);
 	}

@@ -2,12 +2,8 @@ package main.easy.reverse_integer_7;
 
 import main.utils.Solution;
 
-class SolutionCleaned extends Solution
+class ReverseIntegerCleaned extends ReverseInteger
 {
-    public Object execute(Object input) {
-        return reverseInteger((int) input);
-    }
-
     /**
      * Reverse Integer.
      *
@@ -21,7 +17,7 @@ class SolutionCleaned extends Solution
      * @param x 32-bit signed integer (or smaller)
      * @return the input reversed
      */
-    public int reverseInteger(long x)
+    public int reverseInteger(int x)
     {
         if (x > 2147483647 || x < -2147483648)
         {
