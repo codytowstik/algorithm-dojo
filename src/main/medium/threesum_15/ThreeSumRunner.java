@@ -1,16 +1,17 @@
-package main.easy.two_sum_1;
+package main.medium.threesum_15;
 
 import main.utils.Solution;
 
-public class MainClass {
+public class ThreeSumRunner
+{
 
-    private static final String INPUT_FILE_NAME = "input.properties";
-
-    // private static final Solution TEST_CLASS = new TwoSum3();
+    // private static final String INPUT_FILE_NAME = "input.properties";
+    //
+    // private static final Solution TEST_CLASS = new ThreeSum3();
 
     public static void main( String[] args )
     {
-        // Map<String, String>  expectedResults = DataLoader.loadExpectedResults( MainClass.class, INPUT_FILE_NAME );
+        // Map<String, String>  expectedResults = DataLoader.loadExpectedResults( ThreeSum.class, INPUT_FILE_NAME );
         //
         // for ( Map.Entry<String, String> entry: expectedResults.entrySet() )
         // {
@@ -18,13 +19,13 @@ public class MainClass {
         //
         //     long    start = System.nanoTime();
         //
-        //     // int[] twoSum(int[] nums, int target)
+        //     // List<List<Integer>> threeSum(int[] nums)
         //     // Object  result = TEST_CLASS.execute(multiInput);
         //
         //     long    totalTimeNano = System.nanoTime() - start;
         //
         //     String  expectedResult = (String) entry.getValue();
-        //     // String  actualResult = Utils.parseIntArray(result);
+        //     // String  actualResult = Utils.parseListListInt(result);
         //
         //     // TEST_CLASS.saveResult(multiInput.originalInput, expectedResult, actualResult, totalTimeNano);
         // }

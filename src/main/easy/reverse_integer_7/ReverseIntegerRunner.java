@@ -13,7 +13,7 @@ public class ReverseIntegerRunner
 
     public static void main( String[] args )
     {
-        Map<String,String>  expectedResults = DataLoader.loadExpectedResults( ReverseIntegerRunner.class, INPUT_FILE_NAME );
+        Map<String,String>  expectedResults = DataLoader.loadExpectedResults( TEST_CLASS.getClass(), INPUT_FILE_NAME );
         SolutionResults     solutionResults = new SolutionResults();
 
         for ( Map.Entry<String, String> entry: expectedResults.entrySet() )

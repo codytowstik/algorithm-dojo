@@ -6,24 +6,21 @@ import main.utils.Solution;
 import java.util.*;
 
 /**
- * Solution1 - Brute Force, no ordered output
+ * Solution0 - Brute Force, ordered output
  *
- * Same as solution0, except we don't care about result sort.
+ * Time Limit Exceeded
  *
- * RESULT: Order doesn't matter for individual tuples
+ * Runtime: O(n^3)
+ * for each number,
+ *   for each other number with greater index,
+ *    see if there is a value (with greater index) that sums us to zero
  *
- * [[-1,0,1],[-1,2,-1]] == [[-1,-1,2],[-1,0,1]]
+ * Space: 0(n)
+ *
+ * We store the hash of each triplet (ordered) to check for duplicate results
  */
-class Solution1 extends Solution
+class ThreeSum0 extends ThreeSum
 {
-    public Object execute(Object input) {
-        MultiInput      multiInput = (MultiInput) input;
-
-        int[]           nums = multiInput.parseArrayInt(0);
-
-        return threeSum(nums);
-    }
-
     public List<List<Integer>> threeSum(int[] nums)
     {
         // for each number,
@@ -57,7 +54,7 @@ class Solution1 extends Solution
 
                     if (threeValueSum == 0)
                     {
-                        List<Integer>   resultTriplet = createResult(firstValue, secondValue, thirdValue);
+                        List<Integer>   resultTriplet = createOrderedResults(firstValue, secondValue, thirdValue);
 
                         // append the result triplet
                         addResult(resultTriplet, resultTriplets, existingResults );
@@ -75,15 +72,20 @@ class Solution1 extends Solution
      * @param one first num
      * @param two second num
      * @param three third num
-     * @return a list of the given inputs
+     * @return an ordered list of the given numbers
      */
-    public List<Integer> createResult(int one, int two, int three)
+    public List<Integer> createOrderedResults(int one, int two, int three)
     {
         List<Integer> result = new ArrayList<>(3);
 
-        result.add(one);
-        result.add(two);
-        result.add(three);
+        int minValue = Math.min(one, Math.min(two, three));
+        int maxValue = Math.max(one, Math.max(two, three));
+
+        int middleValue = (one+two+three) - minValue - maxValue;
+
+        result.add(minValue);
+        result.add(middleValue);
+        result.add(maxValue);
 
         return result;
     }
@@ -98,12 +100,7 @@ class Solution1 extends Solution
      */
     public void addResult(List<Integer> result, List<List<Integer>> results, Set<Integer> existingResultsHash)
     {
-        // copy the list so it doesn't affect our output, we are just checking if order matters
-        List<Integer> resultOrdered = new ArrayList<>(result);
-
-        Collections.sort(resultOrdered);
-
-        int currentResultHash = resultOrdered.hashCode();
+        int currentResultHash = result.hashCode();
 
         if (!existingResultsHash.contains(currentResultHash))
         {

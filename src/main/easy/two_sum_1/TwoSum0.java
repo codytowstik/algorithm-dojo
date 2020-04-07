@@ -1,8 +1,5 @@
 package main.easy.two_sum_1;
 
-import main.utils.MultiInput;
-import main.utils.Solution;
-
 /**
  * Solution0 - Brute Force.
  *
@@ -11,17 +8,8 @@ import main.utils.Solution;
  *
  * For each number, see if any other number sums up to the target. If so, save indices and return them.
  */
-class Solution0 extends Solution
+public class TwoSum0 extends TwoSum
 {
-    public Object execute(Object input) {
-        MultiInput      multiInput = (MultiInput) input;
-
-        int[]           nums = multiInput.parseArrayInt(0);
-        int             target = multiInput.parseInt(1);
-
-        return twoSum(nums, target);
-    }
-
     public int[] twoSum(int[] nums, int target)
     {
         // for each number

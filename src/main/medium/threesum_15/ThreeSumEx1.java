@@ -13,16 +13,8 @@ import java.util.*;
  *
  * 3sum is really like 'two sum' except the 'target' is our current value
  */
-class SolutionEx1 extends Solution
+class ThreeSumEx1 extends ThreeSum
 {
-    public Object execute(Object input) {
-        MultiInput      multiInput = (MultiInput) input;
-
-        int[]           nums = multiInput.parseArrayInt(0);
-
-        return threeSum(nums);
-    }
-
     public List<List<Integer>> threeSum(int[] nums)
     {
         // https://leetcode.com/problems/3sum/discuss/508631/Simple-O(n2)-Java-solution-with-explanations

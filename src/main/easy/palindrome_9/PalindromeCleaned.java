@@ -2,7 +2,7 @@ package main.easy.palindrome_9;
 
 import main.utils.Solution;
 
-class PalindromeCleaned extends Palindrome
+public class PalindromeCleaned extends Palindrome
 {
     public boolean isPalindrome( int x )
     {

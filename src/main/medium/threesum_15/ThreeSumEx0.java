@@ -17,16 +17,8 @@ import java.util.*;
  * uses bi-directional search for each 2Sum sweep of the remaining array.
  * skip duplicates to avoid duplicates in answer without making a set.
  */
-class SolutionEx0 extends Solution
+class ThreeSumEx0 extends ThreeSum
 {
-    public Object execute(Object input) {
-        MultiInput      multiInput = (MultiInput) input;
-
-        int[]           nums = multiInput.parseArrayInt(0);
-
-        return threeSum(nums);
-    }
-
     public List<List<Integer>> threeSum(int[] nums)
     {
         // https://leetcode.com/problems/3sum/discuss/7380/Concise-O(N2)-Java-solution

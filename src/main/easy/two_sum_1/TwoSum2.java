@@ -1,8 +1,5 @@
 package main.easy.two_sum_1;
 
-import main.utils.MultiInput;
-import main.utils.Solution;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,18 +13,8 @@ import java.util.Map;
  * - give 'processedValues' HashMap load factor of 1 so it doesn't grow.
  * - don't store the first value, since we won't ever need it
  */
-class Solution2 extends Solution
+public class TwoSum2 extends TwoSum
 {
-    public Object execute(Object input)
-    {
-        MultiInput multiInput = (MultiInput) input;
-
-        int[] nums = multiInput.parseArrayInt(0);
-        int target = multiInput.parseInt(1);
-
-        return twoSum(nums, target);
-    }
-
     public int[] twoSum(int[] nums, int target)
     {
         Map<Integer,Integer>     processedValues = new HashMap<>( nums.length-1, 1 );

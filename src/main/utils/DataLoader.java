@@ -8,15 +8,15 @@ import java.util.*;
 
 public final class DataLoader
 {
-    public static Map<String,String> loadExpectedResults(Class<?> clazz, String propertiesFileName )
+    public static Map<String,String> loadExpectedResults(Class<? extends SolutionEx> clazz, String propertiesFileName)
     {
         Properties expectedResults = new Properties();
 
         try
         {
-            URL url = clazz.getResource(propertiesFileName);
-            File inputFile = new File(url.getPath());
-            FileInputStream fileInputStream = new FileInputStream(inputFile);
+            URL                 url = clazz.getResource(propertiesFileName);
+            File                inputFile = new File(url.getPath());
+            FileInputStream     fileInputStream = new FileInputStream(inputFile);
 
             expectedResults.load(fileInputStream);
         } catch (IOException e)
@@ -34,7 +34,7 @@ public final class DataLoader
 
         for (String sortedRawInput : sortedRawInputs)
         {
-            String rawOutput = expectedResults.getProperty(sortedRawInput);
+            String      rawOutput = expectedResults.getProperty(sortedRawInput);
 
             orderedInputOutputs.put(sortedRawInput, rawOutput);
         }

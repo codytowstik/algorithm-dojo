@@ -6,7 +6,7 @@ import main.utils.Solution;
 import java.util.*;
 
 /**
- * Solution3.
+ * Solution4.
  *
  * Runtime: 19ms, 75%
  * Space: 43.9, 100%
@@ -15,23 +15,14 @@ import java.util.*;
  *
  * - Sort the input (n*log(n))
  * - For each number, skipping any duplicate numbers (n)
- *    do a bidirectional search of remaining numbers to see if a pair adds up to the complement of the base number (n)
+ *    do a two sum over the remaining values
  *
  * Space: O(1)
  *
  * We don't need to save any values
  */
-class Solution3 extends Solution
+class ThreeSum4 extends ThreeSum
 {
-    public Object execute(Object input)
-    {
-        MultiInput  multiInput = (MultiInput) input;
-
-        int[]       nums = multiInput.parseArrayInt(0);
-
-        return threeSum(nums);
-    }
-
     public List<List<Integer>> threeSum(int[] nums)
     {
         List<List<Integer>> result = new LinkedList<>();
@@ -91,5 +82,46 @@ class Solution3 extends Solution
         }
 
         return result;
+    }
+
+    /**
+     * Like two sum, but we return a tuple of values rather than indices.
+     *
+     * @param nums
+     * @param target
+     * @return
+     */
+    public List<List<Integer>> twoSumValues(int[] nums, int target)
+    {
+        List<List<Integer>> allResults = new ArrayList<>();
+
+        // since we want to sum to zero, target is inverse of current number
+        int inverseTarget = target * -1;
+
+        Set<Integer> valueSet = new HashSet<>(nums.length - 1, 1);
+
+        // store the values into a map with <key,value> == <value,index>
+        // skip the first value since obviously we need a pair
+        for (int index = 0; index < nums.length; index++)
+        {
+            int baseValue = nums[index];
+            int complement = inverseTarget - baseValue;
+
+            if (valueSet.contains(complement))
+            {
+                List<Integer> result = new ArrayList<>();
+
+
+                result.add(target);
+                result.add(baseValue);
+                result.add(complement);
+
+                allResults.add(result);
+            }
+
+            valueSet.add(baseValue);
+        }
+
+        return allResults;
     }
 }

@@ -2,5 +2,5 @@ package main.utils;
 
 public interface SolutionEx
 {
-	Object execute(int input);
+	Object execute(Object input);
 }

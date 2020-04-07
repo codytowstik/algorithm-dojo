@@ -1,8 +1,5 @@
 package main.easy.two_sum_1;
 
-import main.utils.MultiInput;
-import main.utils.Solution;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -22,18 +19,8 @@ import java.util.Map;
  *      - if not, add the current value to the map
  *      - if yes, return
  */
-class Solution3 extends Solution
+public class TwoSum3 extends TwoSum
 {
-    public Object execute(Object input)
-    {
-        MultiInput multiInput = (MultiInput) input;
-
-        int[] nums = multiInput.parseArrayInt(0);
-        int target = multiInput.parseInt(1);
-
-        return twoSum(nums, target);
-    }
-
     public int[] twoSum(int[] nums, int target)
     {
         Map<Integer,Integer>     processedValues = new HashMap<>( nums.length-1, 1 );

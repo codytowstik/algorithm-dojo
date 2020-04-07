@@ -4,9 +4,9 @@ import main.utils.SolutionEx;
 
 public abstract class ReverseInteger implements SolutionEx
 {
-	public Object execute(int input)
+	public Object execute(Object input)
 	{
-		return reverseInteger(input);
+		return reverseInteger((int) input);
 	}
 
 	abstract int reverseInteger(int x);

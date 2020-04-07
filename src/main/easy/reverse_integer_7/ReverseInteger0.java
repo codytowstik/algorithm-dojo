@@ -1,8 +1,6 @@
 package main.easy.reverse_integer_7;
 
-import main.utils.Solution;
-
-class ReverseInteger0 extends ReverseInteger
+public class ReverseInteger0 extends ReverseInteger
 {
     /**
      * Reverse Integer.

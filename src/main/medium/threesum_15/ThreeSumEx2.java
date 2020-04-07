@@ -13,16 +13,8 @@ import java.util.*;
  *
  * 3sum is really like 'two sum' except the 'target' is our current value
  */
-class SolutionEx2 extends Solution
+class ThreeSumEx2 extends ThreeSum
 {
-    public Object execute(Object input) {
-        MultiInput      multiInput = (MultiInput) input;
-
-        int[]           nums = multiInput.parseArrayInt(0);
-
-        return threeSum(nums);
-    }
-
     public List<List<Integer>> threeSum(int[] nums)
     {
         //https://leetcode.com/problems/3sum/discuss/339850/Java-or-Memory-beats-100-or-Two-pointers

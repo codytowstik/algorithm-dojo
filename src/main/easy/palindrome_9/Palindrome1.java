@@ -1,6 +1,6 @@
 package main.easy.palindrome_9;
 
-class Palindrome1 extends Palindrome
+public class Palindrome1 extends Palindrome
 {
     public boolean isPalindrome( int input )
     {

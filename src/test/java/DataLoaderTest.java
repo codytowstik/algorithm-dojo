@@ -1,3 +1,7 @@
+import main.easy.palindrome_9.Palindrome;
+import main.easy.two_sum_1.TwoSum;
+import main.easy.two_sum_1.TwoSum0;
+import main.easy.two_sum_1.TwoSumCleaned;
 import main.utils.DataLoader;
 import main.utils.InputOutputParser;
 import main.utils.MultiInput;
@@ -16,7 +20,7 @@ public final class DataLoaderTest extends TestBase
     {
         String              testFileName = TestFileName.INT__INT_PROPERTIES.getFileName();
 
-        Map<String,String>  inputOutput = DataLoader.loadExpectedResults(getClass(), testFileName);
+        Map<String,String>  inputOutput = DataLoader.loadExpectedResults(TestProblem.class, testFileName);
 
         int expected = 0;
 
@@ -28,13 +32,17 @@ public final class DataLoaderTest extends TestBase
         }
     }
 
+    /**
+     * TwoSum
+     * ThreeSum
+     */
     @Test
     public void test_ArrayInt_Int_Inputs()
     {
         String                  testFileName = TestFileName.ARRAYINT_INT__ARRAYINT.getFileName();
         int                     expectedCount = 3;
 
-        Map<String, String>     inputOutputs = DataLoader.loadExpectedResults(getClass(), testFileName);
+        Map<String, String>     inputOutputs = DataLoader.loadExpectedResults(TestProblem.class, testFileName);
 
         List<int[]>             expectedArrayIntInputs = new ArrayList<>(expectedCount);
         List<Integer>           expectedIntInputs = new ArrayList<>(expectedCount);
@@ -70,13 +78,16 @@ public final class DataLoaderTest extends TestBase
         Assertions.assertEquals(expectedCount, propertyIndex, "Unexpected property count.");
     }
 
+    /**
+     * TwoSum
+     */
     @Test
     public void test_ArrayInt_Output()
     {
         String                  testFileName = TestFileName.ARRAYINT_INT__ARRAYINT.getFileName();
         int                     expectedCount = 3;
 
-        Map<String, String>     inputOutputs = DataLoader.loadExpectedResults(getClass(), testFileName);
+        Map<String, String>     inputOutputs = DataLoader.loadExpectedResults(TestProblem.class, testFileName);
 
         List<int[]>             expectedOutputs = new ArrayList<>(expectedCount);
 
@@ -101,13 +112,16 @@ public final class DataLoaderTest extends TestBase
         Assertions.assertEquals(expectedCount, propertyIndex, "Unexpected property count.");
     }
 
+    /**
+     * ThreeSum
+     */
     @Test
     public void test_ListListInt_Output()
     {
         String                      testFileName = TestFileName.ARRAYINT__LISTLISTINT.getFileName();
         int                         expectedCount = 5;
 
-        Map<String, String>         inputOutputs = DataLoader.loadExpectedResults(getClass(), testFileName);
+        Map<String, String>         inputOutputs = DataLoader.loadExpectedResults(TestProblem.class, testFileName);
 
         // build our Lists
 
