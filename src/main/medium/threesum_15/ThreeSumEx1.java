@@ -13,7 +13,7 @@ import java.util.*;
  *
  * 3sum is really like 'two sum' except the 'target' is our current value
  */
-class ThreeSumEx1 extends ThreeSum
+public class ThreeSumEx1 extends ThreeSum
 {
     public List<List<Integer>> threeSum(int[] nums)
     {

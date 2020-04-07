@@ -21,7 +21,7 @@ import java.util.*;
  *
  * We don't need to save any values
  */
-class ThreeSum3 extends ThreeSum
+public class ThreeSum3 extends ThreeSum
 {
     public List<List<Integer>> threeSum(int[] nums)
     {

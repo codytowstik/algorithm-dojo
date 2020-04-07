@@ -17,7 +17,7 @@ import java.util.*;
  * uses bi-directional search for each 2Sum sweep of the remaining array.
  * skip duplicates to avoid duplicates in answer without making a set.
  */
-class ThreeSumEx0 extends ThreeSum
+public class ThreeSumEx0 extends ThreeSum
 {
     public List<List<Integer>> threeSum(int[] nums)
     {

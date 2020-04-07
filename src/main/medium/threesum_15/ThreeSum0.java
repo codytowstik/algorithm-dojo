@@ -19,7 +19,7 @@ import java.util.*;
  *
  * We store the hash of each triplet (ordered) to check for duplicate results
  */
-class ThreeSum0 extends ThreeSum
+public class ThreeSum0 extends ThreeSum
 {
     public List<List<Integer>> threeSum(int[] nums)
     {

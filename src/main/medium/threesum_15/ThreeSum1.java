@@ -14,7 +14,7 @@ import java.util.*;
  *
  * [[-1,0,1],[-1,2,-1]] == [[-1,-1,2],[-1,0,1]]
  */
-class ThreeSum1 extends ThreeSum
+public class ThreeSum1 extends ThreeSum
 {
      public List<List<Integer>> threeSum(int[] nums)
     {

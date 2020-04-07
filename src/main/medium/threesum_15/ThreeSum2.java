@@ -25,7 +25,7 @@ import java.util.*;
  *   sets of data that have triplets that hash to the same value (collisions)
  * - we are storing a huge amount of data
  */
-class ThreeSum2 extends ThreeSum
+public class ThreeSum2 extends ThreeSum
 {
     public List<List<Integer>> threeSum(int[] nums)
     {
