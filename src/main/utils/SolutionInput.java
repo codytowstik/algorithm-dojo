@@ -18,36 +18,32 @@ public final class SolutionInput
 
 		Method[] 						declaredMethods = solutionClass.getDeclaredMethods();
 
-		for (Method declaredMethod : declaredMethods)
+		// each problem should only have one method
+		Method			declaredMethod = declaredMethods[0];
+
+		Class<?>[] 		parameterTypes = declaredMethod.getParameterTypes();
+
+		// use reflection to find the expected parameter inputs of each problem
+		for (int i = 0; i < parameterTypes.length; i++)
 		{
-			String 		methodName = declaredMethod.getName();
+			Class<?> 	parameterType = parameterTypes[i];
 
-			if (!methodName.equals("execute"))
+			switch (parameterType.getCanonicalName())
 			{
-				Class<?>[] 		parameterTypes = declaredMethod.getParameterTypes();
-
-				for (int i = 0; i < parameterTypes.length; i++)
+				case "int":
 				{
-					Class<?> 	parameterType = parameterTypes[i];
+					String 		currentRawInput = rawInputsSplit[i];
 
-					switch (parameterType.getCanonicalName())
-					{
-						case "int":
-						{
-							String 		currentRawInput = rawInputsSplit[i];
+					inputs[i] = Integer.parseInt(currentRawInput);
+					break;
+				}
 
-							inputs[i] = Integer.parseInt(currentRawInput);
-							break;
-						}
+				case "int[]":
+				{
+					String 		currentRawInput = rawInputsSplit[i];
 
-						case "int[]":
-						{
-							String 		currentRawInput = rawInputsSplit[i];
-
-							inputs[i] = DataLoader.valueOfArrayIntString(currentRawInput);
-							break;
-						}
-					}
+					inputs[i] = DataLoader.valueOfArrayIntString(currentRawInput);
+					break;
 				}
 			}
 		}

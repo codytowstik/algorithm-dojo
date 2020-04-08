@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34f871cd-4740-4420-b6b9-4b7ca22bd1d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/utils/SolutionInput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ScratchTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/utils/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/DataLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TwoSumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TwoSumTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/utils/SolutionInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/SolutionInput.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +163,7 @@
       <workItem from="1585778885495" duration="599000" />
       <workItem from="1586049922937" duration="695000" />
       <workItem from="1586198752247" duration="15732000" />
-      <workItem from="1586323955310" duration="2223000" />
+      <workItem from="1586323955310" duration="2570000" />
     </task>
     <task id="LOCAL-00001" summary="moved files around">
       <created>1585193165740</created>
@@ -688,9 +684,9 @@
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/utils/SolutionInput.java</url>
-          <line>14</line>
-          <option name="timeStamp" value="6" />
+          <url>file://$PROJECT_DIR$/src/test/java/TwoSumTest.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-defaults>
