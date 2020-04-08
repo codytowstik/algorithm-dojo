@@ -1,12 +1,15 @@
 package main.easy.palindrome_9;
 
 import main.utils.SolutionEx;
+import main.utils.SolutionInput;
 
 public abstract class Palindrome implements SolutionEx
 {
-	public Object execute(Object input)
+	public Object execute(SolutionInput input)
 	{
-		return isPalindrome((int) input);
+		int castedInput = (int) input.getInputAtIndex(0);
+
+		return isPalindrome(castedInput);
 	}
 
 	abstract boolean isPalindrome(int input);

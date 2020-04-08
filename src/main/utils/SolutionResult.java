@@ -4,22 +4,22 @@ import java.util.Objects;
 
 public final class SolutionResult
 {
-	private final int input;
+	private final String rawInput;
 	private final Object expectedResult;
 	private final Object actualResult;
 	private final long executeTime;
 
-	public SolutionResult(int input, Object expectedResult, Object actualResult, long executeTime)
+	public SolutionResult(String rawInput, Object expectedResult, Object actualResult, long executeTime)
 	{
-		this.input = input;
+		this.rawInput = rawInput;
 		this.expectedResult = expectedResult;
 		this.actualResult = actualResult;
 		this.executeTime = executeTime;
 	}
 
-	public int getInput()
+	public String getRawInput()
 	{
-		return input;
+		return rawInput;
 	}
 
 	public Object getExpectedResult()
@@ -52,12 +52,12 @@ public final class SolutionResult
 
 		SolutionResult 	that = (SolutionResult) o;
 
-		return input == that.input;
+		return rawInput == that.rawInput;
 	}
 
 	@Override
 	public int hashCode()
 	{
-		return Objects.hash(input);
+		return Objects.hash(rawInput);
 	}
 }

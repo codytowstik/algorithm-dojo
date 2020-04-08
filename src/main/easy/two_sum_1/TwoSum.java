@@ -1,12 +1,16 @@
 package main.easy.two_sum_1;
 
 import main.utils.SolutionEx;
+import main.utils.SolutionInput;
 
 public abstract class TwoSum implements SolutionEx
 {
-	public Object execute(Object input)
+	public Object execute(SolutionInput input)
 	{
-		return twoSum((int[]) input, 1);
+		int[] 	nums = (int[]) input.getInputAtIndex(0);
+		int 	target = (int) input.getInputAtIndex(1);
+
+		return twoSum(nums, target);
 	}
 
 	abstract int[] twoSum(int[] nums, int target);

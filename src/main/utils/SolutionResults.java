@@ -33,7 +33,6 @@ public class SolutionResults
 
 		for (SolutionResult result : results)
 		{
-			int 		input = result.getInput();
 			Object		expectedResult = result.getExpectedResult();
 			Object		actualResult = result.getActualResult();
 			long		executeTime = result.getExecuteTime();
@@ -87,7 +86,7 @@ public class SolutionResults
 			// keep these variables here for easy debugging
 			SolutionResult 		solutionResult = entry.getKey();
 
-			int			input = solutionResult.getInput();
+			int			input = solutionResult.getRawInput();
 			Object		expectedResult = solutionResult.getExpectedResult();
 			Object		actualResult = solutionResult.getActualResult();
 			long		executeTime = solutionResult.getExecuteTime();

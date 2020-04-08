@@ -6,10 +6,13 @@ public final class SolutionInput
 {
 	public static final String INPUT_DELIMETER = "/";
 
+	private final String rawInput;
 	private final Object[] inputs;
 
 	public SolutionInput(String rawInput, SolutionEx solution)
 	{
+		this.rawInput = rawInput;
+
 		String[] 						rawInputsSplit = rawInput.split(INPUT_DELIMETER);
 
 		inputs = new Object[rawInputsSplit.length];
@@ -67,5 +70,15 @@ public final class SolutionInput
 
 			return null;
 		}
+	}
+
+	public Object getInputAtIndex(int index)
+	{
+		return this.inputs[index];
+	}
+
+	public String getRawInput()
+	{
+		return rawInput;
 	}
 }

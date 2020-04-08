@@ -31,9 +31,8 @@ public final class TwoSumTest extends TestBase
             String          rawExpectedResult = entry.getValue();
             int[]           expectedResult = DataLoader.valueOfArrayIntString(rawExpectedResult);
 
-            int input = 0;
             // List<List<Integer>> threeSum(int[] nums)
-            SolutionResult  solutionResult = SolutionExecutor.executeAndTime(testClass, input, expectedResult);
+            SolutionResult  solutionResult = SolutionExecutor.executeAndTime(testClass, solutionInput, expectedResult);
 
             solutionResults.saveResult(solutionResult);
         }
