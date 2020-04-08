@@ -25,12 +25,13 @@ public final class TwoSumTest extends TestBase
 
         for (Map.Entry<String, String> entry : expectedResults.entrySet())
         {
-            String      rawInput = entry.getKey();
-            int         input = Integer.parseInt(rawInput);
+            String          rawInput = entry.getKey();
+            SolutionInput   solutionInput = new SolutionInput(rawInput, testClass);
 
-            String      rawExpectedResult = entry.getValue();
-            boolean     expectedResult = Boolean.parseBoolean(rawExpectedResult);
+            String          rawExpectedResult = entry.getValue();
+            int[]           expectedResult = DataLoader.valueOfArrayIntString(rawExpectedResult);
 
+            int input = 0;
             // List<List<Integer>> threeSum(int[] nums)
             SolutionResult  solutionResult = SolutionExecutor.executeAndTime(testClass, input, expectedResult);
 
