@@ -24,10 +24,10 @@ public final class ThreeSumTest extends TestBase
             SolutionInput           solutionInput = new SolutionInput(rawInput, testClass);
 
             String                  rawExpectedResult = entry.getValue();
-            List<List<Integer>>     expectedResult = DataLoader.parseListListIntegerString(rawExpectedResult);
+            List<List<Integer>>     expectedResult = InputOutputParser.parseListListIntegerString(rawExpectedResult);
 
             // List<List<Integer>> threeSum(int[] nums)
-            SolutionResult  solutionResult = SolutionExecutor.executeAndTime(testClass, solutionInput, expectedResult);
+            SolutionResult          solutionResult = SolutionExecutor.executeAndTime(testClass, solutionInput, expectedResult);
 
             solutionResults.saveResult(solutionResult);
         }

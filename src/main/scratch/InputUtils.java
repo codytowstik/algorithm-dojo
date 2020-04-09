@@ -1,4 +1,4 @@
-package main.utils;
+package main.scratch;
 
 public class InputUtils
 {

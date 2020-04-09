@@ -10,7 +10,7 @@ public final class ResultValidator
 	{
 		String 		canonicalName = o1.getClass().getCanonicalName();
 
-		boolean		equal = false;
+		boolean		equal;
 
 		switch (canonicalName)
 		{
@@ -21,6 +21,9 @@ public final class ResultValidator
 				break;
 			}
 
+			case "boolean":
+			case "java.lang.Boolean":
+			case "java.lang.Integer":
 			case "int":
 			{
 				equal = o1.equals(o2);
@@ -36,11 +39,13 @@ public final class ResultValidator
 				if (list1.size() != list2.size())
 				{
 					equal = false;
+					break;
 				}
 				// if both are empty, they are equal
 				else if (list1.size() == 0)
 				{
 					equal = true;
+					break;
 				}
 
 				// check the sub-type of the list, if it is a List sub element, we need to use our special impl

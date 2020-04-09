@@ -1,7 +1,5 @@
 package main.easy.palindrome_9;
 
-import main.utils.Solution;
-
 public class PalindromeCleaned extends Palindrome
 {
     public boolean isPalindrome( int x )

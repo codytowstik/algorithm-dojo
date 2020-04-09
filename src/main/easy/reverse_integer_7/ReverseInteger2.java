@@ -1,7 +1,5 @@
 package main.easy.reverse_integer_7;
 
-import main.utils.Solution;
-
 class ReverseInteger2 extends ReverseInteger
 {
     /**

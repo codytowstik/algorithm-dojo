@@ -104,6 +104,13 @@ public class SolutionResults
 		System.out.println("Average execute Time: " + averageExecuteTime);
 	}
 
+	private static String buildReadableString(Object object)
+	{
+		StringBuilder 	readableStringBuilder = new StringBuilder();
+
+		return 	readableStringBuilder.toString();
+	}
+
 	/**
 	 * Normalize all strings to COLUMN_WIDTH length, truncating strings that are longer and adding extra
 	 * spaces to strings that are shorter.

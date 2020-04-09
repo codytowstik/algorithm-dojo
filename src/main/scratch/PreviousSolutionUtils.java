@@ -1,4 +1,4 @@
-package main.utils;
+package main.scratch;
 
 import main.easy.two_sum_1.TwoSumCleaned;
 

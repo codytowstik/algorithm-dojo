@@ -2,26 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34f871cd-4740-4420-b6b9-4b7ca22bd1d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/utils/ResultValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easy/palindrome_9/PalindromeRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/palindrome_9/PalindromeRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easy/reverse_integer_7/ReverseInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/reverse_integer_7/ReverseInteger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easy/reverse_integer_7/ReverseIntegerRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/reverse_integer_7/ReverseIntegerRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easy/two_sum_1/TwoSumCleaned.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/two_sum_1/TwoSumCleaned.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easy/two_sum_1/input.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/two_sum_1/input.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/medium/threesum_15/ThreeSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/ThreeSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/easy/palindrome_9/PalindromeCleaned.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/palindrome_9/PalindromeCleaned.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/easy/reverse_integer_7/ReverseInteger2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/reverse_integer_7/ReverseInteger2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/easy/reverse_integer_7/ReverseIntegerCleaned.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/reverse_integer_7/ReverseIntegerCleaned.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/easy/two_sum_1/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/two_sum_1/MainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/medium/threesum_15/ThreeSum0.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/ThreeSum0.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/medium/threesum_15/ThreeSum1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/ThreeSum1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/medium/threesum_15/ThreeSum2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/ThreeSum2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/medium/threesum_15/ThreeSum3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/ThreeSum3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/medium/threesum_15/ThreeSum4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/ThreeSum4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/medium/threesum_15/ThreeSumEx0.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/ThreeSumEx0.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/medium/threesum_15/ThreeSumEx1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/ThreeSumEx1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/medium/threesum_15/ThreeSumEx2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/ThreeSumEx2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/medium/threesum_15/ThreeSumRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/ThreeSumRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/utils/ComplexOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scratch/ComplexOutput.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/utils/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/DataLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/utils/ListComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/ListComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/utils/SolutionEx.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/SolutionEx.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/utils/SolutionExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/SolutionExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/utils/InputOutputParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/InputOutputParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/utils/InputUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scratch/InputUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/utils/PreviousSolutionUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scratch/PreviousSolutionUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/utils/ResultValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/ResultValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/utils/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scratch/Solution.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/utils/SolutionInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/SolutionInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/utils/SolutionResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/SolutionResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/utils/SolutionResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/SolutionResults.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PalindromeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PalindromeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ReverseIntegerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ReverseIntegerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestProblem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ThreeSumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ThreeSumTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TwoSumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TwoSumTest.java" afterDir="false" />
     </list>
@@ -81,14 +84,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="main.utils.InputOutputParser" />
       <recent name="main.utils.DataLoader" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/test/resources" />
-      <recent name="$PROJECT_DIR$/src/main/medium/threesum_15" />
-      <recent name="$PROJECT_DIR$/src/main/easyInterview/two_sum_1" />
-      <recent name="$PROJECT_DIR$/src/main/easyInterview" />
-      <recent name="$PROJECT_DIR$/src/main/easyInterview/removeDuplicatesSortedArray" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/palindrome" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
@@ -97,11 +97,15 @@
       <recent name="main.easyInterview.two_sum_1" />
       <recent name="main.easyInterview.reverse_integer_7" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/palindrome" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
+      <recent name="$PROJECT_DIR$/src/main/medium/threesum_15" />
+      <recent name="$PROJECT_DIR$/src/main/easyInterview/two_sum_1" />
+      <recent name="$PROJECT_DIR$/src/main/easyInterview" />
+      <recent name="$PROJECT_DIR$/src/main/easyInterview/removeDuplicatesSortedArray" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ThreeSumTest.testThreeSum0">
+  <component name="RunManager" selected="JUnit.All in leetcode">
     <configuration name="All in leetcode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="leetcode" />
       <option name="PACKAGE_NAME" value="" />
@@ -110,21 +114,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ScratchTest.testSingleNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PalindromeTest.testPalindrome0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="leetcode" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ScratchTest" />
-      <option name="METHOD_NAME" value="testSingleNumber" />
+      <option name="MAIN_CLASS_NAME" value="PalindromeTest" />
+      <option name="METHOD_NAME" value="testPalindrome0" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThreeSumTest.testThreeSum0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ReverseIntegerTest.testReverseInteger0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="leetcode" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ThreeSumTest" />
-      <option name="METHOD_NAME" value="testThreeSum0" />
+      <option name="MAIN_CLASS_NAME" value="ReverseIntegerTest" />
+      <option name="METHOD_NAME" value="testReverseInteger0" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -139,23 +143,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TwoSumTest.testTwoSum0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="test in leetcode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="leetcode" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TwoSumTest" />
-      <option name="METHOD_NAME" value="testTwoSum0" />
-      <option name="TEST_OBJECT" value="method" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ThreeSumTest.testThreeSum0" />
-        <item itemvalue="JUnit.TwoSumTest" />
-        <item itemvalue="JUnit.TwoSumTest.testTwoSum0" />
         <item itemvalue="JUnit.All in leetcode" />
-        <item itemvalue="JUnit.ScratchTest.testSingleNumber" />
+        <item itemvalue="JUnit.PalindromeTest.testPalindrome0" />
+        <item itemvalue="JUnit.ReverseIntegerTest.testReverseInteger0" />
+        <item itemvalue="JUnit.test in leetcode" />
+        <item itemvalue="JUnit.TwoSumTest" />
       </list>
     </recent_temporary>
   </component>
@@ -186,7 +194,7 @@
       <workItem from="1586049922937" duration="695000" />
       <workItem from="1586198752247" duration="15732000" />
       <workItem from="1586323955310" duration="3338000" />
-      <workItem from="1586461335800" duration="6171000" />
+      <workItem from="1586461335800" duration="7154000" />
     </task>
     <task id="LOCAL-00001" summary="moved files around">
       <created>1585193165740</created>
@@ -524,7 +532,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586238911074</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="* some reformatting&#10;* complex output comparison done?">
+      <created>1586468131456</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1586468131456</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -546,7 +561,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/../.." />
     </ignored-roots>
-    <MESSAGE value="3sum&#10;- naive done" />
     <MESSAGE value="3sum&#10;- naive more comments" />
     <MESSAGE value="previous solution utils" />
     <MESSAGE value="* renamed some vars in 'two sum' to make more sense&#10;* initial twoSumValue impl for 3sum" />
@@ -571,7 +585,8 @@
     <MESSAGE value="* `Object` generic result" />
     <MESSAGE value="* `Object` generic input&#10;&#10;Need:&#10;- multiple input (new class instead of default 'Object')&#10;- comparing list outputs" />
     <MESSAGE value="* two sum, three sum test outlines" />
-    <option name="LAST_COMMIT_MESSAGE" value="* two sum, three sum test outlines" />
+    <MESSAGE value="* some reformatting&#10;* complex output comparison done?" />
+    <option name="LAST_COMMIT_MESSAGE" value="* some reformatting&#10;* complex output comparison done?" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3672" y="798" width="735" height="597" key="#com.intellij.featureStatistics.actions.ShowFeatureUsageStatisticsDialog" timestamp="1585723071817">
@@ -586,10 +601,10 @@
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
     <state x="3853" y="797" width="374" height="599" key="#com.intellij.ide.util.MemberChooser/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586326856345" />
-    <state x="3772" y="883" width="525" height="435" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1585683999403">
+    <state x="3772" y="883" width="525" height="435" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1586468543799">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state x="3772" y="883" width="525" height="435" key="#com.intellij.ide.util.TreeClassChooserDialog/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585683999403" />
+    <state x="3772" y="883" width="525" height="435" key="#com.intellij.ide.util.TreeClassChooserDialog/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586468543799" />
     <state x="3886" y="985" width="308" height="244" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1585190830466">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
@@ -598,10 +613,10 @@
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
     <state x="3623" y="762" width="824" height="691" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585190780346" />
-    <state x="3754" y="791" width="571" height="612" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog" timestamp="1585684000900">
+    <state x="3754" y="791" width="571" height="612" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog" timestamp="1586468554674">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state x="3754" y="791" width="571" height="612" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585684000900" />
+    <state x="3754" y="791" width="571" height="612" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586468554674" />
     <state x="3517" y="153" width="1046" height="1887" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586326805184">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
@@ -610,50 +625,50 @@
       <screen x="0" y="27" width="2160" height="3813" />
     </state>
     <state x="768" y="811" width="822" height="511" key="#xdebugger.evaluate/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586467372567" />
-    <state x="3463" y="667" width="1602" height="1343" key="CommitChangelistDialog2" timestamp="1586238911031">
+    <state x="3463" y="667" width="1602" height="1343" key="CommitChangelistDialog2" timestamp="1586468131360">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state x="3463" y="667" width="1602" height="1343" key="CommitChangelistDialog2/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586238911031" />
-    <state x="2260" y="127" width="3570" height="1933" key="DiffContextDialog" timestamp="1585604609459">
+    <state x="3463" y="667" width="1602" height="1343" key="CommitChangelistDialog2/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586468131360" />
+    <state x="2260" y="127" width="3570" height="1933" key="DiffContextDialog" timestamp="1586468514326">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state x="2260" y="127" width="3570" height="1933" key="DiffContextDialog/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585604609459" />
+    <state x="2260" y="127" width="3570" height="1933" key="DiffContextDialog/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586468514326" />
     <state x="3818" y="865" width="424" height="491" key="FileChooserDialogImpl" timestamp="1585191148690">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
     <state x="3818" y="865" width="424" height="491" key="FileChooserDialogImpl/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585191148690" />
-    <state width="3724" height="632" key="GridCell.Tab.0.bottom" timestamp="1586467416373">
+    <state width="3724" height="632" key="GridCell.Tab.0.bottom" timestamp="1586469003675">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="632" key="GridCell.Tab.0.bottom/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586467416373" />
-    <state width="3724" height="632" key="GridCell.Tab.0.center" timestamp="1586467416373">
+    <state width="3724" height="632" key="GridCell.Tab.0.bottom/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586469003675" />
+    <state width="3724" height="632" key="GridCell.Tab.0.center" timestamp="1586469003675">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="632" key="GridCell.Tab.0.center/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586467416373" />
-    <state width="3724" height="632" key="GridCell.Tab.0.left" timestamp="1586467416373">
+    <state width="3724" height="632" key="GridCell.Tab.0.center/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586469003675" />
+    <state width="3724" height="632" key="GridCell.Tab.0.left" timestamp="1586469003675">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="632" key="GridCell.Tab.0.left/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586467416373" />
-    <state width="3724" height="632" key="GridCell.Tab.0.right" timestamp="1586467416373">
+    <state width="3724" height="632" key="GridCell.Tab.0.left/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586469003675" />
+    <state width="3724" height="632" key="GridCell.Tab.0.right" timestamp="1586469003675">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="632" key="GridCell.Tab.0.right/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586467416373" />
-    <state width="3724" height="632" key="GridCell.Tab.1.bottom" timestamp="1586467384542">
+    <state width="3724" height="632" key="GridCell.Tab.0.right/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586469003675" />
+    <state width="3724" height="632" key="GridCell.Tab.1.bottom" timestamp="1586469003675">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="632" key="GridCell.Tab.1.bottom/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586467384542" />
-    <state width="3724" height="632" key="GridCell.Tab.1.center" timestamp="1586467384542">
+    <state width="3724" height="632" key="GridCell.Tab.1.bottom/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586469003675" />
+    <state width="3724" height="632" key="GridCell.Tab.1.center" timestamp="1586469003675">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="632" key="GridCell.Tab.1.center/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586467384542" />
-    <state width="3724" height="632" key="GridCell.Tab.1.left" timestamp="1586467384542">
+    <state width="3724" height="632" key="GridCell.Tab.1.center/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586469003675" />
+    <state width="3724" height="632" key="GridCell.Tab.1.left" timestamp="1586469003675">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="632" key="GridCell.Tab.1.left/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586467384542" />
-    <state width="3724" height="632" key="GridCell.Tab.1.right" timestamp="1586467384542">
+    <state width="3724" height="632" key="GridCell.Tab.1.left/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586469003675" />
+    <state width="3724" height="632" key="GridCell.Tab.1.right" timestamp="1586469003675">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="632" key="GridCell.Tab.1.right/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586467384542" />
+    <state width="3724" height="632" key="GridCell.Tab.1.right/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586469003675" />
     <state x="3545" y="641" width="1284" height="737" key="SettingsEditor" timestamp="1586461851289">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
@@ -709,6 +724,16 @@
             <option name="lambda-ordinal" value="0" />
           </properties>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/utils/SolutionResults.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/utils/ResultValidator.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-defaults>

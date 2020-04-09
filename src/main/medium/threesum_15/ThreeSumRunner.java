@@ -1,7 +1,5 @@
 package main.medium.threesum_15;
 
-import main.utils.Solution;
-
 public class ThreeSumRunner
 {
 

@@ -1,7 +1,5 @@
 package main.easy.two_sum_1;
 
-import main.utils.Solution;
-
 public class MainClass {
 
     private static final String INPUT_FILE_NAME = "input.properties";

@@ -45,30 +45,10 @@ public final class SolutionInput
 				{
 					String 		currentRawInput = rawInputsSplit[i];
 
-					inputs[i] = DataLoader.parseArrayIntString(currentRawInput);
+					inputs[i] = InputOutputParser.parseArrayIntString(currentRawInput);
 					break;
 				}
 			}
-		}
-	}
-
-	enum ParamaterType
-	{
-		INT,
-		ARRAY_INT;
-
-		ParamaterType(){}
-
-		static ParamaterType valueOf(Class<?> parameterType)
-		{
-			switch (parameterType.getName())
-			{
-				case "int": return INT;
-
-				case "int[]": return ARRAY_INT;
-			}
-
-			return null;
 		}
 	}
 
