@@ -2,7 +2,10 @@ package main.utils;
 
 public class SolutionExecutor
 {
-	public static SolutionResult executeAndTime(SolutionEx solutionEx, SolutionInput input, Object expectedResult)
+	public static SolutionResult executeAndTime(
+		SolutionEx 		solutionEx,
+		SolutionInput 	input,
+		Object 			expectedResult)
 	{
 		long 		start = System.nanoTime();
 

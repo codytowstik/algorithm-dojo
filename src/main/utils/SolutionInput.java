@@ -45,7 +45,7 @@ public final class SolutionInput
 				{
 					String 		currentRawInput = rawInputsSplit[i];
 
-					inputs[i] = DataLoader.valueOfArrayIntString(currentRawInput);
+					inputs[i] = DataLoader.parseArrayIntString(currentRawInput);
 					break;
 				}
 			}
@@ -70,6 +70,11 @@ public final class SolutionInput
 
 			return null;
 		}
+	}
+
+	public Object getFirstInput()
+	{
+		return this.inputs[0];
 	}
 
 	public Object getInputAtIndex(int index)

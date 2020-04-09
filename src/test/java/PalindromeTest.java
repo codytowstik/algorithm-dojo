@@ -1,10 +1,7 @@
 import main.easy.palindrome_9.Palindrome;
 import main.easy.palindrome_9.Palindrome0;
 import main.easy.palindrome_9.Palindrome1;
-import main.utils.DataLoader;
-import main.utils.SolutionExecutor;
-import main.utils.SolutionResult;
-import main.utils.SolutionResults;
+import main.utils.*;
 import org.junit.jupiter.api.Test;
 
 import java.util.Map;
@@ -23,14 +20,14 @@ public final class PalindromeTest extends TestBase
 
 		for (Map.Entry<String, String> entry : expectedResults.entrySet())
 		{
-			String 		rawInput = entry.getKey();
-			int 		input = Integer.parseInt(rawInput);
+			String 			rawInput = entry.getKey();
+			SolutionInput 	solutionInput = new SolutionInput(rawInput, testClass);
 
-			String 		rawExpectedResult = entry.getValue();
-			boolean 	expectedResult = Boolean.parseBoolean(rawExpectedResult);
+			String 			rawExpectedResult = entry.getValue();
+			boolean 		expectedResult = Boolean.parseBoolean(rawExpectedResult);
 
 			// isPalindrome(int)
-			SolutionResult 		solutionResult = SolutionExecutor.executeAndTime(testClass, input, expectedResult);
+			SolutionResult 		solutionResult = SolutionExecutor.executeAndTime(testClass, solutionInput, expectedResult);
 
 			solutionResults.saveResult(solutionResult);
 		}
@@ -50,14 +47,14 @@ public final class PalindromeTest extends TestBase
 
 		for (Map.Entry<String, String> entry : expectedResults.entrySet())
 		{
-			String 		rawInput = entry.getKey();
-			int 		input = Integer.parseInt(rawInput);
+			String 			rawInput = entry.getKey();
+			SolutionInput	solutionInput = new SolutionInput(rawInput, testClass);
 
-			String 		rawExpectedResult = entry.getValue();
-			boolean 	expectedResult = Boolean.parseBoolean(rawExpectedResult);
+			String 			rawExpectedResult = entry.getValue();
+			boolean 		expectedResult = Boolean.parseBoolean(rawExpectedResult);
 
 			// isPalindrome(int)
-			SolutionResult 		solutionResult = SolutionExecutor.executeAndTime(testClass, input, expectedResult);
+			SolutionResult 		solutionResult = SolutionExecutor.executeAndTime(testClass, solutionInput, expectedResult);
 
 			solutionResults.saveResult(solutionResult);
 		}

@@ -12,11 +12,6 @@ public class SolutionResults
 	private final Set<SolutionResult> results = new LinkedHashSet<>();
 	private final Map<SolutionResult,Boolean> resultToSuccess = new LinkedHashMap<>();
 
-	public void saveResult(int input, boolean expectedResult, boolean actualResult, long executeTime)
-	{
-		results.add(new SolutionResult(input, expectedResult, actualResult, executeTime));
-	}
-
 	public void saveResult(SolutionResult solutionResult)
 	{
 		results.add(solutionResult);
@@ -28,7 +23,7 @@ public class SolutionResults
 	 */
 	public boolean validateResults()
 	{
-		boolean			allSuccess = true;
+		boolean			allResultsSuccess = true;
 		long			averageExecuteTime = 0;
 
 		for (SolutionResult result : results)
@@ -37,11 +32,11 @@ public class SolutionResults
 			Object		actualResult = result.getActualResult();
 			long		executeTime = result.getExecuteTime();
 
-			boolean 	success = validateResult(expectedResult, actualResult);
+			boolean 	thisResultSuccess = validateResult(expectedResult, actualResult);
 
-			allSuccess &= success;
+			allResultsSuccess &= thisResultSuccess;
 
-			trackResult(success, result);
+			trackResult(thisResultSuccess, result);
 
 			// track total execution time so we can compute average
 			averageExecuteTime += executeTime;
@@ -52,12 +47,12 @@ public class SolutionResults
 
 		printResults(averageExecuteTime);
 
-		return allSuccess;
+		return allResultsSuccess;
 	}
 
 	private boolean validateResult(Object expectedResult, Object actualResult)
 	{
-		return expectedResult.equals(actualResult);
+		return ResultValidator.isEqualsIgnoreOrder(expectedResult, actualResult);
 	}
 
 	private void trackResult(boolean success, SolutionResult solutionResult)
@@ -86,18 +81,17 @@ public class SolutionResults
 			// keep these variables here for easy debugging
 			SolutionResult 		solutionResult = entry.getKey();
 
-			int			input = solutionResult.getRawInput();
+			String		input = solutionResult.getRawInput();
 			Object		expectedResult = solutionResult.getExpectedResult();
 			Object		actualResult = solutionResult.getActualResult();
 			long		executeTime = solutionResult.getExecuteTime();
 
-			String		inputString = String.valueOf(input);
 			String		expectedResultString = String.valueOf(expectedResult);
 			String		actualResultString = String.valueOf(actualResult);
 			String		executeTimeString = String.valueOf(executeTime);
 
 
-			resultBuilder.append(normalizeResultStringToColumnWidth(inputString));
+			resultBuilder.append(normalizeResultStringToColumnWidth(input));
 			resultBuilder.append(normalizeResultStringToColumnWidth(expectedResultString));
 			resultBuilder.append(normalizeResultStringToColumnWidth(actualResultString));
 			resultBuilder.append(normalizeResultStringToColumnWidth(executeTimeString));

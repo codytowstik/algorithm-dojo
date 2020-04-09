@@ -3,6 +3,7 @@ import main.medium.threesum_15.ThreeSum0;
 import main.utils.*;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
 import java.util.Map;
 
 public final class ThreeSumTest extends TestBase
@@ -19,14 +20,14 @@ public final class ThreeSumTest extends TestBase
 
         for (Map.Entry<String, String> entry : expectedResults.entrySet())
         {
-            String      rawInput = entry.getKey();
-            int         input = Integer.parseInt(rawInput);
+            String                  rawInput = entry.getKey();
+            SolutionInput           solutionInput = new SolutionInput(rawInput, testClass);
 
-            String      rawExpectedResult = entry.getValue();
-            int         expectedResult = Integer.parseInt(rawExpectedResult);
+            String                  rawExpectedResult = entry.getValue();
+            List<List<Integer>>     expectedResult = DataLoader.parseListListIntegerString(rawExpectedResult);
 
             // List<List<Integer>> threeSum(int[] nums)
-            SolutionResult  solutionResult = SolutionExecutor.executeAndTime(testClass, input, expectedResult);
+            SolutionResult  solutionResult = SolutionExecutor.executeAndTime(testClass, solutionInput, expectedResult);
 
             solutionResults.saveResult(solutionResult);
         }

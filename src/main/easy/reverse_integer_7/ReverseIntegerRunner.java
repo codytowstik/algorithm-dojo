@@ -18,14 +18,14 @@ public class ReverseIntegerRunner
 
         for ( Map.Entry<String, String> entry: expectedResults.entrySet() )
         {
-            String      rawInput = entry.getKey();
-            int         input = Integer.parseInt(rawInput);
+            String              rawInput = entry.getKey();
+            SolutionInput       solutionInput = new SolutionInput(rawInput, TEST_CLASS);
 
-            String      rawExpectedResult = entry.getValue();
-            int         expectedResult = Integer.parseInt(rawExpectedResult);
+            String              rawExpectedResult = entry.getValue();
+            int                 expectedResult = Integer.parseInt(rawExpectedResult);
 
             // int reverseInteger(int)
-            SolutionResult solutionResult = SolutionExecutor.executeAndTime(TEST_CLASS, input, expectedResult);
+            SolutionResult      solutionResult = SolutionExecutor.executeAndTime(TEST_CLASS, solutionInput, expectedResult);
 
             solutionResults.saveResult(solutionResult);
         }

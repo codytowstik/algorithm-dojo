@@ -1,20 +1,17 @@
 import main.easy.two_sum_1.TwoSum;
 import main.easy.two_sum_1.TwoSum0;
-import main.medium.threesum_15.ThreeSum;
-import main.medium.threesum_15.ThreeSum0;
+import main.easy.two_sum_1.TwoSum3;
 import main.utils.*;
-import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Map;
 
 public final class TwoSumTest extends TestBase
 {
     private static final String INPUT_FILE_NAME = "input.properties";
 
+    @Disabled
     @Test
     public void testTwoSum0()
     {
@@ -29,9 +26,36 @@ public final class TwoSumTest extends TestBase
             SolutionInput   solutionInput = new SolutionInput(rawInput, testClass);
 
             String          rawExpectedResult = entry.getValue();
-            int[]           expectedResult = DataLoader.valueOfArrayIntString(rawExpectedResult);
+            int[]           expectedResult = DataLoader.parseArrayIntString(rawExpectedResult);
 
-            // List<List<Integer>> threeSum(int[] nums)
+            // int[] twoSum(int[] nums, int target)
+            SolutionResult  solutionResult = SolutionExecutor.executeAndTime(testClass, solutionInput, expectedResult);
+
+            solutionResults.saveResult(solutionResult);
+        }
+
+        boolean     allResultsSuccessful = solutionResults.validateResults();
+
+        assert allResultsSuccessful;
+    }
+
+    @Test
+    public void testTwoSum3()
+    {
+        final TwoSum            testClass = new TwoSum3();
+
+        Map<String, String>     expectedResults = DataLoader.loadExpectedResults(testClass.getClass(), INPUT_FILE_NAME);
+        SolutionResults         solutionResults = new SolutionResults();
+
+        for (Map.Entry<String, String> entry : expectedResults.entrySet())
+        {
+            String          rawInput = entry.getKey();
+            SolutionInput   solutionInput = new SolutionInput(rawInput, testClass);
+
+            String          rawExpectedResult = entry.getValue();
+            int[]           expectedResult = DataLoader.parseArrayIntString(rawExpectedResult);
+
+            // int[] twoSum(int[] nums, int target)
             SolutionResult  solutionResult = SolutionExecutor.executeAndTime(testClass, solutionInput, expectedResult);
 
             solutionResults.saveResult(solutionResult);

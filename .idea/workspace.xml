@@ -2,13 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34f871cd-4740-4420-b6b9-4b7ca22bd1d2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/utils/ResultValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easy/palindrome_9/Palindrome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/palindrome_9/Palindrome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/easy/two_sum_1/TwoSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/two_sum_1/TwoSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/easy/palindrome_9/PalindromeRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/palindrome_9/PalindromeRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/easy/reverse_integer_7/ReverseInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/reverse_integer_7/ReverseInteger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/easy/reverse_integer_7/ReverseIntegerRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/reverse_integer_7/ReverseIntegerRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/easy/two_sum_1/TwoSumCleaned.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/two_sum_1/TwoSumCleaned.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/easy/two_sum_1/input.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/easy/two_sum_1/input.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/medium/threesum_15/ThreeSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/medium/threesum_15/ThreeSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/utils/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/DataLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/utils/ListComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/ListComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/utils/SolutionEx.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/SolutionEx.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/utils/SolutionExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/SolutionExecutor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/utils/SolutionInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/SolutionInput.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/utils/SolutionResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/SolutionResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/utils/SolutionResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/SolutionResults.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PalindromeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PalindromeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ReverseIntegerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ReverseIntegerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestProblem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ThreeSumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ThreeSumTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TwoSumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TwoSumTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,20 +101,11 @@
       <recent name="$PROJECT_DIR$/src/main/palindrome" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TwoSumTest.testTwoSum0">
+  <component name="RunManager" selected="JUnit.ThreeSumTest.testThreeSum0">
     <configuration name="All in leetcode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="leetcode" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PalindromeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="leetcode" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PalindromeTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -110,6 +115,16 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ScratchTest" />
       <option name="METHOD_NAME" value="testSingleNumber" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThreeSumTest.testThreeSum0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="leetcode" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ThreeSumTest" />
+      <option name="METHOD_NAME" value="testThreeSum0" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -136,11 +151,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TwoSumTest.testTwoSum0" />
+        <item itemvalue="JUnit.ThreeSumTest.testThreeSum0" />
         <item itemvalue="JUnit.TwoSumTest" />
+        <item itemvalue="JUnit.TwoSumTest.testTwoSum0" />
         <item itemvalue="JUnit.All in leetcode" />
         <item itemvalue="JUnit.ScratchTest.testSingleNumber" />
-        <item itemvalue="JUnit.PalindromeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -170,7 +185,8 @@
       <workItem from="1585778885495" duration="599000" />
       <workItem from="1586049922937" duration="695000" />
       <workItem from="1586198752247" duration="15732000" />
-      <workItem from="1586323955310" duration="3168000" />
+      <workItem from="1586323955310" duration="3338000" />
+      <workItem from="1586461335800" duration="6171000" />
     </task>
     <task id="LOCAL-00001" summary="moved files around">
       <created>1585193165740</created>
@@ -590,10 +606,10 @@
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
     <state x="3517" y="153" width="1046" height="1887" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586326805184" />
-    <state x="1106" y="811" key="#xdebugger.evaluate" timestamp="1586326299233">
+    <state x="768" y="811" width="822" height="511" key="#xdebugger.evaluate" timestamp="1586467372567">
       <screen x="0" y="27" width="2160" height="3813" />
     </state>
-    <state x="1106" y="811" key="#xdebugger.evaluate/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586326299233" />
+    <state x="768" y="811" width="822" height="511" key="#xdebugger.evaluate/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586467372567" />
     <state x="3463" y="667" width="1602" height="1343" key="CommitChangelistDialog2" timestamp="1586238911031">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
@@ -606,42 +622,42 @@
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
     <state x="3818" y="865" width="424" height="491" key="FileChooserDialogImpl/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585191148690" />
-    <state width="3724" height="632" key="GridCell.Tab.0.bottom" timestamp="1586326617120">
+    <state width="3724" height="632" key="GridCell.Tab.0.bottom" timestamp="1586467416373">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="632" key="GridCell.Tab.0.bottom/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586326617120" />
-    <state width="3724" height="632" key="GridCell.Tab.0.center" timestamp="1586326617120">
+    <state width="3724" height="632" key="GridCell.Tab.0.bottom/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586467416373" />
+    <state width="3724" height="632" key="GridCell.Tab.0.center" timestamp="1586467416373">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="632" key="GridCell.Tab.0.center/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586326617120" />
-    <state width="3724" height="632" key="GridCell.Tab.0.left" timestamp="1586326617120">
+    <state width="3724" height="632" key="GridCell.Tab.0.center/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586467416373" />
+    <state width="3724" height="632" key="GridCell.Tab.0.left" timestamp="1586467416373">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="632" key="GridCell.Tab.0.left/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586326617120" />
-    <state width="3724" height="632" key="GridCell.Tab.0.right" timestamp="1586326617120">
+    <state width="3724" height="632" key="GridCell.Tab.0.left/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586467416373" />
+    <state width="3724" height="632" key="GridCell.Tab.0.right" timestamp="1586467416373">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="632" key="GridCell.Tab.0.right/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586326617120" />
-    <state width="3724" height="632" key="GridCell.Tab.1.bottom" timestamp="1586326617120">
+    <state width="3724" height="632" key="GridCell.Tab.0.right/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586467416373" />
+    <state width="3724" height="632" key="GridCell.Tab.1.bottom" timestamp="1586467384542">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="632" key="GridCell.Tab.1.bottom/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586326617120" />
-    <state width="3724" height="632" key="GridCell.Tab.1.center" timestamp="1586326617120">
+    <state width="3724" height="632" key="GridCell.Tab.1.bottom/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586467384542" />
+    <state width="3724" height="632" key="GridCell.Tab.1.center" timestamp="1586467384542">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="632" key="GridCell.Tab.1.center/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586326617120" />
-    <state width="3724" height="632" key="GridCell.Tab.1.left" timestamp="1586326617120">
+    <state width="3724" height="632" key="GridCell.Tab.1.center/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586467384542" />
+    <state width="3724" height="632" key="GridCell.Tab.1.left" timestamp="1586467384542">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="632" key="GridCell.Tab.1.left/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586326617120" />
-    <state width="3724" height="632" key="GridCell.Tab.1.right" timestamp="1586326617120">
+    <state width="3724" height="632" key="GridCell.Tab.1.left/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586467384542" />
+    <state width="3724" height="632" key="GridCell.Tab.1.right" timestamp="1586467384542">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state width="3724" height="632" key="GridCell.Tab.1.right/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586326617120" />
-    <state x="3545" y="641" width="1284" height="737" key="SettingsEditor" timestamp="1586239968639">
+    <state width="3724" height="632" key="GridCell.Tab.1.right/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586467384542" />
+    <state x="3545" y="641" width="1284" height="737" key="SettingsEditor" timestamp="1586461851289">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state x="3545" y="641" width="1284" height="737" key="SettingsEditor/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586239968639" />
+    <state x="3545" y="641" width="1284" height="737" key="SettingsEditor/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586461851289" />
     <state width="498" height="451" key="SwitcherDM" timestamp="1586203468684">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
@@ -670,10 +686,10 @@
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
     <state x="3354" y="820" width="1372" height="554" key="new project wizard/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585686331251" />
-    <state x="3741" y="712" width="598" height="769" key="refactoring.ChangeSignatureDialog" timestamp="1585689667917">
+    <state x="3741" y="712" width="598" height="769" key="refactoring.ChangeSignatureDialog" timestamp="1586462792576">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>
-    <state x="3741" y="712" width="598" height="769" key="refactoring.ChangeSignatureDialog/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1585689667917" />
+    <state x="3741" y="712" width="598" height="769" key="refactoring.ChangeSignatureDialog/2160.0.3840.2160/0.27.2160.3813@2160.0.3840.2160" timestamp="1586462792576" />
     <state x="3709" y="522" key="run.anything.popup" timestamp="1585695947516">
       <screen x="2160" y="0" width="3840" height="2160" />
     </state>

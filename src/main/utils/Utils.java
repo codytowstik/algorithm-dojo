@@ -1,5 +1,6 @@
 package main.utils;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -9,7 +10,7 @@ public final class Utils
 {
     public static int parseNumericKey(Map.Entry<Object, Object> entry)
     {
-        String input = (String) entry.getKey();
+        String      input = (String) entry.getKey();
 
         return Integer.parseInt(input);
     }
@@ -25,18 +26,18 @@ public final class Utils
      */
     public static String parseIntArray(Object result)
     {
-        int[]              resultArray = (int[]) result;
+        int[]           resultArray = (int[]) result;
 
         StringBuilder   resultBuilder = new StringBuilder();
 
         for (int i : resultArray)
         {
-            resultBuilder.append( i );
-            resultBuilder.append( ",");
+            resultBuilder.append(i);
+            resultBuilder.append(",");
         }
 
         // remove additional comma
-        resultBuilder.setLength( resultBuilder.length() - 1);
+        resultBuilder.setLength(resultBuilder.length() - 1);
 
         return resultBuilder.toString();
     }
@@ -51,13 +52,13 @@ public final class Utils
      */
     public static String parseListListInt(Object result)
     {
-        List<List<Integer>> resultList = (List<List<Integer>>) result;
+        List<List<Integer>>     resultList = (List<List<Integer>>) result;
 
-        StringBuilder resultBuilder = new StringBuilder();
+        StringBuilder           resultBuilder = new StringBuilder();
 
         for (List<Integer> subList : resultList)
         {
-            StringBuilder subResultBuilder = new StringBuilder();
+            StringBuilder   subResultBuilder = new StringBuilder();
 
             for (Integer value : subList)
             {
@@ -77,6 +78,47 @@ public final class Utils
         resultBuilder.setLength(resultBuilder.length() - 1);
 
         return resultBuilder.toString();
+    }
+
+    public static boolean isEqualsIgnoreOrder(List<List<Integer>> list1, List<List<Integer>> list2)
+    {
+        if (list1.size() != list2.size())
+        {
+            return false;
+        }
+
+        List<List<Integer>>     list1DeepSorted = deepSortListListInteger(list1);
+        List<List<Integer>>     list2DeepSorted = deepSortListListInteger(list2);
+
+        boolean     equal = true;
+
+        for (int i = 0; i < list1.size(); i++)
+        {
+            equal &= list1DeepSorted.get(i).equals(list2DeepSorted.get(i));
+        }
+
+        return equal;
+    }
+
+    public static boolean isEqualsIgnoreOrder(int[] array1, int[] array2)
+    {
+        if (array1.length != array2.length)
+        {
+            return false;
+        }
+
+        // sort arrays since order doesn't matter
+        Arrays.sort(array1);
+        Arrays.sort(array2);
+
+        boolean     equal = true;
+
+        for (int i = 0; i < array1.length; i++)
+        {
+            equal &= (array1[i] == array2[i]);
+        }
+
+        return equal;
     }
 
     /**

@@ -23,7 +23,7 @@ public class TwoSumCleaned extends TwoSum
 {
     public int[] twoSum(int[] nums, int target)
     {
-        Map<Integer, Integer> processedValues = new HashMap<>(nums.length - 2, 1);
+        Map<Integer, Integer>   processedValues = new HashMap<>(nums.length - 2, 1);
 
         processedValues.put(nums[0], 0);
 

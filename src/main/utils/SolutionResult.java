@@ -9,7 +9,11 @@ public final class SolutionResult
 	private final Object actualResult;
 	private final long executeTime;
 
-	public SolutionResult(String rawInput, Object expectedResult, Object actualResult, long executeTime)
+	public SolutionResult(
+		String 		rawInput,
+		Object 		expectedResult,
+		Object 		actualResult,
+		long 		executeTime)
 	{
 		this.rawInput = rawInput;
 		this.expectedResult = expectedResult;

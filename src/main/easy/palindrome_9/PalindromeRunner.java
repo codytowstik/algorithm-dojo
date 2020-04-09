@@ -19,13 +19,13 @@ public class PalindromeRunner
         for ( Map.Entry<String, String> entry: expectedResults.entrySet() )
         {
             String          rawInput = entry.getKey();
-            int             input = Integer.parseInt(rawInput);
+            SolutionInput   solutionInput = new SolutionInput(rawInput, TEST_CLASS);
 
             String          rawExpectedResult = entry.getValue();
             boolean         expectedResult = Boolean.parseBoolean(rawExpectedResult);
 
             // boolean isPalindrome(int)
-            SolutionResult  solutionResult = SolutionExecutor.executeAndTime(TEST_CLASS, input, expectedResult);
+            SolutionResult  solutionResult = SolutionExecutor.executeAndTime(TEST_CLASS, solutionInput, expectedResult);
 
             solutionResults.saveResult(solutionResult);
         }

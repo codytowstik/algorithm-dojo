@@ -1,12 +1,15 @@
 package main.easy.reverse_integer_7;
 
 import main.utils.SolutionEx;
+import main.utils.SolutionInput;
 
 public abstract class ReverseInteger implements SolutionEx
 {
-	public Object execute(Object input)
+	public Object execute(SolutionInput solutionInput)
 	{
-		return reverseInteger((int) input);
+		int 	num = (int) solutionInput.getFirstInput();
+
+		return reverseInteger(num);
 	}
 
 	abstract int reverseInteger(int x);

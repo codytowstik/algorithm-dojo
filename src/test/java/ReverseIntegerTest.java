@@ -1,9 +1,6 @@
 import main.easy.reverse_integer_7.ReverseInteger;
 import main.easy.reverse_integer_7.ReverseInteger0;
-import main.utils.DataLoader;
-import main.utils.SolutionExecutor;
-import main.utils.SolutionResult;
-import main.utils.SolutionResults;
+import main.utils.*;
 import org.junit.jupiter.api.Test;
 
 import java.util.Map;
@@ -22,14 +19,14 @@ public final class ReverseIntegerTest extends TestBase
 
 		for (Map.Entry<String, String> entry : expectedResults.entrySet())
 		{
-			String 		rawInput = entry.getKey();
-			int 		input = Integer.parseInt(rawInput);
+			String 			rawInput = entry.getKey();
+			SolutionInput 	solutionInput = new SolutionInput(rawInput, testClass);
 
-			String 		rawExpectedResult = entry.getValue();
-			int 		expectedResult = Integer.parseInt(rawExpectedResult);
+			String 			rawExpectedResult = entry.getValue();
+			int 			expectedResult = Integer.parseInt(rawExpectedResult);
 
 			// boolean isPalindrome(int)
-			SolutionResult solutionResult = SolutionExecutor.executeAndTime(testClass, input, expectedResult);
+			SolutionResult 		solutionResult = SolutionExecutor.executeAndTime(testClass, solutionInput, expectedResult);
 
 			solutionResults.saveResult(solutionResult);
 		}
