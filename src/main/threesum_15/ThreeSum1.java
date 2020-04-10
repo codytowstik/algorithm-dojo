@@ -1,24 +1,19 @@
-package main.medium.threesum_15;
+package main.threesum_15;
 
 import java.util.*;
 
 /**
- * Solution0 - Brute Force, ordered output
+ * Solution1 - Brute Force, no ordered output
  *
- * Time Limit Exceeded
+ * Same as solution0, except we don't care about result sort.
  *
- * Runtime: O(n^3)
- * for each number,
- *   for each other number with greater index,
- *    see if there is a value (with greater index) that sums us to zero
+ * RESULT: Order doesn't matter for individual tuples
  *
- * Space: 0(n)
- *
- * We store the hash of each triplet (ordered) to check for duplicate results
+ * [[-1,0,1],[-1,2,-1]] == [[-1,-1,2],[-1,0,1]]
  */
-public class ThreeSum0 extends ThreeSum
+public class ThreeSum1 extends ThreeSum
 {
-    public List<List<Integer>> threeSum(int[] nums)
+     public List<List<Integer>> threeSum(int[] nums)
     {
         // for each number,
         //   for each other number with greater index,
@@ -51,7 +46,7 @@ public class ThreeSum0 extends ThreeSum
 
                     if (threeValueSum == 0)
                     {
-                        List<Integer>   resultTriplet = createOrderedResults(firstValue, secondValue, thirdValue);
+                        List<Integer>   resultTriplet = createResult(firstValue, secondValue, thirdValue);
 
                         // append the result triplet
                         addResult(resultTriplet, resultTriplets, existingResults );
@@ -69,20 +64,15 @@ public class ThreeSum0 extends ThreeSum
      * @param one first num
      * @param two second num
      * @param three third num
-     * @return an ordered list of the given numbers
+     * @return a list of the given inputs
      */
-    public List<Integer> createOrderedResults(int one, int two, int three)
+    public List<Integer> createResult(int one, int two, int three)
     {
         List<Integer> result = new ArrayList<>(3);
 
-        int minValue = Math.min(one, Math.min(two, three));
-        int maxValue = Math.max(one, Math.max(two, three));
-
-        int middleValue = (one+two+three) - minValue - maxValue;
-
-        result.add(minValue);
-        result.add(middleValue);
-        result.add(maxValue);
+        result.add(one);
+        result.add(two);
+        result.add(three);
 
         return result;
     }
@@ -97,7 +87,12 @@ public class ThreeSum0 extends ThreeSum
      */
     public void addResult(List<Integer> result, List<List<Integer>> results, Set<Integer> existingResultsHash)
     {
-        int currentResultHash = result.hashCode();
+        // copy the list so it doesn't affect our output, we are just checking if order matters
+        List<Integer> resultOrdered = new ArrayList<>(result);
+
+        Collections.sort(resultOrdered);
+
+        int currentResultHash = resultOrdered.hashCode();
 
         if (!existingResultsHash.contains(currentResultHash))
         {

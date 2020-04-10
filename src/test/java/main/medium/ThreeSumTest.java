@@ -1,5 +1,8 @@
-import main.medium.threesum_15.ThreeSum;
-import main.medium.threesum_15.ThreeSum0;
+package main.medium;
+
+import main.TestBase;
+import main.threesum_15.ThreeSum;
+import main.threesum_15.ThreeSum0;
 import main.utils.*;
 import org.junit.jupiter.api.Test;
 

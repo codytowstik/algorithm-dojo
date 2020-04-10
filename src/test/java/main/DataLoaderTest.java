@@ -1,7 +1,5 @@
-import main.easy.palindrome_9.Palindrome;
-import main.easy.two_sum_1.TwoSum;
-import main.easy.two_sum_1.TwoSum0;
-import main.easy.two_sum_1.TwoSumCleaned;
+package main;
+
 import main.utils.DataLoader;
 import main.utils.InputOutputParser;
 import main.utils.MultiInput;

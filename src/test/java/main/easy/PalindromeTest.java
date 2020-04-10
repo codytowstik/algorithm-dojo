@@ -1,3 +1,6 @@
+package main.easy;
+
+import main.TestBase;
 import main.easy.palindrome_9.Palindrome;
 import main.easy.palindrome_9.Palindrome0;
 import main.easy.palindrome_9.Palindrome1;

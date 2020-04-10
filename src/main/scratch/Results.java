@@ -1,6 +1,6 @@
 package main.scratch;
 
-import main.medium.threesum_15.ThreeSumRunner;
+import main.threesum_15.ThreeSumRunner;
 
 import java.io.File;
 import java.net.URL;

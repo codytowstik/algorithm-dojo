@@ -1,3 +1,5 @@
+package main;
+
 import main.utils.SolutionEx;
 import main.utils.SolutionInput;
 

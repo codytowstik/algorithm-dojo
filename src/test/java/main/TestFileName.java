@@ -1,3 +1,5 @@
+package main;
+
 /**
  * Test file names.
  *

@@ -1,3 +1,6 @@
+package main.easy;
+
+import main.TestBase;
 import main.easy.two_sum_1.TwoSum;
 import main.easy.two_sum_1.TwoSum0;
 import main.easy.two_sum_1.TwoSum3;

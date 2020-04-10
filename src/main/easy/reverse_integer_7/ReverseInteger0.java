@@ -19,7 +19,7 @@ public class ReverseInteger0 extends ReverseInteger
      * @param x 32-bit signed integer (or smaller)
      * @return the input reversed
      */
-    public int reverseInteger(int x )
+    public int reverseInteger(int x)
     {
         if (x > Integer.MAX_VALUE)
         {

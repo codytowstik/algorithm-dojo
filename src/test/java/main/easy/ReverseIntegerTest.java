@@ -1,3 +1,6 @@
+package main.easy;
+
+import main.TestBase;
 import main.easy.reverse_integer_7.ReverseInteger;
 import main.easy.reverse_integer_7.ReverseInteger0;
 import main.utils.*;

@@ -1,7 +1,8 @@
+package main;
+
 import main.utils.Utils;
 import org.junit.jupiter.api.Assertions;
 
-import java.util.Arrays;
 import java.util.List;
 
 public abstract class TestBase
