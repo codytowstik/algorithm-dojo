@@ -3,7 +3,7 @@ package main.utils;
 public class SolutionExecutor
 {
 	public static SolutionResult executeAndTime(
-		Solution solution,
+		Solution 		solution,
 		SolutionInput 	input,
 		Object 			expectedResult)
 	{

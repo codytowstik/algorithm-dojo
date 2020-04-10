@@ -45,7 +45,7 @@ public final class SolutionInput
 				{
 					String 		currentRawInput = rawInputsSplit[i];
 
-					inputs[i] = InputOutputParser.parseArrayIntString(currentRawInput);
+					inputs[i] = InputOutputParser.parseArrayInt(currentRawInput);
 					break;
 				}
 			}

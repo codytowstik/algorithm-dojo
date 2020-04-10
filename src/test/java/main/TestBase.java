@@ -1,13 +1,20 @@
 package main;
 
+import main.utils.SolutionResults;
 import main.utils.Utils;
 import org.junit.jupiter.api.Assertions;
 
 import java.util.List;
+import java.util.Map;
 
 public abstract class TestBase
 {
+    protected static final String INPUT_FILE_NAME = "input.properties";
+
     private static final int ARRAY_LENGTH_LIMIT = 32;
+
+    protected Map<String,String> expectedResults;
+    protected SolutionResults solutionResults;
 
     /**
      * Assert two arrays are equal, order matters.

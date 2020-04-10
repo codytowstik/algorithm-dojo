@@ -8,6 +8,7 @@ import java.util.Set;
 public class SolutionResults
 {
 	private static final int COLUMN_WIDTH = 64;
+	private static final int RESULT_BUFFER = 6;
 
 	private final Set<SolutionResult> results = new LinkedHashSet<>();
 	private final Map<SolutionResult,Boolean> resultToSuccess = new LinkedHashMap<>();
@@ -129,7 +130,7 @@ public class SolutionResults
 
 		int 	originalLength = original.length();
 
-		int 	requiredBufferSize = Math.max(0, COLUMN_WIDTH - originalLength);
+		int 	requiredBufferSize = Math.max(RESULT_BUFFER, COLUMN_WIDTH - originalLength + RESULT_BUFFER);
 
 		// add any space buffering needed to meet our COLUMN_WIDTH
 		normalizedBuilder.append(" ".repeat(requiredBufferSize));

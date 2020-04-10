@@ -29,7 +29,7 @@ public final class TwoSumTest extends TestBase
             SolutionInput   solutionInput = new SolutionInput(rawInput, testClass);
 
             String          rawExpectedResult = entry.getValue();
-            int[]           expectedResult = InputOutputParser.parseArrayIntString(rawExpectedResult);
+            int[]           expectedResult = InputOutputParser.parseArrayInt(rawExpectedResult);
 
             // int[] twoSum(int[] nums, int target)
             SolutionResult  solutionResult = SolutionExecutor.executeAndTime(testClass, solutionInput, expectedResult);
@@ -56,7 +56,7 @@ public final class TwoSumTest extends TestBase
             SolutionInput   solutionInput = new SolutionInput(rawInput, testClass);
 
             String          rawExpectedResult = entry.getValue();
-            int[]           expectedResult = InputOutputParser.parseArrayIntString(rawExpectedResult);
+            int[]           expectedResult = InputOutputParser.parseArrayInt(rawExpectedResult);
 
             // int[] twoSum(int[] nums, int target)
             SolutionResult  solutionResult = SolutionExecutor.executeAndTime(testClass, solutionInput, expectedResult);
