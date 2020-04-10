@@ -1,9 +1,9 @@
 package main.easy.reverse_integer_7;
 
-import main.utils.SolutionEx;
+import main.utils.Solution;
 import main.utils.SolutionInput;
 
-public abstract class ReverseInteger implements SolutionEx
+public abstract class ReverseInteger implements Solution
 {
 	public Object execute(SolutionInput solutionInput)
 	{

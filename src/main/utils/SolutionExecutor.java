@@ -3,13 +3,13 @@ package main.utils;
 public class SolutionExecutor
 {
 	public static SolutionResult executeAndTime(
-		SolutionEx 		solutionEx,
+		Solution solution,
 		SolutionInput 	input,
 		Object 			expectedResult)
 	{
 		long 		start = System.nanoTime();
 
-		Object 		result = solutionEx.execute(input);
+		Object 		result = solution.execute(input);
 
 		long 		end = System.nanoTime() - start;
 

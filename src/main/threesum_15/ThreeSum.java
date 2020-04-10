@@ -1,11 +1,11 @@
 package main.threesum_15;
 
-import main.utils.SolutionEx;
+import main.utils.Solution;
 import main.utils.SolutionInput;
 
 import java.util.List;
 
-public abstract class ThreeSum implements SolutionEx
+public abstract class ThreeSum implements Solution
 {
 	public Object execute(SolutionInput input)
 	{

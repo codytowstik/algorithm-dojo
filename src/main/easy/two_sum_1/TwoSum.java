@@ -1,9 +1,9 @@
 package main.easy.two_sum_1;
 
-import main.utils.SolutionEx;
+import main.utils.Solution;
 import main.utils.SolutionInput;
 
-public abstract class TwoSum implements SolutionEx
+public abstract class TwoSum implements Solution
 {
 	public Object execute(SolutionInput input)
 	{

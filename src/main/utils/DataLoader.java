@@ -5,7 +5,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public final class DataLoader
 {
@@ -15,9 +14,9 @@ public final class DataLoader
         // disallow instantiation
     }
 
-    public static Map<String,String> loadExpectedResults(Class<? extends SolutionEx> clazz, String propertiesFileName)
+    public static Map<String,String> loadExpectedResults(Class<? extends Solution> clazz, String propertiesFileName)
     {
-        Properties expectedResults = new Properties();
+        Properties      expectedResults = new Properties();
 
         try
         {
