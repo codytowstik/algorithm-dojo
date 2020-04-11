@@ -19,7 +19,7 @@ public class PalindromeRunner
         for ( Map.Entry<String, String> entry: expectedResults.entrySet() )
         {
             String          rawInput = entry.getKey();
-            SolutionInput   solutionInput = new SolutionInput(rawInput, TEST_CLASS);
+            SolutionInput   solutionInput = new SolutionInput(rawInput, Palindrome0.class);
 
             String          rawExpectedResult = entry.getValue();
             boolean         expectedResult = Boolean.parseBoolean(rawExpectedResult);

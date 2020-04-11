@@ -9,7 +9,7 @@ public final class SolutionInput
 	private final String rawInput;
 	private final Object[] inputs;
 
-	public SolutionInput(String rawInput, Solution solution)
+	public SolutionInput(String rawInput, Class<? extends Solution> solution)
 	{
 		this.rawInput = rawInput;
 
@@ -17,9 +17,7 @@ public final class SolutionInput
 
 		inputs = new Object[rawInputsSplit.length];
 
-		Class<? extends Solution> 		solutionClass = solution.getClass();
-
-		Method[] 						declaredMethods = solutionClass.getDeclaredMethods();
+		Method[] 						declaredMethods = solution.getDeclaredMethods();
 
 		// each problem should only have one method
 		Method			declaredMethod = declaredMethods[0];

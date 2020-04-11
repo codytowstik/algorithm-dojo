@@ -3,6 +3,7 @@ package main;
 import main.utils.*;
 import org.junit.jupiter.api.Assertions;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import java.util.Map;
 
@@ -92,31 +93,41 @@ public abstract class TestBase
         return builder.toString();
     }
 
-    public static void testSolution(
-        Map<String, String>     expectedResults,
-        SolutionResults         solutionResults,
-        Solution                testInstance )
+    public static void testSolution(Class<? extends Solution> testClass)
     {
+        Map<String, String>     expectedResults = DataLoader.loadExpectedResults(testClass, INPUT_FILE_NAME);
+        SolutionResults         solutionResults = new SolutionResults();
+
         for (Map.Entry<String, String> entry : expectedResults.entrySet())
         {
-            String rawInput = entry.getKey();
-            SolutionInput solutionInput = new SolutionInput(rawInput, testInstance);
+            String                  rawInput = entry.getKey();
+            SolutionInput           solutionInput = new SolutionInput(rawInput, testClass);
 
-            String rawExpectedResult = entry.getValue();
-            SolutionExpectedOutput solutionExpectedOutput = new SolutionExpectedOutput(rawExpectedResult, testInstance);
+            String                  rawExpectedResult = entry.getValue();
+            SolutionExpectedOutput  solutionExpectedOutput = new SolutionExpectedOutput(rawExpectedResult, testClass);
 
-            // List<List<Integer>> threeSum(int[] nums)
+            Solution                testInstance;
+
+            try
+            {
+                testInstance = testClass.getConstructor().newInstance();
+            }
+            catch (NoSuchMethodException | InstantiationException | IllegalAccessException | InvocationTargetException t)
+            {
+                throw new RuntimeException("Invalid class.");
+            }
+
             SolutionResult
                 solutionResult =
-                SolutionExecutor.executeAndTime(
-                    testInstance,
-                    solutionInput,
-                    solutionExpectedOutput.getOutput());
+                    SolutionExecutor.executeAndTime(
+                        testInstance,
+                        solutionInput,
+                        solutionExpectedOutput.getOutput());
 
             solutionResults.saveResult(solutionResult);
         }
 
-        boolean allResultsSuccessful = solutionResults.validateResults();
+        boolean     allResultsSuccessful = solutionResults.validateResults();
 
         assert allResultsSuccessful;
     }

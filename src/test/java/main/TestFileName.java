@@ -33,6 +33,6 @@ public enum TestFileName
 
     public String getFileName()
     {
-        return fileName;
+        return "resources/" + fileName;
     }
 }

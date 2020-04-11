@@ -19,7 +19,7 @@ public class ReverseIntegerRunner
         for ( Map.Entry<String, String> entry: expectedResults.entrySet() )
         {
             String              rawInput = entry.getKey();
-            SolutionInput       solutionInput = new SolutionInput(rawInput, TEST_CLASS);
+            SolutionInput       solutionInput = new SolutionInput(rawInput, ReverseInteger0.class);
 
             String              rawExpectedResult = entry.getValue();
             int                 expectedResult = Integer.parseInt(rawExpectedResult);

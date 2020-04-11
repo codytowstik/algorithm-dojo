@@ -1,28 +1,35 @@
 package main.utils;
 
 import java.lang.reflect.Method;
+import java.text.MessageFormat;
 
 public final class SolutionExpectedOutput
 {
 	private final String rawOutput;
 	private final Object output;
 
-	public SolutionExpectedOutput(String rawOutput, Solution solution)
+	public SolutionExpectedOutput(String rawOutput, Class<? extends Solution> solution)
 	{
 		this.rawOutput = rawOutput;
 
-		Class<? extends Solution> 		solutionClass = solution.getClass();
-
-		Method[] 						declaredMethods = solutionClass.getDeclaredMethods();
+		Method[] 						declaredMethods = solution.getDeclaredMethods();
 
 		// each problem should only have one method
 		Method							declaredMethod = declaredMethods[0];
 
 		Class<?> 						returnType = declaredMethod.getReturnType();
 
+		String 							returnTypeCanonicalName = returnType.getCanonicalName();
+
 		// use reflection to find the expected parameter inputs of each problem
-		switch (returnType.getCanonicalName())
+		switch (returnTypeCanonicalName)
 		{
+			case "boolean":
+			{
+				output = Boolean.parseBoolean(rawOutput);
+				break;
+			}
+
 			case "int":
 			{
 				output = Integer.parseInt(rawOutput);
@@ -45,7 +52,7 @@ public final class SolutionExpectedOutput
 
 			default:
 			{
-				throw new RuntimeException("Unsupported class for output.");
+				throw new RuntimeException(MessageFormat.format("Unsupported class for output: {0}", returnTypeCanonicalName));
 			}
 		}
 	}
