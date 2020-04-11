@@ -1,7 +1,6 @@
 package main;
 
-import main.utils.SolutionResults;
-import main.utils.Utils;
+import main.utils.*;
 import org.junit.jupiter.api.Assertions;
 
 import java.util.List;
@@ -91,5 +90,34 @@ public abstract class TestBase
         builder.append("]");
 
         return builder.toString();
+    }
+
+    public static void testSolution(
+        Map<String, String>     expectedResults,
+        SolutionResults         solutionResults,
+        Solution                testInstance )
+    {
+        for (Map.Entry<String, String> entry : expectedResults.entrySet())
+        {
+            String rawInput = entry.getKey();
+            SolutionInput solutionInput = new SolutionInput(rawInput, testInstance);
+
+            String rawExpectedResult = entry.getValue();
+            SolutionExpectedOutput solutionExpectedOutput = new SolutionExpectedOutput(rawExpectedResult, testInstance);
+
+            // List<List<Integer>> threeSum(int[] nums)
+            SolutionResult
+                solutionResult =
+                SolutionExecutor.executeAndTime(
+                    testInstance,
+                    solutionInput,
+                    solutionExpectedOutput.getOutput());
+
+            solutionResults.saveResult(solutionResult);
+        }
+
+        boolean allResultsSuccessful = solutionResults.validateResults();
+
+        assert allResultsSuccessful;
     }
 }
