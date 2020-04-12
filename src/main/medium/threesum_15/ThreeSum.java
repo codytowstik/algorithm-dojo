@@ -1,4 +1,4 @@
-package main.threesum_15;
+package main.medium.threesum_15;
 
 import main.utils.Solution;
 import main.utils.SolutionInput;

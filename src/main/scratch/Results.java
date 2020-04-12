@@ -1,5 +1,7 @@
 package main.scratch;
 
+import main.medium.threesum_15.ThreeSum;
+
 import java.io.File;
 import java.net.URL;
 import java.nio.file.Files;
@@ -12,8 +14,8 @@ public final class Results
 
     public static void main(String[] args)
     {
-        List<List<Integer>> expectedResults = loadListListOutput(ThreeSumRunner.class, "failed_expected", true);
-        List<List<Integer>> actualResults = loadListListOutput(ThreeSumRunner.class, "failed_actual", false);
+        List<List<Integer>> expectedResults = loadListListOutput(ThreeSum.class, "failed_expected", true);
+        List<List<Integer>> actualResults = loadListListOutput(ThreeSum.class, "failed_actual", false);
 
         checkExpectedVersusActual();
     }

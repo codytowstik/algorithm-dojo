@@ -1,4 +1,4 @@
-package main.threesum_15;
+package main.medium.threesum_15;
 
 import java.util.*;
 
