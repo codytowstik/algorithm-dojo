@@ -40,6 +40,6 @@ public class NGridTest
 	{
 		int		divider = (int) Math.pow(10, 9) + 7;
 
-
+		return 0;
 	}
 }
