@@ -46,6 +46,7 @@ Let's suppose you're adding a new problem `ThreeSum` with the signature `List<Li
 2. Create a new `abstract class` that implements `Solution`. `Solution` provides the generic `execute` method
  the dojo uses to generically run each problem. Also define the signature for the problem you'll be solving.
  There are examples for each supported signature, see [Problems.md](./Problems.md) for a list of existing problems.
+ [(Example)](./src/main/medium/threesum_15/ThreeSum.java)
  
     ```java
     public abstract class ThreeSum implements Solution
@@ -63,10 +64,11 @@ Let's suppose you're adding a new problem `ThreeSum` with the signature `List<Li
         
 3. Create a new property file in your new package called `input.properties` and add test cases to run against your
 implementation. The input goes on the left, the output goes on the right. Multiple inputs are supported. The syntax
-is defined in [InputOutputSyntax.md](./InputOutputSyntax.md).
+is defined in [InputOutputSyntax.md](./InputOutputSyntax.md). [(Example)](./src/main/medium/threesum_15/input.properties)
 
 4. Add a class that `extends` your new `abstract class` that defines the problem's signature, which will implement
 your solution. *Create a new one of these for each implemented solution.*
+[(Example)](./src/main/medium/threesum_15/ThreeSum0.java)
 
     ```java
     public class ThreeSum0 extends ThreeSum
@@ -86,4 +88,19 @@ your solution. *Create a new one of these for each implemented solution.*
     }
     ```
     
+5. Create a new test class for your solutions which extends `TestBase`. `TestBase` provides
+ the method `Class<? extends Solution> testClass`, which checks the signature of the specified
+ class (created in step 2), and properly parses `input.properties` into the correct object types.
+ [(Example)](./src/test/java/main/medium/ThreeSumTest.java)
+
+    ```java
+    public final class ThreeSumTest extends TestBase
+    {
+        @Test
+        public void testThreeSum0()
+        {
+            testSolution(ThreeSum0.class);
+        }
+    }
+    ```
     
