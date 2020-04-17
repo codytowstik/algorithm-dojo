@@ -24,12 +24,36 @@ public final class InputOutputParser
      */
     public static int[] parseArrayInt(String raw)
     {
+        if (raw.length() == 0)
+        {
+            return new int[0];
+        }
+
         String[]    rawValues = raw.split(ARRAY_ITEM_DELIMITER);
 
         return Arrays
                 .stream(rawValues)
                 .mapToInt(Integer::parseInt)
                 .toArray();
+    }
+
+    /**
+     * Parse a string representation of an `String[]`.
+     *
+     * Raw input is just a comma separated list of values e.g. hello,there,world
+     * @param raw the raw string input
+     * @return the array object
+     */
+    public static String[] parseArrayString(String raw)
+    {
+        if (raw.length() == 0)
+        {
+            return new String[0];
+        }
+
+        String[]    rawValues = raw.split(ARRAY_ITEM_DELIMITER);
+
+        return rawValues;
     }
 
     /**
@@ -44,7 +68,7 @@ public final class InputOutputParser
     public static List<List<Integer>> parseListListInteger(String raw)
     {
         // e.g ["-4,2,2", "-4,1,3", "-4,0,4", "-4,-2,6", "-2,0,2", "-2,-2,4"]
-        String[]    rawSubLists = raw.split(SUB_ARRAY_DELIMITER);
+        String[]                rawSubLists = raw.split(SUB_ARRAY_DELIMITER);
 
         List<List<Integer>>     result = new ArrayList<>();
 
@@ -63,5 +87,45 @@ public final class InputOutputParser
         }
 
         return result;
+    }
+
+    /**
+     * Parse a string representation of a `List<String>`
+     *
+     * @param raw the raw string input
+     * @return the list object
+     */
+    public static List<String> parseListString(String raw)
+    {
+        if ( raw.length() == 0)
+        {
+            return new ArrayList<>();
+        }
+
+        String[]        splitListItems = raw.split(ARRAY_ITEM_DELIMITER);
+
+        return Arrays.asList(splitListItems);
+    }
+
+    /**
+     * Parse a string representation of a `List<Integer>`
+     *
+     * @param raw the raw string input
+     * @return the list object
+     */
+    public static List<Integer> parseListInteger(String raw)
+    {
+        if (raw.length() == 0)
+        {
+            return new ArrayList<>();
+        }
+
+        String[]        splitListItems = raw.split(ARRAY_ITEM_DELIMITER);
+
+        return Arrays
+            .stream(splitListItems)
+            .mapToInt(Integer::parseInt)
+            .boxed()
+            .collect(Collectors.toList());
     }
 }

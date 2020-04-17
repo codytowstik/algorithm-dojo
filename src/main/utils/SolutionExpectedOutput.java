@@ -1,6 +1,8 @@
 package main.utils;
 
 import java.lang.reflect.Method;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
 import java.text.MessageFormat;
 
 public final class SolutionExpectedOutput
@@ -44,8 +46,39 @@ public final class SolutionExpectedOutput
 
 			case "java.util.List":
 			{
-				// TODO: assuming this is a list of list of Integers until we need something more robust
-				output = InputOutputParser.parseListListInteger(rawOutput);
+				Type 							genericReturnType = declaredMethod.getGenericReturnType();
+
+				ParameterizedType				listGenericType = (ParameterizedType) genericReturnType;
+
+				Type							genericActualType = listGenericType.getActualTypeArguments()[0];
+
+				switch (genericActualType.getTypeName())
+				{
+					case "java.lang.String":
+					{
+						output = InputOutputParser.parseListString(rawOutput);
+						break;
+					}
+
+					case "java.lang.Integer":
+					{
+						output = InputOutputParser.parseListInteger(rawOutput);
+						break;
+					}
+
+					// List<List<?>
+					case "java.util.List":
+					{
+						// TODO: get type of sub list
+						output = InputOutputParser.parseListListInteger(rawOutput);
+						break;
+					}
+
+					default:
+					{
+						throw new RuntimeException(MessageFormat.format("Unsupported List generic type: {0}", genericActualType.getTypeName()));
+					}
+				}
 
 				break;
 			}

@@ -1,5 +1,6 @@
 package main.utils;
 
+import java.text.MessageFormat;
 import java.util.Collections;
 import java.util.List;
 
@@ -23,6 +24,7 @@ public final class ResultValidator
 			case "boolean":
 			case "java.lang.Boolean":
 			case "java.lang.Integer":
+			case "String":
 			case "int":
 			{
 				equal = o1.equals(o2);
@@ -31,6 +33,7 @@ public final class ResultValidator
 			}
 
 			case "java.util.ArrayList":
+			case "java.util.Arrays.ArrayList":
 			{
 				List<?>		list1 = (List<?>) o1;
 				List<?>		list2 = (List<?>) o2;
@@ -76,7 +79,7 @@ public final class ResultValidator
 
 			default:
 			{
-				throw new RuntimeException("Unsupported class for comparing equality.");
+				throw new RuntimeException(MessageFormat.format("Unsupported class for comparing equality: {0}", canonicalName));
 			}
 		}
 

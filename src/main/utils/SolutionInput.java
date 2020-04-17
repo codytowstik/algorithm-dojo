@@ -1,6 +1,7 @@
 package main.utils;
 
 import java.lang.reflect.Method;
+import java.text.MessageFormat;
 
 public final class SolutionInput
 {
@@ -29,7 +30,9 @@ public final class SolutionInput
 		{
 			Class<?> 	parameterType = parameterTypes[i];
 
-			switch (parameterType.getCanonicalName())
+			String 		canonicalName = parameterType.getCanonicalName();
+
+			switch (canonicalName)
 			{
 				case "int":
 				{
@@ -46,7 +49,25 @@ public final class SolutionInput
 					inputs[i] = InputOutputParser.parseArrayInt(currentRawInput);
 					break;
 				}
+
+				case "String":
+				{
+					inputs[i] = rawInput;
+				}
+
+				case "java.lang.String[]":
+				{
+					String currentRawInput = rawInputsSplit[i];
+
+					inputs[i] = InputOutputParser.parseArrayString(currentRawInput);
+					break;
+				}
 			}
+		}
+
+		if (inputs.length == 0)
+		{
+			throw new RuntimeException(MessageFormat.format("Failed to parse input: {0}", rawInput));
 		}
 	}
 
