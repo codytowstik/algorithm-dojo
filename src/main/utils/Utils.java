@@ -1,5 +1,7 @@
 package main.utils;
 
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -8,6 +10,11 @@ import java.util.stream.Collectors;
 
 public final class Utils
 {
+    private Utils()
+    {
+        // disallow instantiation
+    }
+
     public static int parseNumericKey(Map.Entry<Object, Object> entry)
     {
         String      input = (String) entry.getKey();
@@ -135,5 +142,28 @@ public final class Utils
                  .peek(Collections::sort)
                  .sorted(new ListComparator<>())
                  .collect(Collectors.toList());
+    }
+
+    /**
+     * Get the first public method found in the given array.
+     *
+     * @param methods the methods
+     * @return the first public method
+     */
+    public static Method getFirstPublicMethod(Method[] methods)
+    {
+        for (Method method : methods)
+        {
+            int     modifiers = method.getModifiers();
+
+            String  modifier = Modifier.toString(modifiers);
+
+            if (modifier.equals("public"))
+            {
+                return method;
+            }
+        }
+
+        throw new RuntimeException("No public method found.");
     }
 }

@@ -17,7 +17,7 @@ public final class SolutionExpectedOutput
 		Method[] 						declaredMethods = solution.getDeclaredMethods();
 
 		// each problem should only have one method
-		Method							declaredMethod = declaredMethods[0];
+		Method							declaredMethod = Utils.getFirstPublicMethod(declaredMethods);
 
 		Class<?> 						returnType = declaredMethod.getReturnType();
 
@@ -66,10 +66,8 @@ public final class SolutionExpectedOutput
 						break;
 					}
 
-					// List<List<?>
-					case "java.util.List":
+					case "java.util.List<java.lang.Integer>":
 					{
-						// TODO: get type of sub list
 						output = InputOutputParser.parseListListInteger(rawOutput);
 						break;
 					}

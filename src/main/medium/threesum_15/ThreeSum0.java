@@ -71,7 +71,7 @@ public class ThreeSum0 extends ThreeSum
      * @param three third num
      * @return an ordered list of the given numbers
      */
-    public List<Integer> createOrderedResults(int one, int two, int three)
+    private List<Integer> createOrderedResults(int one, int two, int three)
     {
         List<Integer> result = new ArrayList<>(3);
 
@@ -95,7 +95,7 @@ public class ThreeSum0 extends ThreeSum
      * @param results the set of results to add to
      * @param existingResultsHash a set of hashes for existing result sets.
      */
-    public void addResult(List<Integer> result, List<List<Integer>> results, Set<Integer> existingResultsHash)
+    private void addResult(List<Integer> result, List<List<Integer>> results, Set<Integer> existingResultsHash)
     {
         int currentResultHash = result.hashCode();
 

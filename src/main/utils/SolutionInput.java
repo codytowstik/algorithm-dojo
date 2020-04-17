@@ -20,8 +20,8 @@ public final class SolutionInput
 
 		Method[] 						declaredMethods = solution.getDeclaredMethods();
 
-		// each problem should only have one method
-		Method			declaredMethod = declaredMethods[0];
+		// each problem should only have one public method
+		Method			declaredMethod = Utils.getFirstPublicMethod(declaredMethods);
 
 		Class<?>[] 		parameterTypes = declaredMethod.getParameterTypes();
 
