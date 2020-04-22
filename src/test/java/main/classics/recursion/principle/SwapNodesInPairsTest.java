@@ -34,8 +34,6 @@ public class SwapNodesInPairsTest extends TestBase
 		ListNodeUtils.printRemainingNodes(headNodeExpected);
 		ListNodeUtils.printRemainingNodes(headNode);
 
-		boolean 	equals = ListNodeUtils.isEquals(headNodeExpected, headNode);
-
-		assert(equals);
+		assertEquals(headNodeExpected, headNode);
 	}
 }

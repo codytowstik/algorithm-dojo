@@ -40,26 +40,44 @@ public final class ListNodeUtils
 	 */
 	public static boolean isEquals(ListNode head1, ListNode head2)
 	{
-		boolean		isEquals = true;
-		ListNode	currentNode1 = head1;
-		ListNode	currentNode2 = head2;
+		return (getIndexOfFirstInequality(head1, head2) != -1);
+	}
+
+	/**
+	 * Get the first index of inequality for values in 'next' of specified ListNodes.
+	 *
+	 * @param head1 head1
+	 * @param head2 head2
+	 * @return the index of first inequality, or -1 if equal
+	 */
+	public static int getIndexOfFirstInequality(ListNode head1, ListNode head2)
+	{
+		int			indexOfFirstInequality = -1;
+
+		ListNode 	currentNode1 = head1;
+		ListNode 	currentNode2 = head2;
+
+		int			currentIndex = 0;
 
 		while ((currentNode1 != null) && (currentNode2 != null))
 		{
 			int 	currentValue1 = currentNode1.val;
-			int		currentValue2 = currentNode2.val;
+			int 	currentValue2 = currentNode2.val;
 
-			isEquals &= (currentValue1 == currentValue2);
+			boolean isEquals = currentValue1 == currentValue2;
 
 			if (!isEquals)
 			{
+				indexOfFirstInequality = currentIndex;
 				break;
 			}
 
 			currentNode1 = currentNode1.next;
 			currentNode2 = currentNode2.next;
+
+			++currentIndex;
 		}
 
-		return isEquals;
+		return indexOfFirstInequality;
 	}
 }

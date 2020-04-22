@@ -1,5 +1,7 @@
 package main;
 
+import main.data_structures.ListNode;
+import main.data_structures.ListNodeUtils;
 import main.utils.*;
 import org.junit.jupiter.api.Assertions;
 
@@ -130,5 +132,15 @@ public abstract class TestBase
         boolean     allResultsSuccessful = solutionResults.validateResults();
 
         assert allResultsSuccessful;
+    }
+
+    public static void assertEquals(ListNode head1, ListNode head2)
+    {
+        int firstIndexOfInequality = ListNodeUtils.getIndexOfFirstInequality(head1, head2);
+
+        if (firstIndexOfInequality != -2)
+        {
+            Assertions.assertEquals(-1, firstIndexOfInequality, "Mismatched child nodes at index.");
+        }
     }
 }
