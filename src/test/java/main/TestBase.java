@@ -6,6 +6,7 @@ import main.utils.*;
 import org.junit.jupiter.api.Assertions;
 
 import java.lang.reflect.InvocationTargetException;
+import java.text.MessageFormat;
 import java.util.List;
 import java.util.Map;
 
@@ -138,9 +139,15 @@ public abstract class TestBase
     {
         int firstIndexOfInequality = ListNodeUtils.getIndexOfFirstInequality(head1, head2);
 
-        if (firstIndexOfInequality != -2)
+        if (firstIndexOfInequality != -1)
         {
-            Assertions.assertEquals(-1, firstIndexOfInequality, "Mismatched child nodes at index.");
+            String     printerResult1 = ListNodeUtils.buildRemainingNodesString(head1);
+            String     printerResult2 = ListNodeUtils.buildRemainingNodesString(head2);
+
+            Assertions.assertEquals(
+                printerResult1,
+                printerResult2,
+                MessageFormat.format("Mismatched child nodes at index {0}", firstIndexOfInequality));
         }
     }
 }

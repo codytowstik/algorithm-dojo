@@ -9,7 +9,7 @@ public final class ListNodeUtils
 		// disallow instantiation
 	}
 
-	public static Printer printRemainingNodes(ListNode head)
+	public static String buildRemainingNodesString(ListNode head)
 	{
 		Printer 	printer = new Printer(" -> ");
 
@@ -24,11 +24,16 @@ public final class ListNodeUtils
 			currentNode = currentNode.next;
 		}
 
-		printer.buildAndPrintResult();
+		printer.buildResultString();
 
-		// return printer so we can debug results
+		return printer.getLatestResultString();
+	}
+	
+	public static void printRemainingNodes(ListNode head)
+	{
+		String 		result = buildRemainingNodesString(head);
 
-		return printer;
+		System.out.println(result);
 	}
 
 	/**

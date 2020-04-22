@@ -2,7 +2,6 @@ package main.classics.recursion.principle;
 
 import main.TestBase;
 import main.data_structures.ListNode;
-import main.data_structures.ListNodeUtils;
 import org.junit.jupiter.api.Test;
 
 public class SwapNodesInPairsTest extends TestBase
@@ -30,9 +29,6 @@ public class SwapNodesInPairsTest extends TestBase
 		headNode.setNext(node1);
 		node1.setNext(node2);
 		node2.setNext(node3);
-
-		ListNodeUtils.printRemainingNodes(headNodeExpected);
-		ListNodeUtils.printRemainingNodes(headNode);
 
 		assertEquals(headNodeExpected, headNode);
 	}

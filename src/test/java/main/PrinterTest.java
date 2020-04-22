@@ -24,9 +24,7 @@ public final class PrinterTest
 		node2.setNext(node3);
 		node3.setNext(node4);
 
-		Printer 	printer = ListNodeUtils.printRemainingNodes(headNode);
-
-		String		printedResult = printer.getLatestResultString();
+		String 		printedResult = ListNodeUtils.buildRemainingNodesString(headNode);
 
 		Assertions.assertEquals("0 -> 1 -> 2 -> 3 -> 4", printedResult);
 	}
