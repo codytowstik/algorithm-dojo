@@ -62,7 +62,7 @@ public class SolutionResults
 	{
 		for (Map.Entry<SolutionResult, Boolean> entry : resultToSuccess.entrySet())
 		{
-			StringBuilder resultBuilder = new StringBuilder();
+			StringBuilder 	resultBuilder = new StringBuilder();
 
 			// value should never be null, don't handle *if* it is so it's obvious if its wrong
 			boolean			success = entry.getValue();

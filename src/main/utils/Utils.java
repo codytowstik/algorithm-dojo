@@ -94,11 +94,7 @@ public final class Utils
             return false;
         }
 
-        // sort arrays since order doesn't matter
-        Arrays.sort(array1);
-        Arrays.sort(array2);
-
-        boolean equal = true;
+        boolean     equal = true;
 
         for (int i = 0; i < array1.length; i++)
         {

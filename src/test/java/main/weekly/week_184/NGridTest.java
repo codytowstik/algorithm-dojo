@@ -1,9 +1,11 @@
 package main.weekly.week_184;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 public class NGridTest
 {
+	@Disabled
 	@Test
 	public void testNGrid()
 	{
