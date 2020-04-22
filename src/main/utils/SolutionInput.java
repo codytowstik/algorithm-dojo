@@ -14,11 +14,11 @@ public final class SolutionInput
 	{
 		this.rawInput = rawInput;
 
-		String[] 						rawInputsSplit = rawInput.split(INPUT_DELIMETER);
+		String[] 		rawInputsSplit = rawInput.split(INPUT_DELIMETER);
 
 		inputs = new Object[rawInputsSplit.length];
 
-		Method[] 						declaredMethods = solution.getDeclaredMethods();
+		Method[] 		declaredMethods = solution.getDeclaredMethods();
 
 		// each problem should only have one public method
 		Method			declaredMethod = Utils.getFirstPublicMethod(declaredMethods);
@@ -28,6 +28,8 @@ public final class SolutionInput
 		// use reflection to find the expected parameter inputs of each problem
 		for (int i = 0; i < parameterTypes.length; i++)
 		{
+			String 		currentRawInput = rawInputsSplit[i];
+
 			Class<?> 	parameterType = parameterTypes[i];
 
 			String 		canonicalName = parameterType.getCanonicalName();
@@ -36,29 +38,30 @@ public final class SolutionInput
 			{
 				case "int":
 				{
-					String 		currentRawInput = rawInputsSplit[i];
-
 					inputs[i] = Integer.parseInt(currentRawInput);
 					break;
 				}
 
 				case "int[]":
 				{
-					String 		currentRawInput = rawInputsSplit[i];
-
 					inputs[i] = InputOutputParser.parseArrayInt(currentRawInput);
+					break;
+				}
+
+				case "char[]":
+				{
+					inputs[i] = InputOutputParser.parseArrayChar(currentRawInput);
 					break;
 				}
 
 				case "String":
 				{
-					inputs[i] = rawInput;
+					inputs[i] = currentRawInput;
+					break;
 				}
 
 				case "java.lang.String[]":
 				{
-					String currentRawInput = rawInputsSplit[i];
-
 					inputs[i] = InputOutputParser.parseArrayString(currentRawInput);
 					break;
 				}

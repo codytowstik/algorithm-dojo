@@ -38,6 +38,33 @@ public final class InputOutputParser
     }
 
     /**
+     * Parse a string representation of an `char[]`.
+     *
+     * Raw input is just a comma separated list of values e.g. h,e,l,l,o
+     * @param raw the raw string input
+     * @return the array object
+     */
+    public static char[] parseArrayChar(String raw)
+    {
+        if (raw.length() == 0)
+        {
+            return new char[0];
+        }
+
+        String[]    rawValues = raw.split(ARRAY_ITEM_DELIMITER);
+
+        char[]      chars = new char[rawValues.length];
+
+
+        for (int i = 0; i < rawValues.length; i++)
+        {
+            chars[i] = rawValues[i].charAt(0);
+        }
+
+        return chars;
+    }
+
+    /**
      * Parse a string representation of an `String[]`.
      *
      * Raw input is just a comma separated list of values e.g. hello,there,world

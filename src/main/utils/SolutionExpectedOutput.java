@@ -14,18 +14,46 @@ public final class SolutionExpectedOutput
 	{
 		this.rawOutput = rawOutput;
 
-		Method[] 						declaredMethods = solution.getDeclaredMethods();
+		Method[] 			declaredMethods = solution.getDeclaredMethods();
 
 		// each problem should only have one method
-		Method							declaredMethod = Utils.getFirstPublicMethod(declaredMethods);
+		Method				declaredMethod = Utils.getFirstPublicMethod(declaredMethods);
 
-		Class<?> 						returnType = declaredMethod.getReturnType();
+		Class<?> 			returnType = declaredMethod.getReturnType();
 
-		String 							returnTypeCanonicalName = returnType.getCanonicalName();
+		String 				returnTypeCanonicalName = returnType.getCanonicalName();
 
 		// use reflection to find the expected parameter inputs of each problem
 		switch (returnTypeCanonicalName)
 		{
+			// void return type means output is the same type as the input (in-place)
+			case "void":
+			{
+				// get input of first parameter
+				// TODO: not assume the first param is the right type
+				Class<?>[] 		parameterTypes = declaredMethod.getParameterTypes();
+
+				Class<?> 		parameterType = parameterTypes[0];
+
+				String 			canonicalName = parameterType.getCanonicalName();
+
+				switch (canonicalName)
+				{
+					case "char[]":
+					{
+						output = InputOutputParser.parseArrayChar(rawOutput);
+						break;
+					}
+
+					default:
+					{
+						throw new RuntimeException(MessageFormat.format("Unsupported class for in-place output: {0}", returnTypeCanonicalName));
+					}
+				}
+
+				break;
+			}
+
 			case "boolean":
 			{
 				output = Boolean.parseBoolean(rawOutput);

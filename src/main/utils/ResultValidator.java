@@ -21,6 +21,14 @@ public final class ResultValidator
 				break;
 			}
 
+			case "char[]":
+			{
+				// assuming order is important for `char` arrays
+				equal = Utils.isEquals((char[]) o1,(char[]) o2);
+
+				break;
+			}
+
 			case "boolean":
 			case "java.lang.Boolean":
 			case "java.lang.Integer":

@@ -87,6 +87,27 @@ public final class Utils
         return resultBuilder.toString();
     }
 
+    public static boolean isEquals(char[] array1, char[] array2)
+    {
+        if (array1.length != array2.length)
+        {
+            return false;
+        }
+
+        // sort arrays since order doesn't matter
+        Arrays.sort(array1);
+        Arrays.sort(array2);
+
+        boolean equal = true;
+
+        for (int i = 0; i < array1.length; i++)
+        {
+            equal &= (array1[i] == array2[i]);
+        }
+
+        return equal;
+    }
+
     public static boolean isEqualsIgnoreOrder(List<List<Integer>> list1, List<List<Integer>> list2)
     {
         if (list1.size() != list2.size())
@@ -165,5 +186,19 @@ public final class Utils
         }
 
         throw new RuntimeException("No public method found.");
+    }
+
+    public static String getFirstPublicMethodReturnType(Class<?> clazz)
+    {
+        Method[]        declaredMethods = clazz.getDeclaredMethods();
+
+        // each problem should only have one method
+        Method          declaredMethod = getFirstPublicMethod(declaredMethods);
+
+        Class<?>        returnType = declaredMethod.getReturnType();
+
+        String          returnTypeCanonicalName = returnType.getCanonicalName();
+
+        return returnTypeCanonicalName;
     }
 }
