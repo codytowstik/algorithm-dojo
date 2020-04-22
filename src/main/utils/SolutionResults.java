@@ -1,9 +1,6 @@
 package main.utils;
 
-import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class SolutionResults
 {
@@ -87,9 +84,9 @@ public class SolutionResults
 			Object		actualResult = solutionResult.getActualResult();
 			long		executeTime = solutionResult.getExecuteTime();
 
-			String		expectedResultString = String.valueOf(expectedResult);
-			String		actualResultString = String.valueOf(actualResult);
-			String		executeTimeString = String.valueOf(executeTime);
+			String		expectedResultString = buildReadableString(expectedResult);
+			String		actualResultString = buildReadableString(actualResult);
+			String		executeTimeString = buildReadableString(executeTime);
 
 
 			resultBuilder.append(normalizeResultStringToColumnWidth(input));
@@ -107,9 +104,37 @@ public class SolutionResults
 
 	private static String buildReadableString(Object object)
 	{
-		StringBuilder 	readableStringBuilder = new StringBuilder();
+		String			readableString;
 
-		return 	readableStringBuilder.toString();
+		String			objectClassCanonicalName = object.getClass().getCanonicalName();
+
+		switch (objectClassCanonicalName)
+		{
+			case "int[]":
+			{
+				int[] 		intArrayObject = (int[]) object;
+
+				readableString = Arrays.toString(intArrayObject);
+
+				break;
+			}
+
+			case "char[]":
+			{
+				char[]		charArrayObject = (char[]) object;
+
+				readableString = Arrays.toString(charArrayObject);
+
+				break;
+			}
+
+			default:
+			{
+				readableString = String.valueOf(object);
+			}
+		}
+
+		return readableString;
 	}
 
 	/**
