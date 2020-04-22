@@ -1,5 +1,10 @@
 package main.classics.recursion.principle.reverse_string;
 
+/**
+ * Reverse String.
+ *
+ * Recursion impl.
+ */
 public class ReverseString1 extends ReverseString
 {
 	public void reverseString(char[] str)
