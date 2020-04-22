@@ -1,5 +1,6 @@
 package main.classics.recursion.principle.swap_nodes_in_pairs;
 
+import main.data_structures.ListNode;
 import main.utils.Solution;
 import main.utils.SolutionInput;
 
@@ -22,7 +23,7 @@ public abstract class SwapNodesInPairs implements Solution
 {
 	public Object execute(SolutionInput input)
 	{
-		ListNode 	head = (ListNode) input.getFirstInput();
+		ListNode head = (ListNode) input.getFirstInput();
 
 		swapPairs(head);
 
