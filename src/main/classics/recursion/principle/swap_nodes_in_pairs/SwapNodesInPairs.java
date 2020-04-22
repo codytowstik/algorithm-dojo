@@ -23,6 +23,7 @@ public abstract class SwapNodesInPairs implements Solution
 {
 	public Object execute(SolutionInput input)
 	{
+		//TODO: handle tree-like structures for inputs/outputs
 		ListNode head = (ListNode) input.getFirstInput();
 
 		swapPairs(head);
