@@ -113,6 +113,8 @@ public abstract class TestBase
 
             try
             {
+                // we need to build a new instance because you can't statically define a different implementation
+                // of solution implementations (e.g. ThreeSum0, ThreeSum1, etc)
                 testInstance = testClass.getConstructor().newInstance();
             }
             catch (NoSuchMethodException | InstantiationException | IllegalAccessException | InvocationTargetException t)
@@ -137,7 +139,10 @@ public abstract class TestBase
 
     public static void assertEquals(ListNode head1, ListNode head2)
     {
-        int firstIndexOfInequality = ListNodeUtils.getIndexOfFirstInequality(head1, head2);
+        int     firstIndexOfInequality = ListNodeUtils.getIndexOfFirstInequality(head1, head2);
+
+        ListNodeUtils.printRemainingNodes(head1);
+        ListNodeUtils.printRemainingNodes(head2);
 
         if (firstIndexOfInequality != -1)
         {

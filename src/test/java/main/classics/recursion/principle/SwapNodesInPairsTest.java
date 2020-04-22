@@ -1,6 +1,7 @@
 package main.classics.recursion.principle;
 
 import main.TestBase;
+import main.classics.recursion.principle.swap_nodes_in_pairs.SwapNodesInPairs0;
 import main.data_structures.ListNode;
 import org.junit.jupiter.api.Test;
 
@@ -30,6 +31,10 @@ public class SwapNodesInPairsTest extends TestBase
 		node1.setNext(node2);
 		node2.setNext(node3);
 
-		assertEquals(headNodeExpected, headNode);
+		SwapNodesInPairs0 	swapNodesInPairs0 = new SwapNodesInPairs0();
+
+		ListNode 			resultHead = swapNodesInPairs0.swapPairs(headNode);
+
+		assertEquals(headNodeExpected, resultHead);
 	}
 }

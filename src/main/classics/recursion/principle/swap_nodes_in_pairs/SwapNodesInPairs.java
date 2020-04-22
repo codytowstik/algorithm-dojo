@@ -31,5 +31,5 @@ public abstract class SwapNodesInPairs implements Solution
 		return null;
 	}
 
-	abstract void swapPairs(ListNode head);
+	public abstract ListNode swapPairs(ListNode head);
 }
