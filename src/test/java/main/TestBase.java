@@ -141,8 +141,10 @@ public abstract class TestBase
     {
         int     firstIndexOfInequality = ListNodeUtils.getIndexOfFirstInequality(head1, head2);
 
+        System.out.println("Testing: ");
         ListNodeUtils.printRemainingNodes(head1);
         ListNodeUtils.printRemainingNodes(head2);
+        System.out.println();
 
         if (firstIndexOfInequality != -1)
         {

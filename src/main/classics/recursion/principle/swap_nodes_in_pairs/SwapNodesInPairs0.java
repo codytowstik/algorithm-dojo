@@ -2,6 +2,14 @@ package main.classics.recursion.principle.swap_nodes_in_pairs;
 
 import main.data_structures.ListNode;
 
+/**
+ * Swap nodes.
+ *
+ * Recursive. In place.
+ *
+ * Space: 0
+ * Runtime: O(n)
+ */
 public class SwapNodesInPairs0 extends SwapNodesInPairs
 {
 	@Override
