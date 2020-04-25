@@ -1,4 +1,4 @@
-package main.classics.recursion.principle;
+package main.classics.recursion.memoization;
 
 import main.TestBase;
 import main.classics.recursion.relation.search_in_BST.SearchBST0;
