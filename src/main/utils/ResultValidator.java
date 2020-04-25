@@ -76,8 +76,8 @@ public final class ResultValidator
 					List<Integer> 	listInteger1 = (List<Integer>) list1;
 					List<Integer> 	listInteger2 = (List<Integer>) list2;
 
-					Collections.sort(listInteger1);
-					Collections.sort(listInteger2);
+					// Collections.sort(listInteger1);
+					// Collections.sort(listInteger2);
 
 					equal = listInteger1.equals(listInteger2);
 				}
