@@ -7,6 +7,18 @@ public class SearchBST0 extends SearchBST
 	@Override
 	public TreeNode searchBST(TreeNode root, int val)
 	{
-		return root;
+		if (root == null || root.val == val)
+		{
+			return root;
+		}
+
+		TreeNode 	result = searchBST(root.left, val);
+
+		if (result == null)
+		{
+			result = searchBST(root.right, val);;
+		}
+
+		return result;
 	}
 }
