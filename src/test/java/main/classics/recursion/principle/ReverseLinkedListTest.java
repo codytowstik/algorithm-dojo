@@ -33,7 +33,7 @@ public final class ReverseLinkedListTest extends TestBase
 
 		ReverseLinkedList1 	ReverseLinkedList1 = new ReverseLinkedList1();
 
-		ListNode resultHead = ReverseLinkedList1.reverseList(headNode);
+		ListNode 			resultHead = ReverseLinkedList1.reverseList(headNode);
 
 		assertEquals(headNodeExpected, resultHead);
 	}

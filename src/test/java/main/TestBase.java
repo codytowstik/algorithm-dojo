@@ -2,6 +2,8 @@ package main;
 
 import main.data_structures.ListNode;
 import main.data_structures.ListNodeUtils;
+import main.data_structures.TreeNode;
+import main.data_structures.TreeNodeUtils;
 import main.utils.*;
 import org.junit.jupiter.api.Assertions;
 
@@ -137,6 +139,12 @@ public abstract class TestBase
         assert allResultsSuccessful;
     }
 
+    /**
+     * Assert the head and subsequent children of two ListNodes are equal.
+     *
+     * @param head1
+     * @param head2
+     */
     public static void assertEquals(ListNode head1, ListNode head2)
     {
         int     firstIndexOfInequality = ListNodeUtils.getIndexOfFirstInequality(head1, head2);
@@ -150,6 +158,34 @@ public abstract class TestBase
         {
             String     printerResult1 = ListNodeUtils.buildRemainingNodesString(head1);
             String     printerResult2 = ListNodeUtils.buildRemainingNodesString(head2);
+
+            Assertions.assertEquals(
+                printerResult1,
+                printerResult2,
+                MessageFormat.format("Mismatched child nodes at index {0}", firstIndexOfInequality));
+        }
+    }
+
+    /**
+     * Assert the head and subsequent children of two TreeNodes are equal.
+     *
+     * @param root1
+     * @param root2
+     */
+    public static void assertEquals(TreeNode root1, TreeNode root2)
+    {
+        int firstIndexOfInequality = TreeNodeUtils.getIndexOfFirstInequality(root1, root2);
+
+        System.out.println("Testing: ");
+        TreeNodeUtils.printRemainingNodes(root1);
+        System.out.println("----");
+        TreeNodeUtils.printRemainingNodes(root2);
+        System.out.println();
+
+        if (firstIndexOfInequality != -1)
+        {
+            String printerResult1 = TreeNodeUtils.buildRemainingNodesString(root1);
+            String printerResult2 = TreeNodeUtils.buildRemainingNodesString(root2);
 
             Assertions.assertEquals(
                 printerResult1,

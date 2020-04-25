@@ -1,6 +1,6 @@
 package main.classics.recursion.relation.search_in_BST;
 
-import main.data_structures.ListNode;
+import main.data_structures.TreeNode;
 import main.utils.Solution;
 import main.utils.SolutionInput;
 
@@ -32,12 +32,12 @@ public abstract class SearchBST implements Solution
 {
 	public Object execute(SolutionInput input)
 	{
-		ListNode	root = (ListNode) input.getFirstInput();
+		TreeNode	root = (TreeNode) input.getFirstInput();
 
 		int			val = (int) input.getInputAtIndex(1);
 
 		return searchBST(root, val);
 	}
 
-	public abstract ListNode searchBST(ListNode root, int val);
+	public abstract TreeNode searchBST(TreeNode root, int val);
 }
