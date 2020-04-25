@@ -1,4 +1,4 @@
-package main.classics.recursion.memoization;
+package main.classics.recursion.relation;
 
 import main.TestBase;
 import main.classics.recursion.relation.pascals_triangle_2.PascalsTriangle0;

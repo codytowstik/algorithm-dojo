@@ -1,4 +1,4 @@
-package main.classics.recursion.memoization;
+package main.classics.recursion.relation;
 
 import main.TestBase;
 import main.classics.recursion.relation.reverse_linked_list.ReverseLinkedList1;
