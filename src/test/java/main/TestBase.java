@@ -180,17 +180,8 @@ public abstract class TestBase
         TreeNodeUtils.printRemainingNodes(root2);
         System.out.println();
 
-        int     firstIndexOfInequality = TreeNodeUtils.getIndexOfFirstInequality(root1, root2);
+        boolean         allEqual = TreeNodeUtils.compareTreeNodesDFS(root1, root2);
 
-        if (firstIndexOfInequality != -1)
-        {
-            String printerResult1 = TreeNodeUtils.buildRemainingNodesString(root1);
-            String printerResult2 = TreeNodeUtils.buildRemainingNodesString(root2);
-
-            Assertions.assertEquals(
-                printerResult1,
-                printerResult2,
-                MessageFormat.format("Mismatched child nodes at index {0}", firstIndexOfInequality));
-        }
+        Assertions.assertTrue(allEqual, "Unequal nodes in tree.");
     }
 }

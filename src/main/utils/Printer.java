@@ -1,5 +1,6 @@
 package main.utils;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -9,6 +10,11 @@ public final class Printer
 	 * The list to collect objects to print.
 	 */
 	final private List<Object> itemsToPrint = new LinkedList<>();
+
+	/**
+	 * The list of lines to print.
+	 */
+	final private List<List<Object>> linesToPrint = new LinkedList<>();
 
 	/**
 	 * The token to print in between items e.g. 1 -> 2 -> 3 where the buffer token is " -> "
@@ -30,9 +36,20 @@ public final class Printer
 		itemsToPrint.add(item);
 	}
 
-	public void buildResultString()
+	public void incrementRow()
 	{
-		StringBuilder resultBuilder = new StringBuilder();
+		// copy list
+		List<Object>	currentLineItemsCopy = new ArrayList<>(itemsToPrint);
+
+		linesToPrint.add(currentLineItemsCopy);
+
+		// clear current items
+		itemsToPrint.clear();
+	}
+
+	public void buildResultStringSingleLine()
+	{
+		StringBuilder 	resultBuilder = new StringBuilder();
 
 		for (Object o : itemsToPrint)
 		{
@@ -46,9 +63,27 @@ public final class Printer
 		latestResultString = resultBuilder.toString();
 	}
 
+	public void buildResultStringMultiLine()
+	{
+		StringBuilder 	resultBuilder = new StringBuilder();
+
+		for (List<Object> line : linesToPrint)
+		{
+			for (Object itemToPrint : line)
+			{
+				resultBuilder.append(itemToPrint.toString());
+				resultBuilder.append(bufferToken);
+			}
+
+			resultBuilder.append("\n");
+		}
+
+		latestResultString = resultBuilder.toString();
+	}
+
 	public void buildAndPrintResult()
 	{
-		buildResultString();
+		buildResultStringSingleLine();
 
 		System.out.println(latestResultString);
 	}

@@ -2,6 +2,11 @@ package main.data_structures;
 
 import main.utils.Printer;
 
+import java.text.MessageFormat;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Set;
+
 public final class TreeNodeUtils
 {
 	private TreeNodeUtils()
@@ -13,24 +18,79 @@ public final class TreeNodeUtils
 	{
 		Printer 	printer = new Printer(" -> ");
 
-		addTreeNodesToPrinterDFS(root, printer);
+		addTreeNodesToPrinterBFS(root, printer);
 
-		printer.buildResultString();
+		printer.buildResultStringMultiLine();
 
 		return printer.getLatestResultString();
 	}
 
-	private static void addTreeNodesToPrinterDFS(TreeNode treeNode, Printer printer)
+	private static void addTreeNodesToPrinterBFS(TreeNode treeNode, Printer printer)
 	{
-		if (treeNode == null)
+		LinkedList<TreeNode> 	nodeQueue = new LinkedList<>();
+
+		Set<Integer> 			seenValues = new HashSet<>();
+
+		int 					depth = 1;
+
+		nodeQueue.add(treeNode);
+		seenValues.add(treeNode.val);
+		printer.addItem(treeNode.val);
+		printer.incrementRow();
+
+		while (!nodeQueue.isEmpty())
 		{
-			return;
+			TreeNode 	currentNode = nodeQueue.pop();
+
+			// enqueue (add at end)
+			// if we haven't seen the value yet, add it to our queue
+			if (currentNode.left != null && !seenValues.contains(currentNode.left.val))
+			{
+				nodeQueue.add(currentNode.left);
+				seenValues.add(currentNode.left.val);
+
+				// add visited node value to printer
+
+				printer.addItem(currentNode.left.val);
+			}
+
+			if (currentNode.right != null && !seenValues.contains(currentNode.right.val))
+			{
+				nodeQueue.add(currentNode.right);
+				seenValues.add(currentNode.right.val);
+
+				// add visited node value to printer
+
+				printer.addItem(currentNode.right.val);
+			}
+
+			if (currentNode.left != null || currentNode.right != null)
+			{
+				depth++;
+				printer.incrementRow();
+			}
 		}
 
-		printer.addItem(treeNode.val);
+		printer.addItem(MessageFormat.format("\n\nDepth: {0}", depth));
+	}
 
-		addTreeNodesToPrinterDFS(treeNode.left, printer);
-		addTreeNodesToPrinterDFS(treeNode.right, printer);
+	public static boolean compareTreeNodesDFS(TreeNode treeNode1, TreeNode treeNode2)
+	{
+		// if both nodes aren't null, they are unequal
+		if ((treeNode1 == null && treeNode2 != null ) ||
+			(treeNode2 == null && treeNode1 != null))
+		{
+			return false;
+		}
+		else if (treeNode1 == null && treeNode2 == null)
+		{
+			return true;
+		}
+
+		boolean 	leftResult = compareTreeNodesDFS(treeNode1.left, treeNode2.left);
+		boolean 	rightResult = compareTreeNodesDFS(treeNode1.right, treeNode2.right);
+
+		return leftResult && rightResult;
 	}
 	
 	public static void printRemainingNodes(TreeNode head)

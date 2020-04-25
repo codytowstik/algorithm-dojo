@@ -24,7 +24,7 @@ public final class ListNodeUtils
 			currentNode = currentNode.next;
 		}
 
-		printer.buildResultString();
+		printer.buildResultStringSingleLine();
 
 		return printer.getLatestResultString();
 	}
