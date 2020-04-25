@@ -13,24 +13,24 @@ public final class TreeNodeUtils
 	{
 		Printer 	printer = new Printer(" -> ");
 
-		addTreeNodesToPrinter(root, printer);
+		addTreeNodesToPrinterDFS(root, printer);
 
 		printer.buildResultString();
 
 		return printer.getLatestResultString();
 	}
 
-	private static void addTreeNodesToPrinter(TreeNode treeNode, Printer printer)
+	private static void addTreeNodesToPrinterDFS(TreeNode treeNode, Printer printer)
 	{
 		if (treeNode == null)
 		{
 			return;
 		}
 
-		printer.addItem(treeNode);
+		printer.addItem(treeNode.val);
 
-		addTreeNodesToPrinter(treeNode.left, printer);
-		addTreeNodesToPrinter(treeNode.right, printer);
+		addTreeNodesToPrinterDFS(treeNode.left, printer);
+		addTreeNodesToPrinterDFS(treeNode.right, printer);
 	}
 	
 	public static void printRemainingNodes(TreeNode head)

@@ -147,12 +147,12 @@ public abstract class TestBase
      */
     public static void assertEquals(ListNode head1, ListNode head2)
     {
-        int     firstIndexOfInequality = ListNodeUtils.getIndexOfFirstInequality(head1, head2);
-
         System.out.println("Testing: ");
         ListNodeUtils.printRemainingNodes(head1);
         ListNodeUtils.printRemainingNodes(head2);
         System.out.println();
+
+        int     firstIndexOfInequality = ListNodeUtils.getIndexOfFirstInequality(head1, head2);
 
         if (firstIndexOfInequality != -1)
         {
@@ -174,13 +174,13 @@ public abstract class TestBase
      */
     public static void assertEquals(TreeNode root1, TreeNode root2)
     {
-        int firstIndexOfInequality = TreeNodeUtils.getIndexOfFirstInequality(root1, root2);
-
         System.out.println("Testing: ");
         TreeNodeUtils.printRemainingNodes(root1);
         System.out.println("----");
         TreeNodeUtils.printRemainingNodes(root2);
         System.out.println();
+
+        int     firstIndexOfInequality = TreeNodeUtils.getIndexOfFirstInequality(root1, root2);
 
         if (firstIndexOfInequality != -1)
         {
