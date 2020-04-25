@@ -129,7 +129,7 @@ public abstract class TestBase
                     SolutionExecutor.executeAndTime(
                         testInstance,
                         solutionInput,
-                        solutionExpectedOutput.getOutput());
+                        solutionExpectedOutput);
 
             solutionResults.saveResult(solutionResult);
         }

@@ -10,6 +10,8 @@ public final class SolutionExpectedOutput
 	private final String rawOutput;
 	private final Object output;
 
+	boolean isVoid = false;
+
 	public SolutionExpectedOutput(String rawOutput, Class<? extends Solution> solution)
 	{
 		this.rawOutput = rawOutput;
@@ -29,6 +31,8 @@ public final class SolutionExpectedOutput
 			// void return type means output is the same type as the input (in-place)
 			case "void":
 			{
+				isVoid = true;
+
 				// get input of first parameter
 				// TODO: not assume the first param is the right type
 				Class<?>[] 		parameterTypes = declaredMethod.getParameterTypes();
@@ -124,5 +128,10 @@ public final class SolutionExpectedOutput
 	public String getRawOutput()
 	{
 		return rawOutput;
+	}
+
+	public boolean isVoid()
+	{
+		return isVoid;
 	}
 }
