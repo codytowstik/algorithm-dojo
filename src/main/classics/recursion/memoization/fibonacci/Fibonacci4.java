@@ -5,7 +5,7 @@ package main.classics.recursion.memoization.fibonacci;
  *
  * Runtime: O(N) - each number, starting at 2 and up to and including N, is visited, computed, and then stored for O(1) access later
  *
- * Space: O(N) - the size of the data structure is proportional to N
+ * Space: O(1) - this requires 1 unit of Space for the integer N and 3 units of space to store computed values (curr, prev1, prev2).
  *
  * Classic recursion, with memoization using decorator.
  */
