@@ -7,9 +7,9 @@ package main.classics.recursion.memoization.fibonacci;
  *
  * Space: O(N) - the size of the data structure is proportional to N
  *
- * Classic recursion, Bottom-up with memoization using decorator.
+ * Classic recursion, with memoization using decorator.
  */
-public class Fibonacci2 extends Fibonacci
+public class Fibonacci4 extends Fibonacci
 {
 	@Override
 	public int fib(int n)
@@ -19,22 +19,22 @@ public class Fibonacci2 extends Fibonacci
 			return n;
 		}
 
-		return memoize(n);
-	}
-
-	private int memoize(int n)
-	{
-		int[] 	cache = new int[n + 1];
-
-		cache[1] = 1;
-
-		// F(n) = F(N-1) + F(N-2) for N > 1
-
-		for (int i = 2; i <= n; i++)
+		if (n == 2)
 		{
-			cache[i] = cache[i - 1] + cache[i - 2];
+			return 1;
 		}
 
-		return cache[n];
+		int current = 0;
+		int prev1 = 1;
+		int prev2 = 1;
+
+		for (int i = 3; i <= n; i++)
+		{
+			current = prev1 + prev2;
+			prev2 = prev1;
+			prev1 = current;
+		}
+
+		return current;
 	}
 }

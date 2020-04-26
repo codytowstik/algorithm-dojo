@@ -1,9 +1,7 @@
 package main.classics.recursion.memoization;
 
 import main.TestBase;
-import main.classics.recursion.memoization.fibonacci.Fibonacci0;
-import main.classics.recursion.memoization.fibonacci.Fibonacci1;
-import main.classics.recursion.memoization.fibonacci.Fibonacci2;
+import main.classics.recursion.memoization.fibonacci.*;
 import org.junit.jupiter.api.Test;
 
 public class FibonacciTest extends TestBase
@@ -24,5 +22,17 @@ public class FibonacciTest extends TestBase
 	public void testFibonacci2()
 	{
 		testSolution(Fibonacci2.class);
+	}
+
+	@Test
+	public void testFibonacci3()
+	{
+		testSolution(Fibonacci3.class);
+	}
+
+	@Test
+	public void testFibonacci4()
+	{
+		testSolution(Fibonacci4.class);
 	}
 }
