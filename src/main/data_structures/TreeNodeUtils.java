@@ -1,6 +1,6 @@
 package main.data_structures;
 
-import main.utils.Printer;
+import main.utils.ComplexResultStringBuilder;
 
 import java.text.MessageFormat;
 import java.util.HashSet;
@@ -16,16 +16,16 @@ public final class TreeNodeUtils
 
 	public static String buildRemainingNodesString(TreeNode root)
 	{
-		Printer 	printer = new Printer(" -> ");
+		ComplexResultStringBuilder complexResultStringBuilder = new ComplexResultStringBuilder(" -> ");
 
-		addTreeNodesToPrinterBFS(root, printer);
+		addTreeNodesToPrinterBFS(root, complexResultStringBuilder);
 
-		printer.buildResultStringMultiLine();
+		complexResultStringBuilder.buildResultStringMultiLine();
 
-		return printer.getLatestResultString();
+		return complexResultStringBuilder.getLatestResultString();
 	}
 
-	private static void addTreeNodesToPrinterBFS(TreeNode treeNode, Printer printer)
+	private static void addTreeNodesToPrinterBFS(TreeNode treeNode, ComplexResultStringBuilder complexResultStringBuilder)
 	{
 		LinkedList<TreeNode> 	nodeQueue = new LinkedList<>();
 
@@ -35,8 +35,8 @@ public final class TreeNodeUtils
 
 		nodeQueue.add(treeNode);
 		seenValues.add(treeNode.val);
-		printer.addItem(treeNode.val);
-		printer.incrementRow();
+		complexResultStringBuilder.addItem(treeNode.val);
+		complexResultStringBuilder.incrementRow();
 
 		while (!nodeQueue.isEmpty())
 		{
@@ -51,7 +51,7 @@ public final class TreeNodeUtils
 
 				// add visited node value to printer
 
-				printer.addItem(currentNode.left.val);
+				complexResultStringBuilder.addItem(currentNode.left.val);
 			}
 
 			if (currentNode.right != null && !seenValues.contains(currentNode.right.val))
@@ -61,17 +61,17 @@ public final class TreeNodeUtils
 
 				// add visited node value to printer
 
-				printer.addItem(currentNode.right.val);
+				complexResultStringBuilder.addItem(currentNode.right.val);
 			}
 
 			if (currentNode.left != null || currentNode.right != null)
 			{
 				depth++;
-				printer.incrementRow();
+				complexResultStringBuilder.incrementRow();
 			}
 		}
 
-		printer.addItem(MessageFormat.format("\n\nDepth: {0}", depth));
+		complexResultStringBuilder.addItem(MessageFormat.format("\n\nDepth: {0}", depth));
 	}
 
 	public static boolean compareTreeNodesDFS(TreeNode treeNode1, TreeNode treeNode2)

@@ -1,7 +1,7 @@
 package main;
 
 import main.utils.DataLoader;
-import main.utils.InputOutputParser;
+import main.utils.TestValsParseUtils;
 import main.utils.MultiInput;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -100,7 +100,7 @@ public final class DataLoaderTest extends TestBase
         for (String output : inputOutputs.values())
         {
             int[]     expectedOutput = expectedOutputs.get(propertyIndex);
-            int[]     actualOutput = InputOutputParser.parseArrayInt(output);
+            int[]     actualOutput = TestValsParseUtils.parseArrayInt(output);
 
             assertEquals(expectedOutput, actualOutput);
 
@@ -170,7 +170,7 @@ public final class DataLoaderTest extends TestBase
         for (String output : inputOutputs.values())
         {
             List<List<Integer>>     expectedOutput = expectedOutputs.get(propertyIndex);
-            List<List<Integer>>     actualOutput = InputOutputParser.parseListListInteger(output);
+            List<List<Integer>>     actualOutput = TestValsParseUtils.parseListListInteger(output);
 
             assertEqualsIgnoreOrder(expectedOutput, actualOutput);
 

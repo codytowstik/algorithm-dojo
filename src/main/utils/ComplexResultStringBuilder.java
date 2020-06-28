@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public final class Printer
+public final class ComplexResultStringBuilder
 {
 	/**
 	 * The list to collect objects to print.
@@ -26,16 +26,24 @@ public final class Printer
 	 */
 	String latestResultString;
 
-	public Printer(String bufferToken)
+	public ComplexResultStringBuilder(String bufferToken)
 	{
 		this.bufferToken = bufferToken;
 	}
 
+	/**
+	 * Add item to the row, for printing tree-like structures in a beautiful format.
+	 *
+	 * @param item the item to add
+	 */
 	public void addItem(Object item)
 	{
 		itemsToPrint.add(item);
 	}
 
+	/**
+	 * Increment the printing row, useful for printing tree-like objects (multi-level output)
+	 */
 	public void incrementRow()
 	{
 		// copy list

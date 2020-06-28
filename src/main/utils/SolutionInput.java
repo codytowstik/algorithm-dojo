@@ -18,6 +18,11 @@ public final class SolutionInput
 
 		inputs = new Object[rawInputsSplit.length];
 
+		if (rawInputsSplit.length == 0)
+		{
+			throw new RuntimeException("Found no inputs.");
+		}
+
 		Method[] 		declaredMethods = solution.getDeclaredMethods();
 
 		// each problem should only have one public method
@@ -44,13 +49,19 @@ public final class SolutionInput
 
 				case "int[]":
 				{
-					inputs[i] = InputOutputParser.parseArrayInt(currentRawInput);
+					inputs[i] = TestValsParseUtils.parseArrayInt(currentRawInput);
+					break;
+				}
+
+				case "double":
+				{
+					inputs[i] = Double.parseDouble(currentRawInput);
 					break;
 				}
 
 				case "char[]":
 				{
-					inputs[i] = InputOutputParser.parseArrayChar(currentRawInput);
+					inputs[i] = TestValsParseUtils.parseArrayChar(currentRawInput);
 					break;
 				}
 
@@ -62,7 +73,7 @@ public final class SolutionInput
 
 				case "java.lang.String[]":
 				{
-					inputs[i] = InputOutputParser.parseArrayString(currentRawInput);
+					inputs[i] = TestValsParseUtils.parseArrayString(currentRawInput);
 					break;
 				}
 			}

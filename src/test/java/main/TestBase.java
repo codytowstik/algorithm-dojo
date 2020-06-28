@@ -19,7 +19,7 @@ public abstract class TestBase
     private static final int ARRAY_LENGTH_LIMIT = 32;
 
     protected Map<String,String> expectedResults;
-    protected SolutionResults solutionResults;
+    protected SolutionResultsValidator solutionResultsValidator;
 
     /**
      * Assert two arrays are equal, order matters.
@@ -100,18 +100,18 @@ public abstract class TestBase
 
     public static void testSolution(Class<? extends Solution> testClass)
     {
-        Map<String, String>     expectedResults = DataLoader.loadExpectedResults(testClass, INPUT_FILE_NAME);
-        SolutionResults         solutionResults = new SolutionResults();
+        Map<String, String>             expectedResults = DataLoader.loadExpectedResults(testClass, INPUT_FILE_NAME);
+        SolutionResultsValidator solutionResultsValidator = new SolutionResultsValidator();
 
-        for (Map.Entry<String, String> entry : expectedResults.entrySet())
+        for (Map.Entry<String, String>  entry : expectedResults.entrySet())
         {
-            String                  rawInput = entry.getKey();
-            SolutionInput           solutionInput = new SolutionInput(rawInput, testClass);
+            String                      rawInput = entry.getKey();
+            SolutionInput               solutionInput = new SolutionInput(rawInput, testClass);
 
-            String                  rawExpectedResult = entry.getValue();
-            SolutionExpectedOutput  solutionExpectedOutput = new SolutionExpectedOutput(rawExpectedResult, testClass);
+            String                      rawExpectedResult = entry.getValue();
+            SolutionExpectedOutput      solutionExpectedOutput = new SolutionExpectedOutput(rawExpectedResult, testClass);
 
-            Solution                testInstance;
+            Solution                    testInstance;
 
             try
             {
@@ -131,10 +131,10 @@ public abstract class TestBase
                         solutionInput,
                         solutionExpectedOutput);
 
-            solutionResults.saveResult(solutionResult);
+            solutionResultsValidator.saveResult(solutionResult);
         }
 
-        boolean     allResultsSuccessful = solutionResults.validateResults();
+        boolean     allResultsSuccessful = solutionResultsValidator.validateResults();
 
         assert allResultsSuccessful;
     }

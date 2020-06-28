@@ -2,7 +2,7 @@ package main.utils;
 
 import java.util.*;
 
-public class SolutionResults
+public class SolutionResultsValidator
 {
 	private static final int COLUMN_WIDTH = 64;
 	private static final int RESULT_BUFFER = 6;
@@ -50,7 +50,7 @@ public class SolutionResults
 
 	private boolean validateResult(Object expectedResult, Object actualResult)
 	{
-		return ResultValidator.isEqualsIgnoreOrder(expectedResult, actualResult);
+		return EqualityUtil.isEqualsIgnoreOrder(expectedResult, actualResult);
 	}
 
 	private void trackResult(boolean success, SolutionResult solutionResult)
@@ -60,9 +60,19 @@ public class SolutionResults
 
 	private void printResults(long averageExecuteTime)
 	{
+		StringBuilder 		resultBuilder = new StringBuilder();
+
+		// table title labels
+
+		System.out.print("    **    ");
+		System.out.print(normalizeResultStringToColumnWidth("Raw Input"));
+		System.out.print(normalizeResultStringToColumnWidth("Expected"));
+		System.out.print(normalizeResultStringToColumnWidth("Actual"));
+		System.out.print(normalizeResultStringToColumnWidth("Time"));
+
 		for (Map.Entry<SolutionResult, Boolean> entry : resultToSuccess.entrySet())
 		{
-			StringBuilder 	resultBuilder = new StringBuilder();
+			resultBuilder = new StringBuilder();
 
 			// value should never be null, don't handle *if* it is so it's obvious if its wrong
 			boolean			success = entry.getValue();

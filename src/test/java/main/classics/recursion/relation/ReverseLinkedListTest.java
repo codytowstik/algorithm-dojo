@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Test;
 
 public final class ReverseLinkedListTest extends TestBase
 {
+	// TODO: automate test
+
 	@Test
 	public void testReverseLinkedList1()
 	{

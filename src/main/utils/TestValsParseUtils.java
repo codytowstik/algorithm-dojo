@@ -5,12 +5,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public final class InputOutputParser
+public final class TestValsParseUtils
 {
     private static final String ARRAY_ITEM_DELIMITER = ",";
     private static final String SUB_ARRAY_DELIMITER = ":";
 
-    private InputOutputParser()
+    private TestValsParseUtils()
     {
         // disallow instantiation
     }
@@ -152,6 +152,28 @@ public final class InputOutputParser
         return Arrays
             .stream(splitListItems)
             .mapToInt(Integer::parseInt)
+            .boxed()
+            .collect(Collectors.toList());
+    }
+
+    /**
+     * Parse a string representation of a `List<Double>`
+     *
+     * @param raw the raw string input
+     * @return the list object
+     */
+    public static List<Double> parseListDouble(String raw)
+    {
+        if (raw.length() == 0)
+        {
+            return new ArrayList<>();
+        }
+
+        String[]        splitListItems = raw.split(ARRAY_ITEM_DELIMITER);
+
+        return Arrays
+            .stream(splitListItems)
+            .mapToDouble(Double::parseDouble)
             .boxed()
             .collect(Collectors.toList());
     }

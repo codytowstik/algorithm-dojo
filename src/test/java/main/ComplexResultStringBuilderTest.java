@@ -2,11 +2,10 @@ package main;
 
 import main.data_structures.ListNode;
 import main.data_structures.ListNodeUtils;
-import main.utils.Printer;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public final class PrinterTest
+public final class ComplexResultStringBuilderTest
 {
 	@Test
 	public void testListNodePrinter()

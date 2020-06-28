@@ -28,6 +28,9 @@ Maximum Subarray
 
     int maxSubArray(int[] nums)
     
+MyPow
+
+    double myPow(double x, int n)
     
 ### Weekly
 

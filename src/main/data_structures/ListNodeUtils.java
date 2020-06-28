@@ -1,6 +1,6 @@
 package main.data_structures;
 
-import main.utils.Printer;
+import main.utils.ComplexResultStringBuilder;
 
 public final class ListNodeUtils
 {
@@ -11,22 +11,22 @@ public final class ListNodeUtils
 
 	public static String buildRemainingNodesString(ListNode head)
 	{
-		Printer 	printer = new Printer(" -> ");
+		ComplexResultStringBuilder complexResultStringBuilder = new ComplexResultStringBuilder(" -> ");
 
-		printer.addItem(head.val);
+		complexResultStringBuilder.addItem(head.val);
 
 		ListNode	currentNode = head.next;
 
 		while (currentNode != null)
 		{
-			printer.addItem(currentNode.val);
+			complexResultStringBuilder.addItem(currentNode.val);
 
 			currentNode = currentNode.next;
 		}
 
-		printer.buildResultStringSingleLine();
+		complexResultStringBuilder.buildResultStringSingleLine();
 
-		return printer.getLatestResultString();
+		return complexResultStringBuilder.getLatestResultString();
 	}
 	
 	public static void printRemainingNodes(ListNode head)

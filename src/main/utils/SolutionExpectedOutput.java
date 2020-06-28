@@ -33,7 +33,7 @@ public final class SolutionExpectedOutput
 			{
 				isVoid = true;
 
-				// get input of first parameter
+				// get input of first parameter, assuming the first parameter is the correct type for in-place
 				// TODO: not assume the first param is the right type
 				Class<?>[] 		parameterTypes = declaredMethod.getParameterTypes();
 
@@ -45,7 +45,7 @@ public final class SolutionExpectedOutput
 				{
 					case "char[]":
 					{
-						output = InputOutputParser.parseArrayChar(rawOutput);
+						output = TestValsParseUtils.parseArrayChar(rawOutput);
 						break;
 					}
 
@@ -72,35 +72,48 @@ public final class SolutionExpectedOutput
 
 			case "int[]":
 			{
-				output = InputOutputParser.parseArrayInt(rawOutput);
+				output = TestValsParseUtils.parseArrayInt(rawOutput);
+				break;
+			}
+
+			case "double":
+			{
+				output = Double.parseDouble(rawOutput);
 				break;
 			}
 
 			case "java.util.List":
 			{
-				Type 							genericReturnType = declaredMethod.getGenericReturnType();
+				Type 					genericReturnType = declaredMethod.getGenericReturnType();
 
-				ParameterizedType				listGenericType = (ParameterizedType) genericReturnType;
+				ParameterizedType		listGenericType = (ParameterizedType) genericReturnType;
 
-				Type							genericActualType = listGenericType.getActualTypeArguments()[0];
+				Type					genericActualType = listGenericType.getActualTypeArguments()[0];
 
+				// we are looking for Objects because lists don't hold primitives
 				switch (genericActualType.getTypeName())
 				{
 					case "java.lang.String":
 					{
-						output = InputOutputParser.parseListString(rawOutput);
+						output = TestValsParseUtils.parseListString(rawOutput);
 						break;
 					}
 
 					case "java.lang.Integer":
 					{
-						output = InputOutputParser.parseListInteger(rawOutput);
+						output = TestValsParseUtils.parseListInteger(rawOutput);
 						break;
 					}
 
 					case "java.util.List<java.lang.Integer>":
 					{
-						output = InputOutputParser.parseListListInteger(rawOutput);
+						output = TestValsParseUtils.parseListListInteger(rawOutput);
+						break;
+					}
+
+					case "java.lang.Double":
+					{
+						output = TestValsParseUtils.parseListDouble(rawOutput);
 						break;
 					}
 

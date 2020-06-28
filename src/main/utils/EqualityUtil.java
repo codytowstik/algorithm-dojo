@@ -4,7 +4,7 @@ import java.text.MessageFormat;
 import java.util.Collections;
 import java.util.List;
 
-public final class ResultValidator
+public final class EqualityUtil
 {
 	public static boolean isEqualsIgnoreOrder(Object o1, Object o2)
 	{
@@ -32,6 +32,7 @@ public final class ResultValidator
 			case "boolean":
 			case "java.lang.Boolean":
 			case "java.lang.Integer":
+			case "java.lang.Double":
 			case "String":
 			case "int":
 			{
