@@ -60,8 +60,6 @@ public class SolutionResultsValidator
 
 	private void printResults(long averageExecuteTime)
 	{
-		StringBuilder 		resultBuilder = new StringBuilder();
-
 		// table title labels
 
 		System.out.print("    **    ");
@@ -72,7 +70,7 @@ public class SolutionResultsValidator
 
 		for (Map.Entry<SolutionResult, Boolean> entry : resultToSuccess.entrySet())
 		{
-			resultBuilder = new StringBuilder();
+			StringBuilder 	resultBuilder = new StringBuilder();
 
 			// value should never be null, don't handle *if* it is so it's obvious if its wrong
 			boolean			success = entry.getValue();

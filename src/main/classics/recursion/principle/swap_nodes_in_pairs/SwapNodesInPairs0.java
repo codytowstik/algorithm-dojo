@@ -20,17 +20,20 @@ public class SwapNodesInPairs0 extends SwapNodesInPairs
 			return head;
 		}
 
-		// re-attach the head we are swapping to subsequent pair swaps
+		// Recurse all the way down
 
+		// re-attach the head we are swapping to subsequent pair swaps
 		head.next.next = swapPairs(head.next.next);
 
-		// set new head to next node
+		// Swap on backtracking
+
+		// save the current 'next' node since we are about to write over it
 		ListNode 	newHead = head.next;
 
-		// set previous head's next, to new head's old next
+		// set the current head's next to the new head's next
 		head.next = newHead.next;
 
-		// set new head's next to previous head
+		// set new head's next to current head
 		newHead.next = head;
 
 		return newHead;
