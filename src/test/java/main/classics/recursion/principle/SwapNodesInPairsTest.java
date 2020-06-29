@@ -5,6 +5,14 @@ import main.classics.recursion.principle.swap_nodes_in_pairs.SwapNodesInPairs0;
 import main.data_structures.ListNode;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.PriorityQueue;
+import java.util.Queue;
+
 public class SwapNodesInPairsTest extends TestBase
 {
 	@Test
@@ -43,5 +51,52 @@ public class SwapNodesInPairsTest extends TestBase
 	{
 		System.out.println((-2147483648 + 1) * -1);
 		System.out.println(Math.abs(-2147483648));
+
+		Queue<Map.Entry<String, Integer>> maxHeap = new PriorityQueue<>((a, b) -> a.getValue() == b.getValue() ? a.getKey().compareTo(b.getKey()) : b.getValue() - a.getValue());
+
+		// Queue<Map.Entry<String, Integer>> maxHeap = new PriorityQueue<>((a, b) -> a.getValue() == b.getValue() ? a.getKey().compareTo(b.getKey()) : b.getValue() - a.getValue());
+	}
+
+	public List<String> topKFrequent(String[] words, int k)
+	{
+		Map<String, Integer> 	count = new HashMap();
+
+		for (String word : words)
+		{
+			count.put(word, count.getOrDefault(word, 0) + 1);
+		}
+
+		PriorityQueue<String> heap = new PriorityQueue<>(
+			(w1, w2) -> {
+				return count.get(w1).equals(count.get(w2)) ?
+					w2.compareTo(w1) : count.get(w1) - count.get(w2);
+			});
+
+		for (String word : count.keySet())
+		{
+			System.out.println(heap.toString());
+			heap.offer(word);
+
+			if (heap.size() > k)
+			{
+				String polled = heap.poll();
+
+				System.out.println(polled);
+			}
+		}
+
+		List<String> ans = new ArrayList();
+
+		while (!heap.isEmpty()) ans.add(heap.poll());
+		Collections.reverse(ans);
+		return ans;
+	}
+
+	@Test
+	public void testK()
+	{
+		String[] testArray = new String[]{"i", "love", "love", "leetcode", "i", "love", "coding"};
+
+		topKFrequent(testArray, 3);
 	}
 }

@@ -31,7 +31,7 @@ public class BSTMaxDepth0 extends BSTMaxDepth
 			maxRight = helper(root.right, currentDepth + 1);
 		}
 
-		int max = (maxLeft > maxRight) ? maxLeft : maxRight;
+		int 	max = (maxLeft > maxRight) ? maxLeft : maxRight;
 
 		return max;
 	}

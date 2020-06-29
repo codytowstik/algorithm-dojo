@@ -1,49 +1,37 @@
 package main.classics.recursion.complexity_analysis.mypow;
 
 /**
- * Pow. Recursive solution without converting 'n' to long.. pretty nasty
+ * Pow. Recursive solution.
  *
  *  Time: O(logn)
  * Space: O(logn)
  */
-public class MyPow0 extends MyPow
+public class MyPow1 extends MyPow
 {
 	@Override
 	public double myPow(double x, int n)
 	{
 		// -2147483648 (max_negative_int) is negative again, when multiplied by one
-		double max_negative_helper;
+		long N = n;
 
-
-		if (n == -2147483648)
-		{
-			max_negative_helper = 1 / x;
-
-			++n;
-		}
-		else
-		{
-			max_negative_helper = 1;
-		}
-
-		if (n == 0)
+		if (N == 0)
 		{
 			return 1;
 		}
 
-		else if (n < 0)
+		else if (N < 0)
 		{
 			// x^-2 == 1/x^2
 			x = 1 / x;
-			n = -n;
+			N = -N;
 		}
 
 
 		// multiply one more time since we had to increment MAX_NEGATIVE_INT by 1
-		return max_negative_helper * helper(x, n);
+		return helper(x, N);
 	}
 
-	public double helper(double x, int n)
+	public double helper(double x, long n)
 	{
 		// we can save time and not calculate all values
 		// x^n * x^n = (x^n)^2
@@ -58,7 +46,7 @@ public class MyPow0 extends MyPow
 			return x;
 		}
 
-		double half = helper(x, n / 2);
+		double 	half = helper(x, n / 2);
 
 		if (n % 2 == 0)
 		{
