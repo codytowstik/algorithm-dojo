@@ -7,7 +7,7 @@ import main.data_structures.ListNode;
  *
  * Recursive. In place.
  *
- * Space: 0
+ * Space: n - the size of stack space
  * Runtime: O(n)
  */
 public class SwapNodesInPairs0 extends SwapNodesInPairs

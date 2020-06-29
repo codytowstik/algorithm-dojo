@@ -37,4 +37,11 @@ public class SwapNodesInPairsTest extends TestBase
 
 		assertEquals(headNodeExpected, resultHead);
 	}
+
+	@Test
+	public void testStuff()
+	{
+		System.out.println((-2147483648 + 1) * -1);
+		System.out.println(Math.abs(-2147483648));
+	}
 }
