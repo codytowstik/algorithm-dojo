@@ -2,6 +2,9 @@ package main.classics.recursion.complexity_analysis.BSTMaxDepth;
 
 import main.data_structures.TreeNode;
 
+/**
+ * This is wrong. The base case should be "I am null".
+ */
 public class BSTMaxDepth0 extends BSTMaxDepth
 {
 	@Override
