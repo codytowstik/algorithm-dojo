@@ -1,11 +1,14 @@
 package main.practice;
 
 
-import main.practice.top_k_mentioned_keywords.TopKMentionedKeywords;
+import main.practice.top_k_mentioned_keywords.TopKMentionedKeywords0;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
+/**
+ * Practice for Amazon.
+ */
 public final class TopKMentionedKeywordsTest
 {
 	@Test
@@ -22,7 +25,7 @@ public final class TopKMentionedKeywordsTest
 
 		String[] output = new String[]{"anacell", "betacellular"};
 
-		String[] result = TopKMentionedKeywords.findTopK(reviews, keywords, k);
+		String[] result = TopKMentionedKeywords0.findTopK(reviews, keywords, k);
 
 		System.out.println(Arrays.toString(result));
 
@@ -37,7 +40,7 @@ public final class TopKMentionedKeywordsTest
 
 		String[] output1 = new String[]{"betacellular", "anacell"};
 
-		String[] result1 = TopKMentionedKeywords.findTopK(reviews1, keywords1, k);
+		String[] result1 = TopKMentionedKeywords0.findTopK(reviews1, keywords1, k);
 
 		System.out.println(Arrays.toString(result1));
 	}
