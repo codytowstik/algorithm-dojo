@@ -1,20 +1,20 @@
 package main.practice.table_manufacturing;
 
 import java.text.MessageFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Hashtable;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
- * Practice for Dematic
- *
- * Took about 80 minutes. The problem description was pretty complex.
- *
- * Areas for improvement:
- *  - break logic into methods
- *  - duplicate code in for loop @ line 135 could be abstracted
- *  - output could have been directly to string arrays rather than building up separate List<String>
- *      - wrong... we don't know how much output there will be since some inventory sets could result in 0 tables being built
+ * Practice for Dematic.
  */
-public final class TableManufacturing0
+public final class TableManufacturing1
 {
     public static String[] solution(String[] A)
     {
