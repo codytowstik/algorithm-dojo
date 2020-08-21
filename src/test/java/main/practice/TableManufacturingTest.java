@@ -1,10 +1,19 @@
 package main.practice;
 
 import main.practice.table_manufacturing.TableManufacturing0;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 /**
  * Practice for Dematic.
+ *
+ *          Parts:
+ *         final int REQUIRED_LEGS = 4;
+ *         final int REQUIRED_TOPS = 1;
+ *
+ *         Assembly:
+ *         final int REQUIRED_SCREWS = 6;
+ *         final int REQUIRED_NUTS = 4;
  */
 public final class TableManufacturingTest
 {
@@ -32,7 +41,22 @@ public final class TableManufacturingTest
                         "Tops, L10, 1",
                 };
 
-        TableManufacturing0.solution(input0);
+        // 0 - "Parts, A10, 3"
+        // 1 - "Parts, L10, 3"
+        // 2 - "Assembly, L10, 2"
+        String[] solution1 = TableManufacturing0.solution(input0);
+
+        Assertions.assertEquals(3, solution1.length);
+        Assertions.assertEquals("Parts, A10, 3", solution1[0]);
+        Assertions.assertEquals("Parts, L10, 3", solution1[1]);
+        Assertions.assertEquals("Assembly, L10, 2", solution1[2]);
+
+        // 0 - "None"
+        String[] solution2 = TableManufacturing0.solution(input1);
+
+        Assertions.assertEquals(1, solution2.length);
+
+        Assertions.assertEquals("None", solution2[0]);
     }
 
     @Test
