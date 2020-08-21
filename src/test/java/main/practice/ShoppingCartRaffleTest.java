@@ -50,6 +50,10 @@ import java.util.List;
  * Cart: [Apple, Orange, Pear, Apple]
  * Seq: [[Apple], [Pear, Any]]
  * Winner: True
+ *
+ * Cart: [Apple, Orange, Apple, Orange, Pear]
+ * Seq: [[Apple, Orange, Pear]]
+ * Winner: True
  */
 public final class ShoppingCartRaffleTest
 {
@@ -80,6 +84,10 @@ public final class ShoppingCartRaffleTest
     private static List<String> cart7 = new ArrayList<>();
     private static List<List<String>> seq7 = new ArrayList<>();
     private static int result7;
+
+    private static List<String> cart8 = new ArrayList<>();
+    private static List<List<String>> seq8 = new ArrayList<>();
+    private static int result8;
 
     @BeforeAll
     public static void beforeAll()
@@ -159,6 +167,22 @@ public final class ShoppingCartRaffleTest
 
         seq7.add(List.of("apple"));
         seq7.add(List.of("pear", "any"));
+
+        result7 = 1;
+
+        // Cart: [Apple, Orange, Apple, Orange, Pear]
+        // Seq: [[Apple, Orange, Pear]]
+        // Winner: True
+
+        cart7.add("apple");
+        cart7.add("orange");
+        cart7.add("apple");
+        cart7.add("orange");
+        cart7.add("pear");
+
+        seq8.add(List.of("apple", "orange", "pear"));
+
+        result8 = 1;
     }
 
     @Test
@@ -171,5 +195,6 @@ public final class ShoppingCartRaffleTest
         Assertions.assertEquals(result5, ShoppingCartRaffle0.isWinner(cart5, seq5), "5: ");
         Assertions.assertEquals(result6, ShoppingCartRaffle0.isWinner(cart6, seq6), "6: ");
         Assertions.assertEquals(result7, ShoppingCartRaffle0.isWinner(cart7, seq7), "7: ");
+//        Assertions.assertEquals(result8, ShoppingCartRaffle0.isWinner(cart8, seq8), "8: ");
     }
 }

@@ -6,6 +6,11 @@ import java.util.List;
 /**
  * Practice for Amazon.
  *
+ * Broken:
+ * - if the beginning of a later sequence is matched, but isn't correct, but the correct sequence appears later,
+ * it incorrectly increments index and fails. e.g. test 8
+ * - if sequence starts with any, it will try to match the next item with no fallback, related to problem 1
+ *
  * Room for improvement:
  * - It's weird to check if cartIndex == shoppingCart.size() every iteration
  * - edge case if winning sequence starts with one or more "any"
@@ -50,8 +55,9 @@ public class ShoppingCartRaffle0
                         else
                         {
                             String currentCartItem = shoppingCart.get(cartIndex);
+                            String currentGroupItem = group.get(groupIndex);
 
-                            if (!group.get(groupIndex).equals(currentCartItem))
+                            if (!currentGroupItem.equals("any") && !currentGroupItem.equals(currentCartItem))
                             {
                                 // loser, contiguous group not found
                                 System.out.println("group not found");
