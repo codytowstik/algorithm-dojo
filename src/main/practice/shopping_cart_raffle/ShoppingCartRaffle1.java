@@ -22,24 +22,86 @@ public class ShoppingCartRaffle1
         System.out.println("\nChecking winner status... ");
 
         // initialize cartIndex to 0
+        int cartIndex = 0;
 
         // for each raffle sequence
-            // find the first occurrence of the first item of the raffle sequence in the shopping cart
-            // .. starting at the current cart index
+        for (List<String> raffleSequence : codeList)
+        {
+            boolean isSequenceFound = false;
+
+            while(!isSequenceFound)
+            {
+                // find the first occurrence of the first item of the raffle sequence in the shopping cart
+                // .. starting at the current cart index
+                int firstSequenceItemIndex = findItemStartingAtIndex(raffleSequence.get(0), cartIndex, shoppingCart);
+
+                // if not found, loser!
+                if (firstSequenceItemIndex == -1)
+                {
+                    System.out.println("first item not found, loser");
+                    return 0;
+                }
+
                 // check if the rest of the sequence is contiguously found in the cart
-                    // if yes
-                        // add length of sequence to cart index
-                        // continue to next sequence
+                isSequenceFound = isContiguousSequenceFound(shoppingCart, cartIndex, raffleSequence);
 
-                    // if no,
-                        // increment cart index by 1
-                        // if cartIndex == cartLength, loser!
-                        // keep looking for next occurrence of first item in sequence
-
-            // if not found, loser!
-
+                if (isSequenceFound)
+                {
+                    // add length of sequence to cart index
+                    cartIndex += raffleSequence.size();
+                }
+                else
+                {
+                    // increment cart index by 1
+                    ++cartIndex;
+                    // if cartIndex == cartLength, loser!
+                    if (cartIndex == shoppingCart.size())
+                    {
+                        System.out.println("cart length exceeded, loser");
+                        return 0;
+                    }
+                    // keep looking for next occurrence of first item in sequence
+                }
+            }
+        }
         // found all raffle sequences, winner!
 
         return 1;
+    }
+
+    private static int findItemStartingAtIndex(String itemToFind, int startIndex, List<String> shoppingCart)
+    {
+        if (itemToFind.equals("any"))
+        {
+            return startIndex;
+        }
+        else
+        {
+            return shoppingCart.subList(startIndex, shoppingCart.size()).indexOf(itemToFind);
+        }
+    }
+
+    private static boolean isContiguousSequenceFound(List<String> shoppingCart, int startIndex, List<String> raffleSequence)
+    {
+        int raffleSequenceLength = raffleSequence.size();
+
+        for (int i = 1; i < raffleSequenceLength; i++)
+        {
+            int currentCartIndex = startIndex + i;
+
+            String raffleSequenceItem = raffleSequence.get(i);
+
+            if (currentCartIndex < shoppingCart.size() &&
+                    (raffleSequenceItem.equals("any") || raffleSequenceItem.equals(shoppingCart.get(currentCartIndex))))
+            {
+                continue;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 }

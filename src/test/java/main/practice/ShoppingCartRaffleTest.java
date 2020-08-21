@@ -1,6 +1,7 @@
 package main.practice;
 
 import main.practice.shopping_cart_raffle.ShoppingCartRaffle0;
+import main.practice.shopping_cart_raffle.ShoppingCartRaffle1;
 import main.practice.table_manufacturing.TableManufacturing0;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
@@ -174,11 +175,11 @@ public final class ShoppingCartRaffleTest
         // Seq: [[Apple, Orange, Pear]]
         // Winner: True
 
-        cart7.add("apple");
-        cart7.add("orange");
-        cart7.add("apple");
-        cart7.add("orange");
-        cart7.add("pear");
+        cart8.add("apple");
+        cart8.add("orange");
+        cart8.add("apple");
+        cart8.add("orange");
+        cart8.add("pear");
 
         seq8.add(List.of("apple", "orange", "pear"));
 
@@ -196,5 +197,18 @@ public final class ShoppingCartRaffleTest
         Assertions.assertEquals(result6, ShoppingCartRaffle0.isWinner(cart6, seq6), "6: ");
         Assertions.assertEquals(result7, ShoppingCartRaffle0.isWinner(cart7, seq7), "7: ");
 //        Assertions.assertEquals(result8, ShoppingCartRaffle0.isWinner(cart8, seq8), "8: ");
+    }
+
+    @Test
+    public void shoppingCartRaffle1Test()
+    {
+        Assertions.assertEquals(result1, ShoppingCartRaffle1.isWinner(cart1, seq1), "1: ");
+        Assertions.assertEquals(result2, ShoppingCartRaffle1.isWinner(cart2, seq2), "2: ");
+        Assertions.assertEquals(result3, ShoppingCartRaffle1.isWinner(cart3, seq3), "3: ");
+        Assertions.assertEquals(result4, ShoppingCartRaffle1.isWinner(cart4, seq4), "4: ");
+        Assertions.assertEquals(result5, ShoppingCartRaffle1.isWinner(cart5, seq5), "5: ");
+        Assertions.assertEquals(result6, ShoppingCartRaffle1.isWinner(cart6, seq6), "6: ");
+        Assertions.assertEquals(result7, ShoppingCartRaffle1.isWinner(cart7, seq7), "7: ");
+        Assertions.assertEquals(result8, ShoppingCartRaffle1.isWinner(cart8, seq8), "8: ");
     }
 }
